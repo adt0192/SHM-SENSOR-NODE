@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

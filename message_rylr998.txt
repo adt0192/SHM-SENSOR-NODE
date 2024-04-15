@@ -1,0 +1,10 @@
+RYLR998 -> 240 bytes MAX of payload (ASCII format)
+        -> this means 240 characters (each character is 8-bits long)
+
+>> the header will have 16 bits -> 0xFFFF (4 characters, so 4 bytes)
+>> so there are 236 bytes left (236 ASCII characters)
+   -> which is 236 hexadecimal characters (e.g. 0xFFFF...FF)
+   -> every 2 hex-characters we are encoding <8-bits word>
+      so we have 236 / 2 = ((118 8-bits words))
+      118 * 8 = 944
+  -> so we have (944 BITS) of total space to send ONE MESSAGE WITH RYLR998 
