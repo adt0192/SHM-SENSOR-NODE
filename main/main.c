@@ -1259,7 +1259,7 @@ void transmit_data_task(void *pvParameters) {
                      portMAX_DELAY); // Block indefinitely
 
     // Print out remaining task stack memory (words)
-    ESP_LOGI(TAG, "transmit_data_task high water mark (words): %d\n",
+    ESP_LOGW(TAG, "Bytes free in 'transmit_data_task' stack: <%zu>",
              uxTaskGetStackHighWaterMark(NULL));
 
     //
@@ -1960,9 +1960,8 @@ void check_ack_task(void *pvParameters) {
                      portMAX_DELAY); // Block indefinitely
 
     // Print out remaining task stack memory (words)
-    ESP_LOGI(TAG, "check_ack_task high water mark (words): %d",
+    ESP_LOGW(TAG, "Bytes free in 'check_ack_task' stack: <%zu>",
              uxTaskGetStackHighWaterMark(NULL));
-    // Print out remaining task stack memory (words)
 
     ///// extract the header from the incoming data /////
     char *header_hex = malloc((4 + 1) * sizeof(*header_hex));
@@ -2101,7 +2100,7 @@ void uart_task(void *pvParameters) {
     // waiting for UART event
     if (xQueueReceive(uart_queue, (void *)&event, (TickType_t)portMAX_DELAY)) {
 
-      ESP_LOGE(TAG,
+      /* ESP_LOGE(TAG,
                "******************** <MEMORY CHECKING> *********************");
       ESP_LOGI(TAG, "Heap integrety %i",
                heap_caps_check_integrity_all(true));              // Added
@@ -2110,16 +2109,16 @@ void uart_task(void *pvParameters) {
                uxTaskGetStackHighWaterMark(NULL)); // Added
       ESP_LOGE(
           TAG,
-          "******************** <MEMORY CHECKING> *********************\n");
+          "******************** <MEMORY CHECKING> *********************\n"); */
 
-      ESP_LOGW(TAG, "!!!DEBUGGING!!! ENTERING 'xQueueReceive' in 'uart_task'");
+      // ESP_LOGW(TAG, "!!!DEBUGGING!!! ENTERING 'xQueueReceive' in
+      // 'uart_task'");
 
       bzero(incoming_uart_data, BUF_SIZE);
 
       // Print out remaining task stack memory (words)
-      ESP_LOGI(TAG, "uart_task high water mark (words): %d\n",
+      ESP_LOGW(TAG, "Bytes free in 'uart_task' stack: <%zu>",
                uxTaskGetStackHighWaterMark(NULL));
-
       switch (event.type) {
         // Event of UART receving data
         /*We'd better handler data event fast, there would be much more data
