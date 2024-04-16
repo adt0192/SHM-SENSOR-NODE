@@ -1115,6 +1115,8 @@ void compressing_samples_task(void *pvParameters) {
     ESP_LOGE(TAG,
              "*********************************************************\n");
     //
+    ESP_LOGI(TAG, "Waiting 2s before transmitting data...");
+    vTaskDelay(pdMS_TO_TICKS(2000));
     xTaskNotifyGive(transmit_data_task_handle);
     //
   } // while (1)
@@ -1263,7 +1265,7 @@ void transmit_data_task(void *pvParameters) {
              uxTaskGetStackHighWaterMark(NULL));
 
     //
-    ESP_LOGE(
+    /* ESP_LOGE(
         TAG,
         "******************* <DEBUGGING FLAGS STATE> ********************");
     ESP_LOGW(TAG, "rcv_ack: <%s>", rcv_ack);
@@ -1280,6 +1282,7 @@ void transmit_data_task(void *pvParameters) {
     ESP_LOGE(
         TAG,
         "******************* <DEBUGGING FLAGS STATE> ********************\n");
+  */
     //
 
     // ESP_LOGI(TAG, "transmit_data_task...");
@@ -1976,65 +1979,6 @@ void check_ack_task(void *pvParameters) {
     uint16_t header_dec = HexadecimalToDecimal(header_hex);
 
     // ***********************************************************************
-    // ***************************** UNNECESSARY *****************************
-    // ***********************************************************************
-    // this is to know the number of digits the decimal number number will have
-    // when converted to binary
-    /* int temp = header_dec;
-    uint32_t bin_digits = 0;
-    while (temp > 0) {
-      bin_digits++;
-      temp /= 2;
-    }
-    // this is to know the number of digits the decimal number number will have
-    // when converted to binary
-
-    // bin_digits +1 for the NULL character at the end of the string
-    char *header_hex_to_bin =
-        malloc((bin_digits + 1) * sizeof(*header_hex_to_bin));
-    if (header_hex_to_bin == NULL) {
-      ESP_LOGE(TAG, "NOT ENOUGH HEAP");
-      ESP_LOGE(TAG,
-               "Failed to allocate *header_hex_to_bin in task check_ack_task");
-    }
-    ESP_ERROR_CHECK(DecimalToBinary(header_dec, bin_digits, header_hex_to_bin));
-    free(header_hex);
-    ///// convert the extracted header to binary /////
-
-    // extract the transaction ID (binary) of the incoming data from the header
-    // last 14 bits
-    char *incoming_message_transaction_ID_bin =
-        malloc((14 + 1) * sizeof(*incoming_message_transaction_ID_bin));
-    if (incoming_message_transaction_ID_bin == NULL) {
-      ESP_LOGE(TAG, "NOT ENOUGH HEAP");
-      ESP_LOGE(TAG, "Failed to allocate *incoming_message_transaction_ID_bin "
-                    "in task check_ack_task");
-    }
-    GetSubString(header_hex_to_bin, 2, 14, incoming_message_transaction_ID_bin);
-
-    // converting those last 14 bits (incoming_message_transaction_ID_bin) to
-    // decimal to compare with sending_msg_counter_RX
-    int incoming_message_transaction_ID_dec =
-        BinaryToDecimal(incoming_message_transaction_ID_bin);
-    free(incoming_message_transaction_ID_bin);
-
-    // if first two bits in header of Lora_data.Data are 11, it means is ACK
-    // if next 14 bits in header of Lora_data.Data == sending_msg_counter
-    // these means we received ack of the previously transmitted message
-    char *incoming_message_type_bin =
-        malloc((2 + 1) * sizeof(*incoming_message_type_bin));
-    if (incoming_message_type_bin == NULL) {
-      ESP_LOGE(TAG, "NOT ENOUGH HEAP");
-      ESP_LOGE(TAG, "Failed to allocate *incoming_message_type_bin "
-                    "in task check_ack_task");
-    }
-    GetSubString(header_hex_to_bin, 0, 2, incoming_message_type_bin);
-    free(header_hex_to_bin); */
-    // ***********************************************************************
-    // ***************************** UNNECESSARY *****************************
-    // ***********************************************************************
-
-    // ***********************************************************************
     // 0xC000 -> 1100 0000 0000 0000 (first 2 bits are '11' which means 'ack')
     // so we compare the first 2 bits in the extracted header
     // and the last 14 bits compare to MSG_COUNTER_TX
@@ -2046,6 +1990,10 @@ void check_ack_task(void *pvParameters) {
 
       // set the flag to know we already received the 'ack' message
       rcv_ack = "Y";
+      //
+      ESP_LOGI(TAG,
+               "'ACK' message corresponding to transaction ID <%u> RECEIVED",
+               MSG_COUNTER_TX);
 
       if ((strncmp((const char *)is_sending_ctrl, "Y", 1) == 0)) {
         is_data_sent_ok = "+OK";
@@ -2068,10 +2016,10 @@ void check_ack_task(void *pvParameters) {
       //
       ///// VISUALIZE /////
       ESP_LOGE(TAG,
-               "*********************************************************");
-      ESP_LOGE(TAG, "Free heap memmory (bytes): <%lu>", xPortGetFreeHeapSize());
+               "******************** FREE HEAP MEMORY ********************");
+      ESP_LOGW(TAG, "<%lu> BYTES", xPortGetFreeHeapSize());
       ESP_LOGE(TAG,
-               "*********************************************************");
+               "******************** FREE HEAP MEMORY ********************");
       ///// VISUALIZE /////
       //
       // Send a notification to transmit_data_task()
