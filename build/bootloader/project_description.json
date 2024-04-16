@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
     "project_path":       "C:/Users/andyd/esp-idf/esp-idf/components/bootloader/subproject",
-    "build_dir":          "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/bootloader",
-    "config_file":        "D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/sdkconfig",
+    "build_dir":          "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader",
+    "config_file":        "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/sdkconfig",
     "config_defaults":    "",
     "bootloader_elf":     "",
     "app_elf":            "bootloader.elf",

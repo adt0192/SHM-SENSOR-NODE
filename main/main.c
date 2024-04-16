@@ -74,7 +74,7 @@
 //***************************************************************************//
 // A count of the number of times the timer expires.
 int8_t timer_expires_counter = 0;
-const int16_t RETRANSMISSION_TIMEOUT = 500;
+const int16_t RETRANSMISSION_TIMEOUT = 1000;
 const int timerID = 1;
 const int8_t RETRANSMISSION_COUNT = 5;
 //***************************************************************************//

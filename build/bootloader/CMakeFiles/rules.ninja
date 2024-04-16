@@ -299,7 +299,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\andyd\.espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SC:\Users\andyd\esp-idf\esp-idf\components\bootloader\subproject -BD:\WORK\PROJECT\ESP-IDF_PROJECTS\TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF\build\bootloader
+  command = C:\Users\andyd\.espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SC:\Users\andyd\esp-idf\esp-idf\components\bootloader\subproject -BD:\WORK\PROJECT\ESP-IDF_PROJECTS\SHM-SENSOR-NODE\build\bootloader
   description = Re-running CMake...
   generator = 1
 

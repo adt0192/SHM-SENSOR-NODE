@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h> // required for memcpy()
 
-static const char *TAG = "NUMB SYSTEM CONVERSION";
+static const char *TAG = "SHM SENSOR NODE -> NUMB SYSTEM CONVERSION";
 
 ///////////////////////////////////////////////////////////////////////////////
 //***************************** Common Functions ****************************//

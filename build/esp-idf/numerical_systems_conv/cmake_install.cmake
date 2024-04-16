@@ -1,4 +1,4 @@
-# Install script for directory: D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/components/numerical_systems_conv
+# Install script for directory: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/components/numerical_systems_conv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

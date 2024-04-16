@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-static const char *TAG = "RYLR998 SENSOR NODE";
+static const char *TAG = "SHM SENSOR NODE -> RYLR998";
 
 //***************************************************************************//
 //********************* LoRa Data Message Header Format *********************//

@@ -1,4 +1,4 @@
-/* * Data converted from D:/WORK/PROJECT/ESP-IDF_PROJECTS/TEST-ADXL355-TX-CS-AND-SAMPLE-REDIMENSION-ESP-IDF/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded
