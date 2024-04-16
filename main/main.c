@@ -1515,6 +1515,10 @@ void transmit_data_task(void *pvParameters) {
         int32_t min_z_value_int32 = min_z_value / resolution;
         ESP_LOGW(TAG, "!!!DEBUGGING!!! min_x_value_int32: %ld",
                  min_x_value_int32);
+        ESP_LOGW(TAG, "!!!DEBUGGING!!! min_y_value_int32: %ld",
+                 min_y_value_int32);
+        ESP_LOGW(TAG, "!!!DEBUGGING!!! min_z_value_int32: %ld",
+                 min_z_value_int32);
         uint8_t dayi = 3;
         //
         // the next 'for' loop composes the message like the following format
@@ -1525,24 +1529,30 @@ void transmit_data_task(void *pvParameters) {
         // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
         // |data_to_send_hex_3|data_to_send_hex_4|data_to_send_hex_5|
         // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-        // |    0xFFFFFFFF    |    0xFFFFFFFF    |    0xFFFFFFFF    |
+        // |  0 x FF FF FF FF |  0 x FF FF FF FF |  0 x FF FF FF FF |
         // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
         for (size_t i = 0; i < 8; i += 2) {
           // x_min_value
           tmp_8bits_section = ((min_x_value_int32) >> (dayi * 8)) & 0xFF;
           DecimalToHexadecimal(tmp_8bits_section, tmp_8bits_section_hex);
-          tmp_8bits_section_hex[2] = '\0'; // ensure null-termination
+          tmp_8bits_section_hex[2] = '\0'; // this line can be removed
           strcpy(data_to_send_hex_3 + i, tmp_8bits_section_hex);
+          ESP_LOGW(TAG, "!!!DEBUGGING!!! data_to_send_hex_3[%zu]: %s", i,
+                   data_to_send_hex_3 + i);
           // y_min_value
           tmp_8bits_section = ((min_y_value_int32) >> (dayi * 8)) & 0xFF;
           DecimalToHexadecimal(tmp_8bits_section, tmp_8bits_section_hex);
-          tmp_8bits_section_hex[2] = '\0'; // ensure null-termination
+          tmp_8bits_section_hex[2] = '\0'; // this line can be removed
           strcpy(data_to_send_hex_4 + i, tmp_8bits_section_hex);
+          ESP_LOGW(TAG, "!!!DEBUGGING!!! data_to_send_hex_4[%zu]: %s", i,
+                   data_to_send_hex_4 + i);
           // z_min_value
           tmp_8bits_section = ((min_z_value_int32) >> (dayi * 8)) & 0xFF;
           DecimalToHexadecimal(tmp_8bits_section, tmp_8bits_section_hex);
-          tmp_8bits_section_hex[2] = '\0'; // ensure null-termination
+          tmp_8bits_section_hex[2] = '\0'; // this line can be removed
           strcpy(data_to_send_hex_5 + i, tmp_8bits_section_hex);
+          ESP_LOGW(TAG, "!!!DEBUGGING!!! data_to_send_hex_5[%zu]: %s", i,
+                   data_to_send_hex_5 + i);
           //
           dayi--;
         }
@@ -1557,8 +1567,8 @@ void transmit_data_task(void *pvParameters) {
         strcpy(data_to_send_hex + 2, data_to_send_hex_1);
         strcpy(data_to_send_hex + 4, data_to_send_hex_2);
         strcpy(data_to_send_hex + 6, data_to_send_hex_3);
-        strcpy(data_to_send_hex + 14, data_to_send_hex_3);
-        strcpy(data_to_send_hex + 22, data_to_send_hex_3);
+        strcpy(data_to_send_hex + 14, data_to_send_hex_4);
+        strcpy(data_to_send_hex + 22, data_to_send_hex_5);
         //
         data_to_send_hex[30] = '\0';
         //
