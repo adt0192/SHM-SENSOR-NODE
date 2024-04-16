@@ -742,13 +742,6 @@ void compressing_samples_task(void *pvParameters) {
     ulTaskNotifyTake(pdTRUE,         // Clear the notification value on exit
                      portMAX_DELAY); // Block indefinitely
 
-    // Print out remaining task stack memory (words) ************************
-    ESP_LOGE(TAG, "**************** BYTES FREE IN TASK STACK ****************");
-    ESP_LOGW(TAG, "'compressing_samples_task': <%zu>",
-             uxTaskGetStackHighWaterMark(NULL));
-    ESP_LOGE(TAG, "**************** BYTES FREE IN TASK STACK ****************");
-    // Print out remaining task stack memory (words) ************************
-
     //*************************** COMPRESSION STAGE **************************//
     // step 1: re-arrange and decode samples ***********************************
     uint32_t tmp_arranged_sample = 0;
@@ -1157,13 +1150,6 @@ void xyz_data_reading_task(void *pvParameters) {
     ulTaskNotifyTake(pdTRUE,         // Clear the notification value on exit
                      portMAX_DELAY); // Block indefinitely
 
-    // Print out remaining task stack memory (words) ************************
-    ESP_LOGE(TAG, "**************** BYTES FREE IN TASK STACK ****************");
-    ESP_LOGW(TAG, "'xyz_data_reading_task': <%zu>",
-             uxTaskGetStackHighWaterMark(NULL));
-    ESP_LOGE(TAG, "**************** BYTES FREE IN TASK STACK ****************");
-    // Print out remaining task stack memory (words) ************************
-
     ///// REAL CODE ******************************************************//
     if (xyz_data_reg_count == N) {
       xyz_data_reg_count = 0;
@@ -1274,12 +1260,9 @@ void transmit_data_task(void *pvParameters) {
     ulTaskNotifyTake(pdTRUE,         // Clear the notification value on exit
                      portMAX_DELAY); // Block indefinitely
 
-    // Print out remaining task stack memory (words) ************************
-    ESP_LOGE(TAG, "**************** BYTES FREE IN TASK STACK ****************");
-    ESP_LOGW(TAG, "'transmit_data_task': <%zu>",
+    // Print out remaining task stack memory (words)
+    ESP_LOGW(TAG, "Bytes free in 'transmit_data_task' stack: <%zu>",
              uxTaskGetStackHighWaterMark(NULL));
-    ESP_LOGE(TAG, "**************** BYTES FREE IN TASK STACK ****************");
-    // Print out remaining task stack memory (words) ************************
 
     //
     /* ESP_LOGE(
@@ -1979,11 +1962,9 @@ void check_ack_task(void *pvParameters) {
     ulTaskNotifyTake(pdTRUE,         // Clear the notification value on exit
                      portMAX_DELAY); // Block indefinitely
 
-    // Print out remaining task stack memory (words) ************************
-    ESP_LOGE(TAG, "**************** BYTES FREE IN TASK STACK ****************");
-    ESP_LOGW(TAG, "'check_ack_task': <%zu>", uxTaskGetStackHighWaterMark(NULL));
-    ESP_LOGE(TAG, "**************** BYTES FREE IN TASK STACK ****************");
-    // Print out remaining task stack memory (words) ************************
+    // Print out remaining task stack memory (words)
+    ESP_LOGW(TAG, "Bytes free in 'check_ack_task' stack: <%zu>",
+             uxTaskGetStackHighWaterMark(NULL));
 
     ///// extract the header from the incoming data /////
     char *header_hex = malloc((4 + 1) * sizeof(*header_hex));
@@ -2083,14 +2064,9 @@ void uart_task(void *pvParameters) {
 
       bzero(incoming_uart_data, BUF_SIZE);
 
-      // Print out remaining task stack memory (words) ************************
-      ESP_LOGE(TAG,
-               "**************** BYTES FREE IN TASK STACK ****************");
-      ESP_LOGW(TAG, "'uart_task': <%zu>", uxTaskGetStackHighWaterMark(NULL));
-      ESP_LOGE(TAG,
-               "**************** BYTES FREE IN TASK STACK ****************");
-      // Print out remaining task stack memory (words) ************************
-
+      // Print out remaining task stack memory (words)
+      ESP_LOGW(TAG, "Bytes free in 'uart_task' stack: <%zu>",
+               uxTaskGetStackHighWaterMark(NULL));
       switch (event.type) {
         // Event of UART receving data
         /*We'd better handler data event fast, there would be much more data
