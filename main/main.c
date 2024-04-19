@@ -1751,9 +1751,9 @@ void transmit_data_task(void *pvParameters) {
           }
           //
           // segment size -> 8-bit words -> so 8 BITS
-          size_t segment_size = 8;
+          const size_t segment_size = 8;
           // calculate number of 8-bit words needed
-          size_t num_segments = total_bits_tx_after_pad0 / segment_size;
+          const size_t num_segments = total_bits_tx_after_pad0 / segment_size;
           //
           // temporal vlaue to store each 8-bit segment
           tmp_segment_bin =
@@ -1874,10 +1874,10 @@ void transmit_data_task(void *pvParameters) {
         retransmission_msg_defined = "N";
         // freeing up allocated memory **********************
         ESP_LOGE(TAG,
-                 "******************** <AP FINISHED> *********************");
+                 "******************** <APP FINISHED> *********************");
         ESP_LOGW(TAG, "!!!DEBUGGING!!! d_a: <%d>", d_a);
         ESP_LOGE(TAG,
-                 "******************** <AP FINISHED> *********************");
+                 "******************** <APP FINISHED> *********************");
 
         d_a = 0;
         break;
