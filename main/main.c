@@ -1769,8 +1769,7 @@ void transmit_data_task(void *pvParameters) {
             // copy next 8-character segment in the temporal variable
             strncpy(tmp_segment_bin, tmp_data_to_send_bin + i * segment_size,
                     segment_size);
-            tmp_segment_bin[segment_size] =
-                '\0'; // add null-terminating character
+            tmp_segment_bin[segment_size] = '\0'; // null-end character
             //
             // getting the corresponding decimal value of the current
             // 8-character segment
