@@ -5,7 +5,7 @@
 // ** Project name:               SHM SENSOR NODE
 // ** Created by:                 Andy Duarte Taño
 // ** Created:                    25/03/2024
-// ** Last modified:              17/04/2024
+// ** Last modified:              22/04/2024
 // ** Software:                   C/C++, ESP-IDF Framework, VS Code
 // ** Hardware:                   ESP32-S3-DevKit-C1
 //                                Reyax RYLR998 LoRa Module
@@ -1764,6 +1764,15 @@ void transmit_data_task(void *pvParameters) {
                           "transmit_data_task");
           }
           //
+          // temporal variable to store the conversion of
+          // decimal tmp_segment_dec to hexadecimal
+          tmp_segment_hex = malloc((2 + 1) * sizeof(*tmp_segment_hex));
+          if (tmp_segment_hex == NULL) {
+            ESP_LOGE(TAG, "NOT ENOUGH HEAP");
+            ESP_LOGE(TAG, "Failed to allocate *tmp_segment_hex in "
+                          "transmit_data_task");
+          }
+          //
           // ITERATE OVER THE SEGMENTS *****************************************
           for (size_t i = 0; i < num_segments; i++) {
             // copy next 8-character segment in the temporal variable
@@ -1774,16 +1783,7 @@ void transmit_data_task(void *pvParameters) {
             // getting the corresponding decimal value of the current
             // 8-character segment
             int tmp_segment_dec = BinaryToDecimal(tmp_segment_bin);
-            free(tmp_segment_bin);
             //
-            // temporal variable to store the conversion of
-            // decimal tmp_segment_dec to hexadecimal
-            tmp_segment_hex = malloc((2 + 1) * sizeof(*tmp_segment_hex));
-            if (tmp_segment_hex == NULL) {
-              ESP_LOGE(TAG, "NOT ENOUGH HEAP");
-              ESP_LOGE(TAG, "Failed to allocate *tmp_segment_hex in "
-                            "transmit_data_task");
-            }
             DecimalToHexadecimal(tmp_segment_dec, tmp_segment_hex);
             //
             // append every 'tmp_segment_hex' to 'data_to_send_hex'
@@ -1795,6 +1795,8 @@ void transmit_data_task(void *pvParameters) {
           // free the allocated space for 'tmp_segment_hex' 'cause we don´t need
           // to use it anymore
           free(tmp_segment_hex);
+          //
+          free(tmp_segment_bin);
           //
           free(tmp_data_to_send_bin);
           //
