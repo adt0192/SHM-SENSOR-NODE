@@ -1025,7 +1025,7 @@ void compressing_samples_task(void *pvParameters) {
       DecimalToBinary(x_sample_compressed_temp_dec, x_bits_tx,
                       x_sample_compressed_temp_bin);
       strcpy(x_samples_compressed_bin[i], x_sample_compressed_temp_bin);
-      ESP_LOGW(TAG, "X-AXIS [%d] -> %.12lf : %.12lf : %.1lf : %s", i,
+      ESP_LOGW(TAG, "X-AXIS [%d] -> %.15lf : %.15lf : %.1lf : %s", i,
                x_samples_compressed[i],
                ((fabs(min_x_value)) + (x_samples_compressed[i])),
                x_sample_compressed_temp_dec, x_samples_compressed_bin[i]);
@@ -1038,7 +1038,7 @@ void compressing_samples_task(void *pvParameters) {
       DecimalToBinary(y_sample_compressed_temp_dec, y_bits_tx,
                       y_sample_compressed_temp_bin);
       strcpy(y_samples_compressed_bin[i], y_sample_compressed_temp_bin);
-      ESP_LOGW(TAG, "Y-AXIS [%d] -> %.12lf : %.12lf : %.1lf : %s", i,
+      ESP_LOGW(TAG, "Y-AXIS [%d] -> %.15lf : %.15lf : %.1lf : %s", i,
                y_samples_compressed[i],
                ((fabs(min_y_value)) + (y_samples_compressed[i])),
                y_sample_compressed_temp_dec, y_samples_compressed_bin[i]);
@@ -1051,7 +1051,7 @@ void compressing_samples_task(void *pvParameters) {
       DecimalToBinary(z_sample_compressed_temp_dec, z_bits_tx,
                       z_sample_compressed_temp_bin);
       strcpy(z_samples_compressed_bin[i], z_sample_compressed_temp_bin);
-      ESP_LOGW(TAG, "Z-AXIS [%d] -> %.12lf : %.12lf : %.1lf : %s", i,
+      ESP_LOGW(TAG, "Z-AXIS [%d] -> %.15lf : %.15lf : %.1lf : %s", i,
                z_samples_compressed[i],
                ((fabs(min_z_value)) + (z_samples_compressed[i])),
                z_sample_compressed_temp_dec, z_samples_compressed_bin[i]);
