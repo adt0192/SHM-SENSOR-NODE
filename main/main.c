@@ -368,6 +368,31 @@ double accel_res(scale_t scale) {
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
+//****************** ROUND UP TO A NUMBER OF DECIMAL PLACES *****************//
+///////////////////////////////////////////////////////////////////////////////
+double round_to_decimal(double num, scale_t scale) {
+  int decimal_places = 0;
+  switch (scale) {
+  case SCALE_2G:
+    decimal_places = 11;
+    break;
+  case SCALE_4G:
+    decimal_places = 10;
+    break;
+  case SCALE_8G:
+    decimal_places = 9;
+    break;
+  default:
+    break;
+  }
+  double multiplier = pow(10, decimal_places);
+  return round(num * multiplier) / multiplier;
+}
+///////////////////////////////////////////////////////////////////////////////
+//****************** ROUND UP TO A NUMBER OF DECIMAL PLACES *****************//
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
 //************************* ENCODE MIN AXIS SAMPLES *************************//
 //************************** FROM DOUBLE TO 32-BITS *************************//
 ///////////////////////////////////////////////////////////////////////////////
@@ -757,23 +782,23 @@ void compressing_samples_task(void *pvParameters) {
       // tmp_arranged_sample = |0000|-|X19-X16|-|X15-X08|-|X07-X00|
       tmp_arranged_sample = re_arrange_accel_data(
           x_samples[i][0], x_samples[i][1], x_samples[i][2]);
-      x_samples_double[i] =
-          decode_20bits_sample(test_scale, tmp_arranged_sample);
+      x_samples_double[i] = round_to_decimal(
+          decode_20bits_sample(test_scale, tmp_arranged_sample), test_scale);
       // x_samples_double[i] = resolution * tmp_arranged_sample;
       temp_time1 += esp_timer_get_time();
       //
       // tmp_arranged_sample = |0000|-|Y19-Y16|-|Y15-Y08|-|Y07-Y00|
       tmp_arranged_sample = re_arrange_accel_data(
           y_samples[i][0], y_samples[i][1], y_samples[i][2]);
-      y_samples_double[i] =
-          decode_20bits_sample(test_scale, tmp_arranged_sample);
+      y_samples_double[i] = round_to_decimal(
+          decode_20bits_sample(test_scale, tmp_arranged_sample), test_scale);
       // y_samples_double[i] = resolution * tmp_arranged_sample;
       //
       //   tmp_arranged_sample = |0000|-|Z19-Z16|-|Z15-Z08|-|Z07-Z00|
       tmp_arranged_sample = re_arrange_accel_data(
           z_samples[i][0], z_samples[i][1], z_samples[i][2]);
-      z_samples_double[i] =
-          decode_20bits_sample(test_scale, tmp_arranged_sample);
+      z_samples_double[i] = round_to_decimal(
+          decode_20bits_sample(test_scale, tmp_arranged_sample), test_scale);
       // z_samples_double[i] = resolution * tmp_arranged_sample;
       //
     } // end for (uint16_t i = 0; i < N; i++)
@@ -844,9 +869,9 @@ void compressing_samples_task(void *pvParameters) {
         //
         tmp_sum_z += (sensing_mtrx[i][j] * z_samples_double[j]);
       }
-      x_samples_compressed[i] = tmp_sum_x;
-      y_samples_compressed[i] = tmp_sum_y;
-      z_samples_compressed[i] = tmp_sum_z;
+      x_samples_compressed[i] = round_to_decimal(tmp_sum_x, test_scale);
+      y_samples_compressed[i] = round_to_decimal(tmp_sum_y, test_scale);
+      z_samples_compressed[i] = round_to_decimal(tmp_sum_z, test_scale);
     }
     //
     ESP_LOGW(TAG, "compressing_samples_task DEBUGGING <COMPRESSION STAGE STEP "
