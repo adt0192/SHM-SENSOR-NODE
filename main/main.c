@@ -52,6 +52,8 @@
 #include <string.h>
 #include <time.h>
 
+#define NULL_END ((char){'\0'})
+
 // note: you should check if offset==sizeof(buf) after use
 #define strcpyALL(buf, offset, ...)                                            \
   do {                                                                         \
@@ -871,12 +873,12 @@ void compressing_samples_task(void *pvParameters) {
     }
     //
     ESP_LOGW(TAG, "Values 'max' and 'min' for each axis:");
-    ESP_LOGW(TAG, "double_min_x_value = %.12lf", min_x_value);
-    ESP_LOGW(TAG, "double_max_x_value = %.12lf", max_x_value);
-    ESP_LOGW(TAG, "double_min_y_value = %.12lf", min_y_value);
-    ESP_LOGW(TAG, "double_max_y_value = %.12lf", max_y_value);
-    ESP_LOGW(TAG, "double_min_z_value = %.12lf", min_z_value);
-    ESP_LOGW(TAG, "double_max_z_value = %.12lf", max_z_value);
+    ESP_LOGW(TAG, "double_min_x_value = %.15lf", min_x_value);
+    ESP_LOGW(TAG, "double_max_x_value = %.15lf", max_x_value);
+    ESP_LOGW(TAG, "double_min_y_value = %.15lf", min_y_value);
+    ESP_LOGW(TAG, "double_max_y_value = %.15lf", max_y_value);
+    ESP_LOGW(TAG, "double_min_z_value = %.15lf", min_z_value);
+    ESP_LOGW(TAG, "double_max_z_value = %.15lf", max_z_value);
     //
     ESP_LOGW(TAG,
              "compressing_samples_task DEBUGGING <SAMPLES RE-DIMENSIONING STEP "
@@ -1535,21 +1537,21 @@ void transmit_data_task(void *pvParameters) {
           // x_min_value
           tmp_8bits_section = ((min_x_value_int32) >> (dayi * 8)) & 0xFF;
           DecimalToHexadecimal(tmp_8bits_section, tmp_8bits_section_hex);
-          tmp_8bits_section_hex[2] = '\0'; // this line can be removed
+          tmp_8bits_section_hex[2] = NULL_END; // this line can be removed
           strcpy(data_to_send_hex_3 + i, tmp_8bits_section_hex);
           ESP_LOGW(TAG, "!!!DEBUGGING!!! data_to_send_hex_3[%zu]: %s", i,
                    data_to_send_hex_3 + i);
           // y_min_value
           tmp_8bits_section = ((min_y_value_int32) >> (dayi * 8)) & 0xFF;
           DecimalToHexadecimal(tmp_8bits_section, tmp_8bits_section_hex);
-          tmp_8bits_section_hex[2] = '\0'; // this line can be removed
+          tmp_8bits_section_hex[2] = NULL_END; // this line can be removed
           strcpy(data_to_send_hex_4 + i, tmp_8bits_section_hex);
           ESP_LOGW(TAG, "!!!DEBUGGING!!! data_to_send_hex_4[%zu]: %s", i,
                    data_to_send_hex_4 + i);
           // z_min_value
           tmp_8bits_section = ((min_z_value_int32) >> (dayi * 8)) & 0xFF;
           DecimalToHexadecimal(tmp_8bits_section, tmp_8bits_section_hex);
-          tmp_8bits_section_hex[2] = '\0'; // this line can be removed
+          tmp_8bits_section_hex[2] = NULL_END; // this line can be removed
           strcpy(data_to_send_hex_5 + i, tmp_8bits_section_hex);
           ESP_LOGW(TAG, "!!!DEBUGGING!!! data_to_send_hex_5[%zu]: %s", i,
                    data_to_send_hex_5 + i);
@@ -1570,7 +1572,7 @@ void transmit_data_task(void *pvParameters) {
         strcpy(data_to_send_hex + 14, data_to_send_hex_4);
         strcpy(data_to_send_hex + 22, data_to_send_hex_5);
         //
-        data_to_send_hex[30] = '\0';
+        data_to_send_hex[30] = NULL_END;
         //
         //
         full_message_hex = malloc((strlen(header_hex_of_data_to_send) +
@@ -1684,7 +1686,7 @@ void transmit_data_task(void *pvParameters) {
           if (tmp_data_to_send_bin != NULL) {
             ///// reset 'tmp_data_to_send_bin' to '0' **************************
             memset(tmp_data_to_send_bin, '0', total_bits_tx_after_pad0);
-            tmp_data_to_send_bin[total_bits_tx_after_pad0] = '\0';
+            tmp_data_to_send_bin[total_bits_tx_after_pad0] = NULL_END;
             ///// reset 'tmp_data_to_send_bin' to '0' **************************
           } else {
             ESP_LOGE(TAG, "NOT ENOUGH HEAP");
@@ -1729,7 +1731,7 @@ void transmit_data_task(void *pvParameters) {
             }
           }
           tmp_data_to_send_bin[total_bits_tx_after_pad0] =
-              '\0'; // ensure null-termination
+              NULL_END; // ensure null-termination
           //
           ///// composing the block of data to send (in hexadecimal)
           // we are sending 'total_bits_tx_after_pad0' bits
@@ -1778,7 +1780,7 @@ void transmit_data_task(void *pvParameters) {
             // copy next 8-character segment in the temporal variable
             strncpy(tmp_segment_bin, tmp_data_to_send_bin + i * segment_size,
                     segment_size);
-            tmp_segment_bin[segment_size] = '\0'; // null-end character
+            tmp_segment_bin[segment_size] = NULL_END; // null-end character
             //
             // getting the corresponding decimal value of the current
             // 8-character segment
@@ -1790,7 +1792,7 @@ void transmit_data_task(void *pvParameters) {
             strcpy(data_to_send_hex + (i * 2), tmp_segment_hex);
           }
           data_to_send_hex[data_to_send_hex_characters] =
-              '\0'; // ensure null-termination
+              NULL_END; // ensure null-termination
           //
           // free the allocated space for 'tmp_segment_hex' 'cause we don´t need
           // to use it anymore
