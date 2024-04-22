@@ -428,7 +428,7 @@ double decode_20bits_sample(scale_t scale, uint32_t value_to_decode) {
   // |0-1|0-1|0-1|0-1|X19|X18|X17|X16|
   // |X15|X14|X13|X12|X11|X10|X09|X08|
   // |X07|X06|X05|X04|X03|X02|X01|X00|
-  // I will keep X00 ~ X18 to convert it to de value
+  // I will keep X00 ~ X18 to convert it to real_value
   // and X19 will indicate the sign (+ or -)
 
   // shifting 19 places to right the 'value_to_decode' to get the sign
@@ -436,8 +436,8 @@ double decode_20bits_sample(scale_t scale, uint32_t value_to_decode) {
   sign = 0x01 & (value_to_decode >> 19);
 
   // out of 32 bits, we ignore the first 13 bits, so only the remaining will
-  // have the real value to convert, and adjust it according to the sign in bit
-  // X19
+  // have the real value to convert (not signed), and adjust it according to the
+  // sign in bit X19
   static int32_t real_value;
   real_value = 0x7FFFF & (value_to_decode);
 
@@ -486,7 +486,7 @@ uint32_t re_arrange_accel_data(uint8_t data_0, uint8_t data_1, uint8_t data_2) {
   //  tmp_24_bits_num = |0000|-|X19-X16|-|X15-X08|-|X07-X00|
   //  ----------------------------------------------------
 
-  uint32_t tmp_24_bits_num;
+  uint32_t tmp_24_bits_num = 0;
   uint8_t v[3];
 
   v[0] = (0x0F & (data_0 >> 4));
@@ -494,6 +494,7 @@ uint32_t re_arrange_accel_data(uint8_t data_0, uint8_t data_1, uint8_t data_2) {
   // fill with 1 at beggining
   if ((data_0 & 0x80) > 0) {
     v[0] = v[0] | 0xF0;
+    tmp_24_bits_num = tmp_24_bits_num | 0xFF000000;
   }
   v[1] = (0xF0 & (data_0 << 4)) | (0x0F & (data_1 >> 4));
   v[2] = (0xF0 & (data_1 << 4)) | (0x0F & (data_2 >> 4));
@@ -734,6 +735,9 @@ esp_err_t init_2d_arrays() {
 //************************* Compressing Samples Task *************************//
 ////////////////////////////////////////////////////////////////////////////////
 void compressing_samples_task(void *pvParameters) {
+  double resolution = accel_res(test_scale);
+  //
+  uint32_t tmp_arranged_sample = 0;
   while (1) {
     // Block indefinitely (without a timeout, so no need to check the function's
     // return value) to wait for a notification. Here the RTOS task notification
@@ -746,26 +750,32 @@ void compressing_samples_task(void *pvParameters) {
 
     //*************************** COMPRESSION STAGE **************************//
     // step 1: re-arrange and decode samples ***********************************
-    uint32_t tmp_arranged_sample = 0;
     //
     for (uint16_t i = 0; i < N; i++) {
       temp_time0 += esp_timer_get_time();
+      //
+      // tmp_arranged_sample = |0000|-|X19-X16|-|X15-X08|-|X07-X00|
       tmp_arranged_sample = re_arrange_accel_data(
           x_samples[i][0], x_samples[i][1], x_samples[i][2]);
-      x_samples_double[i] =
-          decode_20bits_sample(test_scale, tmp_arranged_sample);
+      // x_samples_double[i] = decode_20bits_sample(test_scale,
+      // tmp_arranged_sample);
+      x_samples_double[i] = resolution * tmp_arranged_sample;
       temp_time1 += esp_timer_get_time();
       //
+      // tmp_arranged_sample = |0000|-|Y19-Y16|-|Y15-Y08|-|Y07-Y00|
       tmp_arranged_sample = re_arrange_accel_data(
           y_samples[i][0], y_samples[i][1], y_samples[i][2]);
-      y_samples_double[i] =
-          decode_20bits_sample(test_scale, tmp_arranged_sample);
+      // y_samples_double[i] = decode_20bits_sample(test_scale,
+      // tmp_arranged_sample);
+      y_samples_double[i] = resolution * tmp_arranged_sample;
       //
+      //  tmp_arranged_sample = |0000|-|Z19-Z16|-|Z15-Z08|-|Z07-Z00|
       tmp_arranged_sample = re_arrange_accel_data(
           z_samples[i][0], z_samples[i][1], z_samples[i][2]);
-      z_samples_double[i] =
-          decode_20bits_sample(test_scale, tmp_arranged_sample);
-
+      // z_samples_double[i] = decode_20bits_sample(test_scale,
+      // tmp_arranged_sample);
+      z_samples_double[i] = resolution * tmp_arranged_sample;
+      //
     } // end for (uint16_t i = 0; i < N; i++)
     //
     ESP_LOGI(TAG, "Taken time to decode a sample: <%lld us>",
@@ -889,7 +899,6 @@ void compressing_samples_task(void *pvParameters) {
     // step 2: determine how many possible values are multiples of ************
     // 'range/2^n-bits'(which is the resolution of the accelerometer) can fit *
     // inside those min and max ***********************************************
-    double resolution = accel_res(test_scale);
     //
     uint32_t x_possible_values =
         ((fabs(min_x_value)) + (max_x_value)) / (resolution);
@@ -1166,20 +1175,25 @@ void xyz_data_reading_task(void *pvParameters) {
       ///// reading x, y, z sample values /////*******************************
       // ESP_LOGI(TAG, "Reading xyz data registers");
       // x axis measurement
+      // XDATA3-XDATA2-XDATA1
       _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA3, &tmp_buf, 1);
       x_samples[xyz_data_reg_count][0] = tmp_buf; // storing
       _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA2, &tmp_buf, 1);
       x_samples[xyz_data_reg_count][1] = tmp_buf; // storing
       _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA1, &tmp_buf, 1);
       x_samples[xyz_data_reg_count][2] = tmp_buf; // storing
+      //
       // y axis measurement
+      // YDATA3-YDATA2-YDATA1
       _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA3, &tmp_buf, 1);
       y_samples[xyz_data_reg_count][0] = tmp_buf; // storing
       _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA2, &tmp_buf, 1);
       y_samples[xyz_data_reg_count][1] = tmp_buf; // storing
       _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA1, &tmp_buf, 1);
       y_samples[xyz_data_reg_count][2] = tmp_buf; // storing
+      //
       // z axis measurement
+      // ZDATA3-ZDATA2-ZDATA1
       _read_register(&adxl355_accel_handle, ADXL355_REG_ZDATA3, &tmp_buf, 1);
       z_samples[xyz_data_reg_count][0] = tmp_buf; // storing
       _read_register(&adxl355_accel_handle, ADXL355_REG_ZDATA2, &tmp_buf, 1);
