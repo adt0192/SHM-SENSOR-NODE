@@ -5,7 +5,7 @@
 // ** Project name:               SHM SENSOR NODE
 // ** Created by:                 Andy Duarte Taño
 // ** Created:                    25/03/2024
-// ** Last modified:              22/04/2024
+// ** Last modified:              23/04/2024
 // ** Software:                   C/C++, ESP-IDF Framework, VS Code
 // ** Hardware:                   ESP32-S3-DevKit-C1
 //                                Reyax RYLR998 LoRa Module
@@ -207,6 +207,7 @@ uint16_t XYZ_DATA_READ_PERIOD_MS = 8;
 #define TASK_MEMORY 1024 * 2
 
 int64_t temp_time0, temp_time1;
+int64_t temp_time2 = 0, temp_time3 = 0;
 
 #define LED_PIN GPIO_NUM_1
 
@@ -951,12 +952,16 @@ void compressing_samples_task(void *pvParameters) {
     // testing new approach to multiply the samples by the sensing matrix ******
     // testing new approach to multiply the samples by the sensing matrix ******
     for (int i = 0; i < N; i++) {
+      temp_time2 = esp_timer_get_time();
       for (int j = 0; j < p; j++) {
         x_samples_compressed_adt[j] += x_samples_double[i] * sensing_mtrx[j][i];
         y_samples_compressed_adt[j] += y_samples_double[i] * sensing_mtrx[j][i];
         z_samples_compressed_adt[j] += z_samples_double[i] * sensing_mtrx[j][i];
       }
+      temp_time3 = esp_timer_get_time();
     }
+    ESP_LOGI(TAG, "Taken time for NEW APPROACH: <%lld us>",
+             temp_time3 - temp_time2);
     // testing new approach to multiply the samples by the sensing matrix ******
     // testing new approach to multiply the samples by the sensing matrix ******
     // testing new approach to multiply the samples by the sensing matrix ******
