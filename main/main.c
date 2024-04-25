@@ -5,7 +5,7 @@
 // ** Project name:               SHM SENSOR NODE
 // ** Created by:                 Andy Duarte Taño
 // ** Created:                    25/03/2024
-// ** Last modified:              23/04/2024
+// ** Last modified:              25/04/2024
 // ** Software:                   C/C++, ESP-IDF Framework, VS Code
 // ** Hardware:                   ESP32-S3-DevKit-C1
 //                                Reyax RYLR998 LoRa Module
