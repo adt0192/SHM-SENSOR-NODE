@@ -170,9 +170,9 @@ uint16_t xyz_data_reg_count = 0; // to keep tracking the times timer expires
 // XDATA3-XDATA2-XDATA1
 // YDATA3-YDATA2-YDATA1
 // ZDATA3-ZDATA2-ZDATA1
-uint8_t **x_samples; // x measurements
-uint8_t **y_samples; // y measurements
-uint8_t **z_samples; // z measurements
+// uint8_t **x_samples; // x measurements
+// uint8_t **y_samples; // y measurements
+// uint8_t **z_samples; // z measurements
 
 // all next will have all samples re-arranged,
 // and decoded (double type)
@@ -653,7 +653,7 @@ esp_err_t init_2d_arrays() {
 
   //************************************************************************//
   // 2D arrays to hold ALL original samples
-  x_samples = (uint8_t **)malloc(N * sizeof(uint8_t *));
+  /* x_samples = (uint8_t **)malloc(N * sizeof(uint8_t *));
   if (x_samples == NULL)
     ESP_LOGE(TAG, "*NOT ENOUGH HEAP* Failed to allocate **x_samples");
   y_samples = (uint8_t **)malloc(N * sizeof(uint8_t *));
@@ -678,7 +678,7 @@ esp_err_t init_2d_arrays() {
   ESP_LOGW(TAG, "*********************************************************");
   ESP_LOGW(TAG, "After *_samples allocation");
   ESP_LOGW(TAG, "Free heap memmory (bytes): <%lu>", xPortGetFreeHeapSize());
-  ESP_LOGW(TAG, "*********************************************************");
+  ESP_LOGW(TAG, "*********************************************************"); */
   // 2D arrays to hold ALL samples
   //************************************************************************//
 
@@ -839,7 +839,7 @@ void compressing_samples_task(void *pvParameters) {
     //*************************** COMPRESSION STAGE **************************//
     // step 1: re-arrange and decode samples ***********************************
     //
-    for (uint16_t i = 0; i < N; i++) {
+    /* for (uint16_t i = 0; i < N; i++) {
       temp_time0 += esp_timer_get_time();
       //
       // tmp_arranged_sample = |0000|-|X19-X16|-|X15-X08|-|X07-X00|
@@ -870,7 +870,7 @@ void compressing_samples_task(void *pvParameters) {
              temp_time1 / N - temp_time0 / N);
     //
     ESP_LOGW(TAG, "compressing_samples_task DEBUGGING <COMPRESSION STAGE STEP "
-                  "1 FINISHED>");
+                  "1 FINISHED>"); */
     // step 1: re-arrange and decode samples ***********************************
 
     // step 2: read antipodal matrix to build sensing matrix *******************
@@ -951,6 +951,7 @@ void compressing_samples_task(void *pvParameters) {
     // testing new approach to multiply the samples by the sensing matrix ******
     // testing new approach to multiply the samples by the sensing matrix ******
     // testing new approach to multiply the samples by the sensing matrix ******
+    // (taken sample * each column)
     for (int i = 0; i < N; i++) {
       temp_time2 = esp_timer_get_time();
       for (int j = 0; j < p; j++) {
@@ -1211,15 +1212,15 @@ void compressing_samples_task(void *pvParameters) {
     // ********************************************************************** //
     // FREEING ALLOCATED MEMORY  ******************************************** //
     for (int i = 0; i < p; i++) {
-      free(x_samples[i]);
-      free(y_samples[i]);
-      free(z_samples[i]);
+      // free(x_samples[i]);
+      // free(y_samples[i]);
+      // free(z_samples[i]);
 
       free(sensing_mtrx[i]);
     }
-    free(x_samples);
-    free(y_samples);
-    free(z_samples);
+    // free(x_samples);
+    // free(y_samples);
+    // free(z_samples);
 
     free(x_samples_double);
     free(y_samples_double);
@@ -1280,7 +1281,11 @@ void xyz_data_reading_tmr_callback(void *arg) {
 //************************** XYZ Data Reading Task ***************************//
 ////////////////////////////////////////////////////////////////////////////////
 void xyz_data_reading_task(void *pvParameters) {
-  uint8_t tmp_buf;
+  uint8_t tmp_buf3;
+  uint8_t tmp_buf2;
+  uint8_t tmp_buf1;
+  //
+  uint32_t tmp_arranged_sample = 0;
   while (1) {
     // Block indefinitely (without a timeout, so no need to check the function's
     // return value) to wait for a notification. Here the RTOS task notification
@@ -1306,30 +1311,42 @@ void xyz_data_reading_task(void *pvParameters) {
       // ESP_LOGI(TAG, "Reading xyz data registers");
       // x axis measurement
       // XDATA3-XDATA2-XDATA1
-      _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA3, &tmp_buf, 1);
-      x_samples[xyz_data_reg_count][0] = tmp_buf; // storing
-      _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA2, &tmp_buf, 1);
-      x_samples[xyz_data_reg_count][1] = tmp_buf; // storing
-      _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA1, &tmp_buf, 1);
-      x_samples[xyz_data_reg_count][2] = tmp_buf; // storing
+      _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA3, &tmp_buf3, 1);
+      // x_samples[xyz_data_reg_count][0] = tmp_buf; // storing
+      _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA2, &tmp_buf2, 1);
+      // x_samples[xyz_data_reg_count][1] = tmp_buf; // storing
+      _read_register(&adxl355_accel_handle, ADXL355_REG_XDATA1, &tmp_buf1, 1);
+      // x_samples[xyz_data_reg_count][2] = tmp_buf; // storing
+      // tmp_arranged_sample = |0000|-|X19-X16|-|X15-X08|-|X07-X00|
+      tmp_arranged_sample = re_arrange_accel_data(tmp_buf3, tmp_buf2, tmp_buf1);
+      x_samples_double[xyz_data_reg_count] =
+          decode_20bits_sample(test_scale, tmp_arranged_sample);
       //
       // y axis measurement
       // YDATA3-YDATA2-YDATA1
-      _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA3, &tmp_buf, 1);
-      y_samples[xyz_data_reg_count][0] = tmp_buf; // storing
-      _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA2, &tmp_buf, 1);
-      y_samples[xyz_data_reg_count][1] = tmp_buf; // storing
-      _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA1, &tmp_buf, 1);
-      y_samples[xyz_data_reg_count][2] = tmp_buf; // storing
+      _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA3, &tmp_buf3, 1);
+      // y_samples[xyz_data_reg_count][0] = tmp_buf; // storing
+      _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA2, &tmp_buf2, 1);
+      // y_samples[xyz_data_reg_count][1] = tmp_buf; // storing
+      _read_register(&adxl355_accel_handle, ADXL355_REG_YDATA1, &tmp_buf1, 1);
+      // y_samples[xyz_data_reg_count][2] = tmp_buf; // storing
+      // tmp_arranged_sample = |0000|-|X19-X16|-|X15-X08|-|X07-X00|
+      tmp_arranged_sample = re_arrange_accel_data(tmp_buf3, tmp_buf2, tmp_buf1);
+      y_samples_double[xyz_data_reg_count] =
+          decode_20bits_sample(test_scale, tmp_arranged_sample);
       //
-      // z axis measurement
-      // ZDATA3-ZDATA2-ZDATA1
-      _read_register(&adxl355_accel_handle, ADXL355_REG_ZDATA3, &tmp_buf, 1);
-      z_samples[xyz_data_reg_count][0] = tmp_buf; // storing
-      _read_register(&adxl355_accel_handle, ADXL355_REG_ZDATA2, &tmp_buf, 1);
-      z_samples[xyz_data_reg_count][1] = tmp_buf; // storing
-      _read_register(&adxl355_accel_handle, ADXL355_REG_ZDATA1, &tmp_buf, 1);
-      z_samples[xyz_data_reg_count][2] = tmp_buf; // storing
+      //  z axis measurement
+      //  ZDATA3-ZDATA2-ZDATA1
+      _read_register(&adxl355_accel_handle, ADXL355_REG_ZDATA3, &tmp_buf3, 1);
+      // z_samples[xyz_data_reg_count][0] = tmp_buf; // storing
+      _read_register(&adxl355_accel_handle, ADXL355_REG_ZDATA2, &tmp_buf2, 1);
+      // z_samples[xyz_data_reg_count][1] = tmp_buf; // storing
+      _read_register(&adxl355_accel_handle, ADXL355_REG_ZDATA1, &tmp_buf1, 1);
+      // z_samples[xyz_data_reg_count][2] = tmp_buf; // storing
+      //  tmp_arranged_sample = |0000|-|X19-X16|-|X15-X08|-|X07-X00|
+      tmp_arranged_sample = re_arrange_accel_data(tmp_buf3, tmp_buf2, tmp_buf1);
+      z_samples_double[xyz_data_reg_count] =
+          decode_20bits_sample(test_scale, tmp_arranged_sample);
       ///// reading x, y, z sample values /////*******************************
 
       xyz_data_reg_count++;
