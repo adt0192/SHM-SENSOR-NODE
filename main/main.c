@@ -745,7 +745,7 @@ esp_err_t init_2d_arrays() {
   ESP_LOGW(TAG, "After *_samples_compressed allocation");
   ESP_LOGW(TAG, "Free heap memmory (bytes): <%lu>", xPortGetFreeHeapSize());
   ESP_LOGW(TAG, "*********************************************************");
-  // 2D array to hold CMPRESSED samples
+  // 2D array to hold COMPRESSED samples
   //************************************************************************//
 
   //************************************************************************//
@@ -789,7 +789,7 @@ esp_err_t init_2d_arrays() {
   ESP_LOGW(TAG, "Free heap memmory (bytes): <%lu>", xPortGetFreeHeapSize());
   ESP_LOGW(TAG, "*********************************************************");
   // NEW APPROACH
-  // 2D array to hold CMPRESSED samples
+  // 2D array to hold COMPRESSED samples
   //************************************************************************//
 
   //************************************************************************//
