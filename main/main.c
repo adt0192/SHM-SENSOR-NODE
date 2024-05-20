@@ -158,7 +158,7 @@ uint16_t MSG_COUNTER_TX = 0; // counter to set the message transaction ID
 
 #define MAXCHAR 4096
 
-#define CR 10
+#define CR 2
 #define N 1024     // number of samples
 #define p (N / CR) // number of compressed samples
 int8_t **sensing_mtrx;
@@ -960,8 +960,10 @@ void compressing_samples_task(void *pvParameters) {
       }
       temp_time3 = esp_timer_get_time();
     }
-    ESP_LOGI(TAG, "Taken time for NEW APPROACH: <%lld us>",
-             temp_time3 - temp_time2);
+    ESP_LOGI(
+        TAG,
+        "Taken time for NEW APPROACH (taken sample * each column): <%lld us>",
+        temp_time3 - temp_time2);
     // testing new approach to multiply the samples by the sensing matrix ******
     // testing new approach to multiply the samples by the sensing matrix ******
     // testing new approach to multiply the samples by the sensing matrix ******
