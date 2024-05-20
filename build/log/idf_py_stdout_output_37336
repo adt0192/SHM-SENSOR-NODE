@@ -1,12 +1,0 @@
-[1/1] cmd.exe /C "cd /D D:\WORK\PROJECT\ESP-IDF_PROJECTS\SHM-SENSOR-NODE\build && C:\Users\andyd\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/andyd/esp-idf/esp-idf/tools/idf_size.py D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/TEST-ADXL355-ESP-IDF.map"
-Total sizes:
-Used static IRAM:   68234 bytes ( 294006 remain, 18.8% used)
-      .text size:   67207 bytes
-   .vectors size:    1027 bytes
-Used stat D/IRAM:   18628 bytes ( 327228 remain, 5.4% used)
-      .data size:    9340 bytes
-      .bss  size:    9288 bytes
-Used Flash size :  235359 bytes
-      .text     :  171507 bytes
-      .rodata   :   63596 bytes
-Total image size:  312933 bytes (.bin may be padded larger)

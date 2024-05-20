@@ -35,7 +35,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_029d8 && [1/2] Building C object CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj
+Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_e6f12 && [1/2] Building C object CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj
 Using built-in specs.
 COLLECT_GCC=C:\Users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\xtensa-esp32s3-elf-gcc.exe
 Target: xtensa-esp32s3-elf
@@ -43,8 +43,8 @@ Configured with: /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (crosstool-NG esp-2022r1) 
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_029d8.dir/'
- c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/cc1.exe -quiet -v -iprefix c:\users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\../lib/gcc/xtensa-esp32s3-elf/11.2.0/ C:/Users/andyd/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_029d8.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlongcalls -version -o C:\Users\andyd\AppData\Local\Temp\ccHxMDMg.s
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_e6f12.dir/'
+ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/cc1.exe -quiet -v -iprefix c:\users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\../lib/gcc/xtensa-esp32s3-elf/11.2.0/ C:/Users/andyd/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e6f12.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlongcalls -version -o C:\Users\andyd\AppData\Local\Temp\ccmds8Z6.s
 GNU C17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32s3-elf)
 	compiled by GNU C version 6.3.0 20170516, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
 
@@ -65,12 +65,12 @@ GNU C17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32s3-elf)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: ff36b1befec994eff95a400488369c0d
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_029d8.dir/'
- c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/as.exe --traditional-format --longcalls -o CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj C:\Users\andyd\AppData\Local\Temp\ccHxMDMg.s
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_e6f12.dir/'
+ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/as.exe --traditional-format --longcalls -o CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj C:\Users\andyd\AppData\Local\Temp\ccmds8Z6.s
 COMPILER_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/
 LIBRARY_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.'
-[2/2] Linking C executable cmTC_029d8
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.'
+[2/2] Linking C executable cmTC_e6f12
 Using built-in specs.
 COLLECT_GCC=C:\Users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\xtensa-esp32s3-elf-gcc.exe
 COLLECT_LTO_WRAPPER=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe
@@ -81,9 +81,9 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (crosstool-NG esp-2022r1) 
 COMPILER_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/
 LIBRARY_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_029d8' '-dumpdir' 'cmTC_029d8.'
- c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe -plugin c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll -plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccdaLd4j.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_029d8 c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0 -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtend.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtn.o
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_029d8' '-dumpdir' 'cmTC_029d8.'
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_e6f12' '-dumpdir' 'cmTC_e6f12.'
+ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe -plugin c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll -plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccSpgVUf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_e6f12 c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0 -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtend.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtn.o
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_e6f12' '-dumpdir' 'cmTC_e6f12.'
 
 
 
@@ -106,7 +106,7 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(xtensa-esp32s3-elf-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_029d8 && [1/2] Building C object CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_e6f12 && [1/2] Building C object CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\Users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\xtensa-esp32s3-elf-gcc.exe]
   ignore line: [Target: xtensa-esp32s3-elf]
@@ -114,8 +114,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (crosstool-NG esp-2022r1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_029d8.dir/']
-  ignore line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/cc1.exe -quiet -v -iprefix c:\users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\../lib/gcc/xtensa-esp32s3-elf/11.2.0/ C:/Users/andyd/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_029d8.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlongcalls -version -o C:\Users\andyd\AppData\Local\Temp\ccHxMDMg.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_e6f12.dir/']
+  ignore line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/cc1.exe -quiet -v -iprefix c:\users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\../lib/gcc/xtensa-esp32s3-elf/11.2.0/ C:/Users/andyd/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e6f12.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlongcalls -version -o C:\Users\andyd\AppData\Local\Temp\ccmds8Z6.s]
   ignore line: [GNU C17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32s3-elf)]
   ignore line: [	compiled by GNU C version 6.3.0 20170516  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
   ignore line: []
@@ -136,16 +136,16 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: ff36b1befec994eff95a400488369c0d]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_029d8.dir/']
-  ignore line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/as.exe --traditional-format --longcalls -o CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj C:\Users\andyd\AppData\Local\Temp\ccHxMDMg.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_e6f12.dir/']
+  ignore line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/as.exe --traditional-format --longcalls -o CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj C:\Users\andyd\AppData\Local\Temp\ccmds8Z6.s]
   ignore line: [COMPILER_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/]
   ignore line: [LIBRARY_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.']
-  ignore line: [[2/2] Linking C executable cmTC_029d8]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.']
+  ignore line: [[2/2] Linking C executable cmTC_e6f12]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\Users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\xtensa-esp32s3-elf-gcc.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe]
@@ -160,27 +160,27 @@ Parsed C implicit link information from above output:
   ignore line: [LIBRARY_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_029d8' '-dumpdir' 'cmTC_029d8.']
-  link line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe -plugin c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll -plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccdaLd4j.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_029d8 c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0 -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtend.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_e6f12' '-dumpdir' 'cmTC_e6f12.']
+  link line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe -plugin c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll -plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccSpgVUf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_e6f12 c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0 -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtend.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtn.o]
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll] ==> ignore
     arg [-plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccdaLd4j.res] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccSpgVUf.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_029d8] ==> ignore
+    arg [cmTC_e6f12] ==> ignore
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o] ==> obj [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o]
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o] ==> obj [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o]
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o] ==> obj [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o]
     arg [-Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0] ==> dir [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0]
     arg [-Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc] ==> dir [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc]
     arg [-Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib] ==> dir [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib]
-    arg [CMakeFiles/cmTC_029d8.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [CMakeFiles/cmTC_e6f12.dir/CMakeCCompilerABI.c.obj] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [-lc] ==> lib [c]
     arg [-lnosys] ==> lib [nosys]
@@ -205,7 +205,7 @@ Parsed C implicit link information from above output:
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_f1e21 && [1/2] Building CXX object CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj
+Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_94431 && [1/2] Building CXX object CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj
 Using built-in specs.
 COLLECT_GCC=C:\Users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\xtensa-esp32s3-elf-g++.exe
 Target: xtensa-esp32s3-elf
@@ -213,8 +213,8 @@ Configured with: /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (crosstool-NG esp-2022r1) 
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_f1e21.dir/'
- c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/cc1plus.exe -quiet -v -iprefix c:\users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\../lib/gcc/xtensa-esp32s3-elf/11.2.0/ C:/Users/andyd/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f1e21.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlongcalls -version -o C:\Users\andyd\AppData\Local\Temp\cc7udjLP.s
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_94431.dir/'
+ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/cc1plus.exe -quiet -v -iprefix c:\users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\../lib/gcc/xtensa-esp32s3-elf/11.2.0/ C:/Users/andyd/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_94431.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlongcalls -version -o C:\Users\andyd\AppData\Local\Temp\ccNCLEWm.s
 GNU C++17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32s3-elf)
 	compiled by GNU C version 6.3.0 20170516, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
 
@@ -241,12 +241,12 @@ GNU C++17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32s3-elf)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 5c7bf38ffcf59e8dfe4546311e650df5
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_f1e21.dir/'
- c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/as.exe --traditional-format --longcalls -o CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\andyd\AppData\Local\Temp\cc7udjLP.s
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_94431.dir/'
+ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/as.exe --traditional-format --longcalls -o CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\andyd\AppData\Local\Temp\ccNCLEWm.s
 COMPILER_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/
 LIBRARY_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.'
-[2/2] Linking CXX executable cmTC_f1e21
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.'
+[2/2] Linking CXX executable cmTC_94431
 Using built-in specs.
 COLLECT_GCC=C:\Users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\xtensa-esp32s3-elf-g++.exe
 COLLECT_LTO_WRAPPER=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe
@@ -257,9 +257,9 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (crosstool-NG esp-2022r1) 
 COMPILER_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/
 LIBRARY_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/;c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_f1e21' '-dumpdir' 'cmTC_f1e21.'
- c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe -plugin c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll -plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccY1Hi7T.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_f1e21 c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0 -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtend.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtn.o
-COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_f1e21' '-dumpdir' 'cmTC_f1e21.'
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_94431' '-dumpdir' 'cmTC_94431.'
+ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe -plugin c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll -plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccZSXKNq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_94431 c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0 -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtend.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtn.o
+COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_94431' '-dumpdir' 'cmTC_94431.'
 
 
 
@@ -288,7 +288,7 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(xtensa-esp32s3-elf-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_f1e21 && [1/2] Building CXX object CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_94431 && [1/2] Building CXX object CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\Users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\xtensa-esp32s3-elf-g++.exe]
   ignore line: [Target: xtensa-esp32s3-elf]
@@ -296,8 +296,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (crosstool-NG esp-2022r1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_f1e21.dir/']
-  ignore line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/cc1plus.exe -quiet -v -iprefix c:\users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\../lib/gcc/xtensa-esp32s3-elf/11.2.0/ C:/Users/andyd/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f1e21.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlongcalls -version -o C:\Users\andyd\AppData\Local\Temp\cc7udjLP.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_94431.dir/']
+  ignore line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/cc1plus.exe -quiet -v -iprefix c:\users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\../lib/gcc/xtensa-esp32s3-elf/11.2.0/ C:/Users/andyd/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_94431.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlongcalls -version -o C:\Users\andyd\AppData\Local\Temp\ccNCLEWm.s]
   ignore line: [GNU C++17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32s3-elf)]
   ignore line: [	compiled by GNU C version 6.3.0 20170516  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
   ignore line: []
@@ -324,16 +324,16 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 5c7bf38ffcf59e8dfe4546311e650df5]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_f1e21.dir/']
-  ignore line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/as.exe --traditional-format --longcalls -o CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\andyd\AppData\Local\Temp\cc7udjLP.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_94431.dir/']
+  ignore line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/as.exe --traditional-format --longcalls -o CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\andyd\AppData\Local\Temp\ccNCLEWm.s]
   ignore line: [COMPILER_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/]
   ignore line: [LIBRARY_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [[2/2] Linking CXX executable cmTC_f1e21]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [[2/2] Linking CXX executable cmTC_94431]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\Users\andyd\.espressif\tools\xtensa-esp32s3-elf\esp-2022r1-11.2.0\xtensa-esp32s3-elf\bin\xtensa-esp32s3-elf-g++.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe]
@@ -348,27 +348,27 @@ Parsed CXX implicit link information from above output:
   ignore line: [LIBRARY_PATH=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/]
   ignore line: [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_f1e21' '-dumpdir' 'cmTC_f1e21.']
-  link line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe -plugin c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll -plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccY1Hi7T.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_f1e21 c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0 -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtend.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-v' '-o' 'cmTC_94431' '-dumpdir' 'cmTC_94431.']
+  link line: [ c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe -plugin c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll -plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccZSXKNq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_94431 c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0 -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc -Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtend.o c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtn.o]
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/liblto_plugin.dll] ==> ignore
     arg [-plugin-opt=c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../libexec/gcc/xtensa-esp32s3-elf/11.2.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccY1Hi7T.res] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\andyd\AppData\Local\Temp\ccZSXKNq.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f1e21] ==> ignore
+    arg [cmTC_94431] ==> ignore
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o] ==> obj [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib/crt0.o]
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o] ==> obj [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crti.o]
     arg [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o] ==> obj [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/crtbegin.o]
     arg [-Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0] ==> dir [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0]
     arg [-Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc] ==> dir [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc]
     arg [-Lc:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib] ==> dir [c:/users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/lib]
-    arg [CMakeFiles/cmTC_f1e21.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+    arg [CMakeFiles/cmTC_94431.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc] ==> lib [gcc]
@@ -395,32 +395,32 @@ Parsed CXX implicit link information from above output:
 Determining if the include file sys/types.h exists passed with the following output:
 Change Dir: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_d252c && [1/2] Building C object CMakeFiles/cmTC_d252c.dir/CheckIncludeFile.c.obj
-[2/2] Linking C executable cmTC_d252c
+Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_7e2f9 && [1/2] Building C object CMakeFiles/cmTC_7e2f9.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_7e2f9
 
 
 
 Determining if the include file stdint.h exists passed with the following output:
 Change Dir: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_2a0b1 && [1/2] Building C object CMakeFiles/cmTC_2a0b1.dir/CheckIncludeFile.c.obj
-[2/2] Linking C executable cmTC_2a0b1
+Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_376de && [1/2] Building C object CMakeFiles/cmTC_376de.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_376de
 
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_27c9a && [1/2] Building C object CMakeFiles/cmTC_27c9a.dir/CheckIncludeFile.c.obj
-[2/2] Linking C executable cmTC_27c9a
+Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_df3a1 && [1/2] Building C object CMakeFiles/cmTC_df3a1.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_df3a1
 
 
 
 Determining size of time_t passed with the following output:
 Change Dir: D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_c4368 && [1/2] Building C object CMakeFiles/cmTC_c4368.dir/TIME_T_SIZE.c.obj
-[2/2] Linking C executable cmTC_c4368
+Run Build Command(s):C:/Users/andyd/.espressif/tools/ninja/1.10.2/ninja.exe cmTC_d7134 && [1/2] Building C object CMakeFiles/cmTC_d7134.dir/TIME_T_SIZE.c.obj
+[2/2] Linking C executable cmTC_d7134
 
 
 
