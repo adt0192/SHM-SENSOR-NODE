@@ -1736,3 +1736,17 @@
 9647	9927	7379071473075581	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/.bin_timestamp	cf12acf0e7351848
 9927	10030	0	esp-idf/esptool_py/CMakeFiles/app_check_size	aba5e77a1944fa02
 9927	10030	0	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esptool_py/CMakeFiles/app_check_size	aba5e77a1944fa02
+54	157	0	esp-idf/esptool_py/CMakeFiles/app_check_size	aba5e77a1944fa02
+54	157	0	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esptool_py/CMakeFiles/app_check_size	aba5e77a1944fa02
+47	224	7379068136696912	bootloader-prefix/src/bootloader-stamp/bootloader-build	4630f88b89c692c6
+47	224	7379068136696912	bootloader/bootloader.elf	4630f88b89c692c6
+47	224	7379068136696912	bootloader/bootloader.bin	4630f88b89c692c6
+47	224	7379068136696912	bootloader/bootloader.map	4630f88b89c692c6
+47	224	7379068136696912	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	4630f88b89c692c6
+47	224	7379068136696912	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/bootloader.elf	4630f88b89c692c6
+47	224	7379068136696912	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/bootloader.bin	4630f88b89c692c6
+47	224	7379068136696912	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/bootloader.map	4630f88b89c692c6
+58	285	0	esp-idf/main/CMakeFiles/spiffs_storage_bin	a49a8372b1f06dc0
+58	285	0	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/main/CMakeFiles/spiffs_storage_bin	a49a8372b1f06dc0
+286	61865	0	CMakeFiles/flash	9fbb7d9ab8c37465
+286	61865	0	D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/CMakeFiles/flash	9fbb7d9ab8c37465
