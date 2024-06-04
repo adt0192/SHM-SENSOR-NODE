@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/andyd/esp-idf/esp-idf/components/bootloader/subproject"
+  "C:/Espressif/frameworks/esp-idf-v5.1.2/components/bootloader/subproject"
   "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader"
   "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader-prefix"
   "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader-prefix/tmp"

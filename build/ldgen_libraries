@@ -8,6 +8,7 @@ D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_app_format/li
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/bootloader_support/libbootloader_support.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_partition/libesp_partition.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/app_update/libapp_update.a
+D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_mm/libesp_mm.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/spi_flash/libspi_flash.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/pthread/libpthread.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_system/libesp_system.a
@@ -30,6 +31,7 @@ D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/vfs/libvfs.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/lwip/liblwip.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_netif/libesp_netif.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
+D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_coex/libesp_coex.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_wifi/libesp_wifi.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/unity/libunity.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/cmock/libcmock.a
@@ -48,7 +50,6 @@ D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_lcd/libesp_lc
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/protobuf-c/libprotobuf-c.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/protocomm/libprotocomm.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_local_ctrl/libesp_local_ctrl.a
-D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_psram/libesp_psram.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/espcoredump/libespcoredump.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/wear_levelling/libwear_levelling.a
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/sdmmc/libsdmmc.a

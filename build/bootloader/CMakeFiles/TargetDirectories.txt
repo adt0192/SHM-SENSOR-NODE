@@ -27,14 +27,13 @@ D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/newlib
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/soc/CMakeFiles/edit_cache.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/soc/CMakeFiles/rebuild_cache.dir
-D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/soc/esp32s3/CMakeFiles/edit_cache.dir
-D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/soc/esp32s3/CMakeFiles/rebuild_cache.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/micro-ecc/CMakeFiles/edit_cache.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/micro-ecc/CMakeFiles/rebuild_cache.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/hal/CMakeFiles/edit_cache.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/hal/CMakeFiles/rebuild_cache.dir
+D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/spi_flash/CMakeFiles/edit_cache.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/spi_flash/CMakeFiles/rebuild_cache.dir
 D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/bootloader/esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir

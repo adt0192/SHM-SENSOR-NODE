@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/andyd/esp-idf/esp-idf
+# Install script for directory: C:/Espressif/frameworks/esp-idf-v5.1.2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/TEST-ADXL355-ESP-IDF")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SHM-SENSOR-NODE")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/andyd/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -100,6 +100,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/app_update/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_mm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -204,12 +209,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_netif_stack/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_netif/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/wpa_supplicant/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_coex/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -294,6 +309,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_psram/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_lcd/cmake_install.cmake")
 endif()
 
@@ -310,11 +330,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_local_ctrl/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_psram/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

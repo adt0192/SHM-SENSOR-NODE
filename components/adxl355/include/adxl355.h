@@ -15,19 +15,21 @@
  * @brief Sample rates in Hertz (Hz)
  *
  */
-typedef enum {
-  F_31_5HZ = 0x00, /**< Speed at 31.5 samples per second*/
-  F_125HZ          /**< Speed at 125 samples per second */
+typedef enum
+{
+    F_31_5HZ = 0x00, /**< Speed at 31.5 samples per second*/
+    F_125HZ          /**< Speed at 125 samples per second */
 } frequency_t;
 
 /**
  * @brief Scale configuration in g
  *
  */
-typedef enum {
-  SCALE_2G = 0x00, /**< ±2g Scale */
-  SCALE_4G,        /**< ±4g Scale */
-  SCALE_8G,        /**< ±8g Scale */
+typedef enum
+{
+    SCALE_2G = 0x00, /**< ±2g Scale */
+    SCALE_4G,        /**< ±4g Scale */
+    SCALE_8G,        /**< ±8g Scale */
 } scale_t;
 
 // handle for a device on a SPI bus
@@ -123,29 +125,37 @@ extern int64_t accel_fifo_length_time0, accel_fifo_length_time1,
 //*********** ADXL355 INITIALIZING REGISTERS AND OPTIONS SEQUENCE ***********//
 //***************************************************************************//
 // start configuration
-#define _INIT_CONF_REGISTERS                                                   \
-  {                                                                            \
-    ADXL355_REG_RESET, _INSERT_DELAY, ADXL355_REG_POWER_CTL, _INSERT_DELAY,    \
-        ADXL355_REG_FILTER_SETTINGS, ADXL355_REG_RANGE,                        \
-  }
+#define _INIT_CONF_REGISTERS                                                    \
+    {                                                                           \
+        ADXL355_REG_RESET, _INSERT_DELAY, ADXL355_REG_POWER_CTL, _INSERT_DELAY, \
+            ADXL355_REG_FILTER_SETTINGS, ADXL355_REG_RANGE,                     \
+    }
 
-#define _INIT_CONF_OPTIONS                                                     \
-  {                                                                            \
-    ADXL355_DO_RESET, 10, ADXL355_DISABLE_TEMP | ADXL355_MEASURE_OFF, 10,      \
-        ADXL355_ODR_125HZ, ADXL355_HIGH_SPEED_MODE | ADXL355_SCALE_2G,         \
-  }
+#define _INIT_CONF_OPTIONS                                                    \
+    {                                                                         \
+        ADXL355_DO_RESET, 10, ADXL355_DISABLE_TEMP | ADXL355_MEASURE_OFF, 10, \
+            ADXL355_ODR_125HZ, ADXL355_HIGH_SPEED_MODE | ADXL355_SCALE_2G,    \
+    }
 
 // stop accel configuration
-#define _END_CONF_REGISTERS                                                    \
-  { ADXL355_REG_POWER_CTL, _INSERT_DELAY }
-#define _END_CONF_OPTIONS                                                      \
-  { ADXL355_DISABLE_TEMP | ADXL355_MEASURE_OFF, 10 }
+#define _END_CONF_REGISTERS                  \
+    {                                        \
+        ADXL355_REG_POWER_CTL, _INSERT_DELAY \
+    }
+#define _END_CONF_OPTIONS                              \
+    {                                                  \
+        ADXL355_DISABLE_TEMP | ADXL355_MEASURE_OFF, 10 \
+    }
 
 // accel measurement mode on configuration
-#define _ON_MEASUREMENT_REGISTERS                                              \
-  { ADXL355_REG_POWER_CTL, _INSERT_DELAY }
-#define _ON_MEASUREMENT_OPTIONS                                                \
-  { ADXL355_DISABLE_TEMP | ADXL355_MEASURE_ON, 10 }
+#define _ON_MEASUREMENT_REGISTERS            \
+    {                                        \
+        ADXL355_REG_POWER_CTL, _INSERT_DELAY \
+    }
+#define _ON_MEASUREMENT_OPTIONS                       \
+    {                                                 \
+        ADXL355_DISABLE_TEMP | ADXL355_MEASURE_ON, 10 \
+    }
 //***************************************************************************//
 //******************** ADXL355 INIT REGISTERS AND OPTIONS *******************//
 //***************************************************************************//
