@@ -188,9 +188,9 @@ double *z_samples_compressed; // z measurements
 
 // all next will have compressed measurement vector
 // new approach
-double *x_samples_compressed_adt; // x measurements
-double *y_samples_compressed_adt; // y measurements
-double *z_samples_compressed_adt; // z measurements
+// double *x_samples_compressed_adt; // x measurements
+// double *y_samples_compressed_adt; // y measurements
+// double *z_samples_compressed_adt; // z measurements
 
 // all next will have the difference between consecutive compressed samples
 // double *x_samples_compressed_dif; // x measurements
@@ -798,7 +798,7 @@ esp_err_t init_2d_arrays()
     //************************************************************************//
     // 2D arrays to hold COMPRESSED samples
     // NEW APPROACH
-    x_samples_compressed_adt = (double *)malloc(p * sizeof(double));
+    /* x_samples_compressed_adt = (double *)malloc(p * sizeof(double));
     if (x_samples_compressed_adt == NULL)
     {
         ESP_LOGE(TAG,
@@ -841,12 +841,12 @@ esp_err_t init_2d_arrays()
         {
             z_samples_compressed_adt[i] = 0;
         }
-    }
+    } */
 
-    ESP_LOGW(TAG, "*********************************************************");
+    /* ESP_LOGW(TAG, "*********************************************************");
     ESP_LOGW(TAG, "After *_samples_compressed_adt allocation");
     ESP_LOGW(TAG, "Free heap memmory (bytes): <%zu>", xPortGetFreeHeapSize());
-    ESP_LOGW(TAG, "*********************************************************");
+    ESP_LOGW(TAG, "*********************************************************"); */
     // NEW APPROACH
     // 2D array to hold COMPRESSED samples
     //************************************************************************//
@@ -986,7 +986,7 @@ void compressing_samples_task(void *pvParameters)
         // step 2: read antipodal matrix to build sensing matrix *******************
 
         // step 3: multiply 'sensing_mtrx' by each '*_samples_arranged' array ******
-        double tmp_sum_x, tmp_sum_y, tmp_sum_z;
+        /* double tmp_sum_x, tmp_sum_y, tmp_sum_z;
         for (int i = 0; i < p; i++)
         {
             // vTaskDelay(pdMS_TO_TICKS(10));
@@ -1006,12 +1006,7 @@ void compressing_samples_task(void *pvParameters)
             x_samples_compressed[i] = tmp_sum_x;
             y_samples_compressed[i] = tmp_sum_y;
             z_samples_compressed[i] = tmp_sum_z;
-        }
-        //
-        ESP_LOGW(TAG, "compressing_samples_task DEBUGGING <COMPRESSION STAGE STEP "
-                      "3 FINISHED>");
-        // step 3: multiply 'sensing_mtrx' by each '*_samples_arranged' array ******
-        //*************************** COMPRESSION STAGE **************************//
+        } */
 
         // ...
         // ...
@@ -1028,9 +1023,9 @@ void compressing_samples_task(void *pvParameters)
             temp_time2 = esp_timer_get_time();
             for (int j = 0; j < p; j++)
             {
-                x_samples_compressed_adt[j] += x_samples_double[i] * sensing_mtrx[j][i];
-                y_samples_compressed_adt[j] += y_samples_double[i] * sensing_mtrx[j][i];
-                z_samples_compressed_adt[j] += z_samples_double[i] * sensing_mtrx[j][i];
+                x_samples_compressed[j] += x_samples_double[i] * sensing_mtrx[j][i];
+                y_samples_compressed[j] += y_samples_double[i] * sensing_mtrx[j][i];
+                z_samples_compressed[j] += z_samples_double[i] * sensing_mtrx[j][i];
             }
             temp_time3 = esp_timer_get_time();
         }
@@ -1047,6 +1042,11 @@ void compressing_samples_task(void *pvParameters)
         // ...
         // ...
         // ...
+        //
+        ESP_LOGW(TAG, "compressing_samples_task DEBUGGING <COMPRESSION STAGE STEP "
+                      "3 FINISHED>");
+        // step 3: multiply 'sensing_mtrx' by each '*_samples_arranged' array ******
+        //*************************** COMPRESSION STAGE **************************//
 
         //*********************** SAMPLES RE-DIMENSIONING ***********************//
         // perform a redimension of the samples to transmit,
@@ -1237,12 +1237,9 @@ void compressing_samples_task(void *pvParameters)
             DecimalToBinary(x_sample_compressed_temp_dec, x_bits_tx,
                             x_sample_compressed_temp_bin);
             strcpy(x_samples_compressed_bin[i], x_sample_compressed_temp_bin);
-            ESP_LOGW(TAG, "X-AXIS [%d] -> %.15lf : %.15lf : %c : %.15lf : %.1lf : %s",
-                     i, x_samples_compressed[i], x_samples_compressed_adt[i],
-                     x_samples_compressed[i] == x_samples_compressed_adt[i] ? 'Y'
-                                                                            : 'N',
-                     ((fabs(min_x_value)) + (x_samples_compressed[i])),
-                     x_sample_compressed_temp_dec, x_samples_compressed_bin[i]);
+            /* ESP_LOGW(TAG, "X-AXIS [%d] -> %.15lf : %.15lf : %.1lf : %s",
+                     i, x_samples_compressed[i], ((fabs(min_x_value)) + (x_samples_compressed[i])),
+                     x_sample_compressed_temp_dec, x_samples_compressed_bin[i]); */
             //
             // y_sample_compressed_temp_dec is the position of y_samples_compressed[i]
             // in the new interval [0 ~ (max + |min|)]
@@ -1252,12 +1249,9 @@ void compressing_samples_task(void *pvParameters)
             DecimalToBinary(y_sample_compressed_temp_dec, y_bits_tx,
                             y_sample_compressed_temp_bin);
             strcpy(y_samples_compressed_bin[i], y_sample_compressed_temp_bin);
-            ESP_LOGW(TAG, "Y-AXIS [%d] -> %.15lf : %.15lf :%c : %.15lf : %.1lf : %s",
-                     i, y_samples_compressed[i], y_samples_compressed_adt[i],
-                     y_samples_compressed[i] == y_samples_compressed_adt[i] ? 'Y'
-                                                                            : 'N',
-                     ((fabs(min_y_value)) + (y_samples_compressed[i])),
-                     y_sample_compressed_temp_dec, y_samples_compressed_bin[i]);
+            /* ESP_LOGW(TAG, "Y-AXIS [%d] -> %.15lf : %.15lf : %.1lf : %s",
+                     i, y_samples_compressed[i], ((fabs(min_y_value)) + (y_samples_compressed[i])),
+                     y_sample_compressed_temp_dec, y_samples_compressed_bin[i]); */
             //
             // z_sample_compressed_temp_dec is the position of z_samples_compressed[i]
             // in the new interval [0 ~ (max + |min|)]
@@ -1267,12 +1261,9 @@ void compressing_samples_task(void *pvParameters)
             DecimalToBinary(z_sample_compressed_temp_dec, z_bits_tx,
                             z_sample_compressed_temp_bin);
             strcpy(z_samples_compressed_bin[i], z_sample_compressed_temp_bin);
-            ESP_LOGW(TAG, "Z-AXIS [%d] -> %.15lf : %.15lf :%c : %.15lf : %.1lf : %s",
-                     i, z_samples_compressed[i], z_samples_compressed_adt[i],
-                     z_samples_compressed[i] == z_samples_compressed_adt[i] ? 'Y'
-                                                                            : 'N',
-                     ((fabs(min_z_value)) + (z_samples_compressed[i])),
-                     z_sample_compressed_temp_dec, z_samples_compressed_bin[i]);
+            /* ESP_LOGW(TAG, "Z-AXIS [%d] -> %.15lf : %.15lf : %.1lf : %s",
+                     i, z_samples_compressed[i], ((fabs(min_z_value)) + (z_samples_compressed[i])),
+                     z_sample_compressed_temp_dec, z_samples_compressed_bin[i]); */
 
             // x_samples_representation[i] = ((fabs(double_min_x_value)) +
             // (double_x_samples[i])) / ((RANGE) / (RES));
@@ -1313,9 +1304,9 @@ void compressing_samples_task(void *pvParameters)
         free(y_samples_compressed);
         free(z_samples_compressed);
 
-        free(x_samples_compressed_adt);
+        /* free(x_samples_compressed_adt);
         free(y_samples_compressed_adt);
-        free(z_samples_compressed_adt);
+        free(z_samples_compressed_adt); */
 
         free(x_sample_compressed_temp_bin);
         free(y_sample_compressed_temp_bin);
