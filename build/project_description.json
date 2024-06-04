@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "SHM-SENSOR-NODE",
-    "project_version":    "1",
+    "project_version":    "6e00065-dirty",
     "project_path":       "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.1.2",
     "build_dir":          "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build",
@@ -528,14 +528,14 @@
             "target": "___idf_esp_psram",
             "prefix": "idf",
             "dir": "C:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_psram",
-            "type": "CONFIG_ONLY",
+            "type": "LIBRARY",
             "lib": "__idf_esp_psram",
             "reqs": [],
             "priv_reqs": [ "heap", "spi_flash", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "file": "",
-            "sources": [],
+            "file": "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build/esp-idf/esp_psram/libesp_psram.a",
+            "sources": [ "C:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_psram/esp_psram.c", "C:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_psram/mmu_psram_flash.c", "C:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_psram/esp32s3/esp_psram_impl_quad.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_ringbuf": {
