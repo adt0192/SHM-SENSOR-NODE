@@ -655,7 +655,11 @@ void init_led(void)
     ESP_ERROR_CHECK(gpio_reset_pin(LED_PIN));
     ESP_ERROR_CHECK(gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT));
 
+    // ESP_ERROR_CHECK(gpio_reset_pin(SND_MSG_PIN));
+    // ESP_ERROR_CHECK(gpio_set_direction(SND_MSG_PIN, GPIO_MODE_OUTPUT));
+
     gpio_set_level(LED_PIN, 0);
+    // gpio_set_level(SND_MSG_PIN, 0);
 
     ESP_LOGI(TAG, "Init LED !!!COMPLETED!!!");
 }
@@ -1379,9 +1383,9 @@ void xyz_data_reading_task(void *pvParameters)
             xyz_data_reg_count = 0;
             esp_timer_stop(xyz_data_reading_tmr_hndl);
 
-            gpio_set_level(LED_PIN, 0);
             ESP_LOGI(TAG, "Turning OFF Measurement Mode ADXL355");
             ESP_ERROR_CHECK(adxl355_measure_off(&adxl355_accel_handle));
+            gpio_set_level(LED_PIN, 0);
 
             xTaskNotifyGive(compressing_samples_task_handle);
         }
@@ -1567,7 +1571,7 @@ void transmit_data_task(void *pvParameters)
                     ///// VISUALIZE /////
                     //
                     gpio_set_level(LED_PIN, 1);
-                    lora_send(LORA_RX_ADDRESS, retransmission_message_hex); // sending
+                    lora_send(LORA_RX_ADDRESS, retransmission_message_hex, LED_PIN); // sending
                     is_ctrl_sent_ok = "N";
                     is_sending_ctrl = "Y";
                     // free(full_message_hex);
@@ -1598,7 +1602,7 @@ void transmit_data_task(void *pvParameters)
                     ///// VISUALIZE /////
                     //
                     gpio_set_level(LED_PIN, 1);
-                    lora_send(LORA_RX_ADDRESS, retransmission_message_hex); // sending
+                    lora_send(LORA_RX_ADDRESS, retransmission_message_hex, LED_PIN); // sending
                     is_data_sent_ok = "N";
                     is_sending_data = "Y";
                     // free(full_message_hex);
@@ -1884,7 +1888,7 @@ void transmit_data_task(void *pvParameters)
                 ///// VISUALIZE /////
                 //
                 gpio_set_level(LED_PIN, 1);
-                lora_send(LORA_RX_ADDRESS, full_message_hex); // sending
+                lora_send(LORA_RX_ADDRESS, full_message_hex, LED_PIN); // sending
                 is_ctrl_sent_ok = "N";
                 is_sending_ctrl = "Y";
                 free(full_message_hex);
@@ -2128,7 +2132,7 @@ void transmit_data_task(void *pvParameters)
                     ///// VISUALIZE /////
                     //
                     gpio_set_level(LED_PIN, 1);
-                    lora_send(LORA_RX_ADDRESS, full_message_hex); // sending
+                    lora_send(LORA_RX_ADDRESS, full_message_hex, LED_PIN); // sending
                     is_data_sent_ok = "N";
                     is_sending_data = "Y";
                     free(full_message_hex);
@@ -2387,6 +2391,7 @@ void uart_task(void *pvParameters)
                 if ((strncmp((const char *)incoming_uart_data, "+OK", 3) == 0) &&
                     (is_rylr998_module_init))
                 {
+                    gpio_set_level(LED_PIN, 0);
                     //
                     // are we sending 'data' type message???
                     if (strncmp((const char *)is_sending_data, "Y", 1) == 0)

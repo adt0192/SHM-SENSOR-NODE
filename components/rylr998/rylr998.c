@@ -158,7 +158,7 @@ void init_rylr998_module(void)
 ////////////////////////////////////////////////////////////////////////////////
 //********************** Send data through LoRa module ***********************//
 ////////////////////////////////////////////////////////////////////////////////
-void lora_send(int address, const char *data)
+void lora_send(int address, const char *data, gpio_num_t gpio_pin)
 {
     char command_data[300] = "";
     char command[] = "AT+SEND=";
@@ -173,6 +173,7 @@ void lora_send(int address, const char *data)
 
     // ESP_LOGW(TAG, "!!!DEBUGGING!!! Before 'uart_write_bytes' in 'lora_send'
     // function");
+    gpio_set_level(gpio_pin, 1);
     bytes_pushed_to_tx_fifo = uart_write_bytes(
         UART_NUM, (const char *)command_data, strlen(command_data));
     ESP_LOGW(TAG, "!!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <%d>",

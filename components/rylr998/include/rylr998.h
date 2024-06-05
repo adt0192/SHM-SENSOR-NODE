@@ -7,6 +7,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
 
+// #define SND_MSG_PIN GPIO_NUM_2
+
 extern bool is_rylr998_module_init; // to know if we already configured the
                                     // LoRa module so if we recieve "+OK" we
                                     // can discriminate if we are sending data
@@ -116,7 +118,7 @@ typedef enum
 
 void init_rylr998_module(void);
 
-void lora_send(int address, const char *data);
+void lora_send(int address, const char *data, gpio_num_t gpio_pin);
 
 char *add_header_hex(msg_type message_type, const uint16_t transactionID);
 
