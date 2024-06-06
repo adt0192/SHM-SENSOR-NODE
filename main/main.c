@@ -1337,6 +1337,19 @@ void compressing_samples_task(void *pvParameters)
         //
         ESP_LOGI(TAG, "Waiting 2s before transmitting data...");
         vTaskDelay(pdMS_TO_TICKS(2000));
+
+        // new code added ********************************************************
+        // enabling Transceiver mode in RYLR998
+        ESP_LOGI(TAG, "Enabling Transceiver mode in LoRa Module RYLR998...\n");
+        char *mode_command = "AT+MODE=" LORA_MODE_TX_RX "\r\n";
+        uart_write_bytes(UART_NUM, (const char *)mode_command,
+                         strlen(mode_command));
+        char *data_config = "AT+MODE?\r\n";
+        uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
+        vTaskDelay(pdMS_TO_TICKS(DELAY));
+        // new code added ********************************************************
+
+        ESP_LOGI(TAG, "STARTING DATA TRANSMISSION...");
         xTaskNotifyGive(transmit_data_task_handle);
         //
     } // while (1)
@@ -2156,6 +2169,15 @@ void transmit_data_task(void *pvParameters)
                 //
                 retransmission_msg_defined = "N";
                 // freeing up allocated memory **********************
+
+                // SLEEP MODE RYLR998
+                ESP_LOGI(TAG, "SLEEP MODE in LoRa Module RYLR998...\n");
+                char *mode_command = "AT+MODE=" LORA_MODE_SLEEP "\r\n";
+                uart_write_bytes(UART_NUM, (const char *)mode_command,
+                                 strlen(mode_command));
+                char *data_config = "AT+MODE?\r\n";
+                uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
+                vTaskDelay(pdMS_TO_TICKS(DELAY));
                 ESP_LOGE(TAG,
                          "******************** <APP FINISHED> *********************");
                 ESP_LOGW(TAG, "!!!DEBUGGING!!! d_a: <%d>", d_a);
