@@ -1583,14 +1583,10 @@ void transmit_data_task(void *pvParameters)
                     //
                     ///// VISUALIZE /////
                     //
-                    gpio_set_level(LED_PIN, 1);
                     lora_send(LORA_RX_ADDRESS, retransmission_message_hex, LED_PIN); // sending
                     is_ctrl_sent_ok = "N";
                     is_sending_ctrl = "Y";
                     // free(full_message_hex);
-                    vTaskDelay(pdMS_TO_TICKS(200));
-                    gpio_set_level(LED_PIN, 0);
-                    vTaskDelay(pdMS_TO_TICKS(200));
                     //
                     break;
                 } // (strncmp((const char *)is_sending_ctrl, "Y", 1) == 0)
@@ -1614,14 +1610,10 @@ void transmit_data_task(void *pvParameters)
                     //
                     ///// VISUALIZE /////
                     //
-                    gpio_set_level(LED_PIN, 1);
                     lora_send(LORA_RX_ADDRESS, retransmission_message_hex, LED_PIN); // sending
                     is_data_sent_ok = "N";
                     is_sending_data = "Y";
                     // free(full_message_hex);
-                    vTaskDelay(pdMS_TO_TICKS(200));
-                    gpio_set_level(LED_PIN, 0);
-                    vTaskDelay(pdMS_TO_TICKS(200));
                     //
                     break;
                 } // (strncmp((const char *)is_sending_ctrl, "Y", 1) == 0)
@@ -1900,14 +1892,10 @@ void transmit_data_task(void *pvParameters)
                          "******************** <TRANSMISSION> *********************\n");
                 ///// VISUALIZE /////
                 //
-                gpio_set_level(LED_PIN, 1);
                 lora_send(LORA_RX_ADDRESS, full_message_hex, LED_PIN); // sending
                 is_ctrl_sent_ok = "N";
                 is_sending_ctrl = "Y";
                 free(full_message_hex);
-                vTaskDelay(pdMS_TO_TICKS(200));
-                gpio_set_level(LED_PIN, 0);
-                vTaskDelay(pdMS_TO_TICKS(200));
                 //
                 break;
             } // (strncmp((const char *)is_ctrl_sent_ok, "N", 1) == 0)
@@ -2144,14 +2132,10 @@ void transmit_data_task(void *pvParameters)
                         "******************** <TRANSMISSION> *********************\n");
                     ///// VISUALIZE /////
                     //
-                    gpio_set_level(LED_PIN, 1);
                     lora_send(LORA_RX_ADDRESS, full_message_hex, LED_PIN); // sending
                     is_data_sent_ok = "N";
                     is_sending_data = "Y";
                     free(full_message_hex);
-                    vTaskDelay(pdMS_TO_TICKS(200));
-                    gpio_set_level(LED_PIN, 0);
-                    vTaskDelay(pdMS_TO_TICKS(200));
                 } // if ((strncmp((const char *)is_data_sent_ok, "+OK", 3) == 0) &&
                 //  (strncmp((const char *)is_ctrl_sent_ok, "+OK", 3) == 0))
                 break;

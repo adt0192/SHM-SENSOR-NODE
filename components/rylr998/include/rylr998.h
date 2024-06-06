@@ -34,7 +34,7 @@ extern bool is_rylr998_module_init; // to know if we already configured the
 //************************ RYLR998 CONFIG PARAMETERS ************************//
 //***************************************************************************//
 #define LORA_BAND "868000000" // Frequency Band
-#define LORA_NETWORK_ID "12"  // ID of LoRa Network
+#define LORA_NETWORK_ID "18"  // ID of LoRa Network
 #define LORA_ADDRESS "2"      // Address of this module
 #define LORA_RX_ADDRESS 22    // Address of receiver module
 #define LORA_MODE_TX_RX "0"   // 0：Transceiver mode
