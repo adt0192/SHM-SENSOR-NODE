@@ -108,7 +108,6 @@ void init_rylr998_module(void)
     char param_set[30];
     snprintf(param_set, 25, "AT+PARAMETER=%d,%d,%d,%d\r\n", LORA_SPREADING_FACTOR,
              LORA_BANDWIDTH, LORA_CODING_RATE, LORA_PREAMBLE);
-    // char *param_set = "AT+PARAMETER=" LORA_PARAMETERES "\r\n";
     ESP_LOGI(TAG, "Sending <%s> Config Command to LoRa Module...\n", param_set);
     uart_write_bytes(UART_NUM, (const char *)param_set, strlen(param_set));
     vTaskDelay(pdMS_TO_TICKS(DELAY));
@@ -117,6 +116,7 @@ void init_rylr998_module(void)
     uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
     vTaskDelay(pdMS_TO_TICKS(DELAY));
 
+    // NOT USED
     /* ESP_LOGI(TAG, "Sending IPR Baud Rate Command to LoRa Module...\n");
     char *ipr_command = "AT+IPR=" LORA_BAUD_RATE "\r\n";
     uart_write_bytes(UART_NUM, (const char *)ipr_command, strlen(ipr_command));
@@ -135,7 +135,7 @@ void init_rylr998_module(void)
     uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
     vTaskDelay(pdMS_TO_TICKS(DELAY));
 
-    // 6
+    // 6 NOT USED
     /* ESP_LOGI(TAG, "Sending RF Output Power Command to LoRa Module...\n");
     char *rf_output_power = "AT+CRFOP=" LORA_RF_OUTPUT_POWER "\r\n";
     uart_write_bytes(UART_NUM, (const char *)rf_output_power,
