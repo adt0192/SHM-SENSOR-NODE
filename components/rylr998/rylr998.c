@@ -116,16 +116,16 @@ void init_rylr998_module(void)
     uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
     vTaskDelay(pdMS_TO_TICKS(DELAY));
 
-    // NOT USED
-    /* ESP_LOGI(TAG, "Sending IPR Baud Rate Command to LoRa Module...\n");
-    char *ipr_command = "AT+IPR=" LORA_BAUD_RATE "\r\n";
-    uart_write_bytes(UART_NUM, (const char *)ipr_command, strlen(ipr_command));
+    // 5 NOT USED
+    /*  ESP_LOGI(TAG, "Sending IPR Baud Rate Command to LoRa Module...\n");
+     char *ipr_command = "AT+IPR=" LORA_BAUD_RATE "\r\n";
+     uart_write_bytes(UART_NUM, (const char *)ipr_command, strlen(ipr_command));
 
-    data_config = "AT+IPR?\r\n";
-    uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
-    vTaskDelay(pdMS_TO_TICKS(DELAY)); */
+     data_config = "AT+IPR?\r\n";
+     uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
+     vTaskDelay(pdMS_TO_TICKS(DELAY)); */
 
-    // 5
+    // 6
     ESP_LOGI(TAG, "Sending Domain Password Config Command to LoRa Module...\n");
     char *param_pass = "AT+CPIN=" LORA_DOMAIN_PASS "\r\n";
     uart_write_bytes(UART_NUM, (const char *)param_pass, strlen(param_pass));
@@ -135,7 +135,7 @@ void init_rylr998_module(void)
     uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
     vTaskDelay(pdMS_TO_TICKS(DELAY));
 
-    // 6 NOT USED
+    // 7 NOT USED
     /* ESP_LOGI(TAG, "Sending RF Output Power Command to LoRa Module...\n");
     char *rf_output_power = "AT+CRFOP=" LORA_RF_OUTPUT_POWER "\r\n";
     uart_write_bytes(UART_NUM, (const char *)rf_output_power,
@@ -145,7 +145,7 @@ void init_rylr998_module(void)
     uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
     vTaskDelay(pdMS_TO_TICKS(DELAY));
 
-    // 7
+    // 8
     ESP_LOGI(TAG, "Sending Mode Command to LoRa Module...\n");
     char *mode_command = "AT+MODE=" LORA_MODE_SLEEP "\r\n";
     uart_write_bytes(UART_NUM, (const char *)mode_command,
