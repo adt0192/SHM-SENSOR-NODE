@@ -890,7 +890,7 @@ void compressing_samples_task(void *pvParameters)
 {
     double resolution = accel_res(test_scale);
     //
-    uint32_t tmp_arranged_sample = 0;
+    // uint32_t tmp_arranged_sample = 0;
     while (1)
     {
         // Block indefinitely (without a timeout, so no need to check the function's
