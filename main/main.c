@@ -211,6 +211,10 @@ int64_t temp_time0, temp_time1;
 int64_t temp_time2 = 0, temp_time3 = 0;
 
 #define LED_PIN GPIO_NUM_1
+#define DELAY_PIN GPIO_NUM_2         // active when calling delay task
+#define COMPRESSION_PIN GPIO_NUM_38  // active when calling compression task
+#define TRANSMISSION_PIN GPIO_NUM_37 // active when calling transmission task
+#define ACK_PIN GPIO_NUM_36          // active when calling ack task
 
 //***************************************************************************//
 //***************************** GLOBAL VARIABLES ****************************//
@@ -655,11 +659,23 @@ void init_led(void)
     ESP_ERROR_CHECK(gpio_reset_pin(LED_PIN));
     ESP_ERROR_CHECK(gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT));
 
-    // ESP_ERROR_CHECK(gpio_reset_pin(SND_MSG_PIN));
-    // ESP_ERROR_CHECK(gpio_set_direction(SND_MSG_PIN, GPIO_MODE_OUTPUT));
+    ESP_ERROR_CHECK(gpio_reset_pin(DELAY_PIN));
+    ESP_ERROR_CHECK(gpio_set_direction(DELAY_PIN, GPIO_MODE_OUTPUT));
+
+    ESP_ERROR_CHECK(gpio_reset_pin(COMPRESSION_PIN));
+    ESP_ERROR_CHECK(gpio_set_direction(COMPRESSION_PIN, GPIO_MODE_OUTPUT));
+
+    ESP_ERROR_CHECK(gpio_reset_pin(TRANSMISSION_PIN));
+    ESP_ERROR_CHECK(gpio_set_direction(TRANSMISSION_PIN, GPIO_MODE_OUTPUT));
+
+    ESP_ERROR_CHECK(gpio_reset_pin(ACK_PIN));
+    ESP_ERROR_CHECK(gpio_set_direction(ACK_PIN, GPIO_MODE_OUTPUT));
 
     gpio_set_level(LED_PIN, 0);
-    // gpio_set_level(SND_MSG_PIN, 0);
+    gpio_set_level(DELAY_PIN, 0);
+    gpio_set_level(COMPRESSION_PIN, 0);
+    gpio_set_level(TRANSMISSION_PIN, 0);
+    gpio_set_level(ACK_PIN, 0);
 
     ESP_LOGI(TAG, "Init LED !!!COMPLETED!!!");
 }
@@ -901,6 +917,8 @@ void compressing_samples_task(void *pvParameters)
         // that may prevent the interrupt from sending any more notifications.
         ulTaskNotifyTake(pdTRUE,         // Clear the notification value on exit
                          portMAX_DELAY); // Block indefinitely
+
+        gpio_set_level(COMPRESSION_PIN, 1);
 
         //*************************** COMPRESSION STAGE **************************//
         // step 1: re-arrange and decode samples ***********************************
@@ -1352,6 +1370,7 @@ void compressing_samples_task(void *pvParameters)
         ESP_LOGI(TAG, "STARTING DATA TRANSMISSION...");
         xTaskNotifyGive(transmit_data_task_handle);
         //
+        gpio_set_level(COMPRESSION_PIN, 0);
     } // while (1)
 } // compressing_samples_task
 ////////////////////////////////////////////////////////////////////////////////
@@ -1521,6 +1540,8 @@ void transmit_data_task(void *pvParameters)
         // that may prevent the interrupt from sending any more notifications.
         ulTaskNotifyTake(pdTRUE,         // Clear the notification value on exit
                          portMAX_DELAY); // Block indefinitely
+
+        gpio_set_level(TRANSMISSION_PIN, 1);
 
         // Print out remaining task stack memory (words)
         ESP_LOGW(TAG, "Bytes free in 'transmit_data_task' stack: <%zu>",
@@ -2169,6 +2190,10 @@ void transmit_data_task(void *pvParameters)
                 ESP_LOGE(TAG,
                          "******************** <APP FINISHED> *********************");
                 gpio_set_level(LED_PIN, 0);
+                gpio_set_level(DELAY_PIN, 0);
+                gpio_set_level(COMPRESSION_PIN, 0);
+                gpio_set_level(TRANSMISSION_PIN, 0);
+                gpio_set_level(ACK_PIN, 0);
 
                 d_a = 0;
                 break;
@@ -2239,9 +2264,10 @@ void transmit_data_task(void *pvParameters)
           */
 
         } // while ((MSG_COUNTER_TX <= MAX_TRANSACTION_ID) && ((strncmp((const char
-          // *)rcv_ack, "Y", 1) == 0) || (strncmp((const char
-          // *)need_retransmit, "Y", 1) == 0)) && (strncmp((const char
-          // *)is_data_sent_ok, "+OK", 3) == 0))
+        // *)rcv_ack, "Y", 1) == 0) || (strncmp((const char
+        // *)need_retransmit, "Y", 1) == 0)) && (strncmp((const char
+        // *)is_data_sent_ok, "+OK", 3) == 0))
+        gpio_set_level(TRANSMISSION_PIN, 0);
     } // while (1)
 } // transmit_data_task
 ///////////////////////////////////////////////////////////////////////////////
@@ -2264,6 +2290,8 @@ void check_ack_task(void *pvParameters)
         // that may prevent the interrupt from sending any more notifications.
         ulTaskNotifyTake(pdTRUE,         // Clear the notification value on exit
                          portMAX_DELAY); // Block indefinitely
+
+        gpio_set_level(ACK_PIN, 1);
 
         // Print out remaining task stack memory (words)
         ESP_LOGW(TAG, "Bytes free in 'check_ack_task' stack: <%zu>",
@@ -2335,6 +2363,7 @@ void check_ack_task(void *pvParameters)
         }
         //
         // ***********************************************************************
+        gpio_set_level(ACK_PIN, 0);
     }
 }
 ///////////////////////////////////////////////////////////////////////////////
@@ -2643,7 +2672,9 @@ void app_main(void)
     ESP_LOGI(TAG, "Accelerometer STOPPED (OFF)!!!");
 
     ESP_LOGI(TAG, "Waiting 2s");
+    gpio_set_level(DELAY_PIN, 1);
     vTaskDelay(pdMS_TO_TICKS(2000));
+    gpio_set_level(DELAY_PIN, 0);
 
     ///// esp periodic timer /////
     // Periodic Timer to tick
