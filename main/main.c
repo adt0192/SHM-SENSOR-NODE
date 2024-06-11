@@ -2155,6 +2155,7 @@ void transmit_data_task(void *pvParameters)
                 // freeing up allocated memory **********************
 
                 // SLEEP MODE RYLR998
+                gpio_set_level(LED_PIN, 1);
                 ESP_LOGI(TAG, "SLEEP MODE in LoRa Module RYLR998...\n");
                 char *mode_command = "AT+MODE=" LORA_MODE_SLEEP "\r\n";
                 uart_write_bytes(UART_NUM, (const char *)mode_command,
@@ -2167,6 +2168,7 @@ void transmit_data_task(void *pvParameters)
                 ESP_LOGW(TAG, "!!!DEBUGGING!!! d_a: <%d>", d_a);
                 ESP_LOGE(TAG,
                          "******************** <APP FINISHED> *********************");
+                gpio_set_level(LED_PIN, 0);
 
                 d_a = 0;
                 break;
