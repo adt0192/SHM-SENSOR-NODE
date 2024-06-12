@@ -210,12 +210,12 @@ uint16_t XYZ_DATA_READ_PERIOD_MS = 8;
 int64_t temp_time0, temp_time1;
 int64_t temp_time2 = 0, temp_time3 = 0;
 
-#define LED_PIN GPIO_NUM_1
-#define DELAY_PIN GPIO_NUM_2         // active when calling delay task
-#define COMPRESSION_PIN GPIO_NUM_38  // active when calling compression task
-#define TRANSMISSION_PIN GPIO_NUM_37 // active when calling transmission task
-#define RECEPTION_PIN GPIO_NUM_36    // active when calling ack task
-#define ACK_PIN GPIO_NUM_35          // active when calling ack task
+#define LED_PIN GPIO_NUM_1           // channel 0
+#define DELAY_PIN GPIO_NUM_2         // channel 1 - active when calling delay task
+#define COMPRESSION_PIN GPIO_NUM_38  // channel 2 - active when calling compression task
+#define TRANSMISSION_PIN GPIO_NUM_37 // channel 3 - active when calling transmission task
+#define RECEPTION_PIN GPIO_NUM_36    // channel 4 - active when calling ack task
+#define ACK_PIN GPIO_NUM_35          // channel 5 - active when calling ack task
 
 //***************************************************************************//
 //***************************** GLOBAL VARIABLES ****************************//
@@ -2198,6 +2198,7 @@ void transmit_data_task(void *pvParameters)
                 gpio_set_level(DELAY_PIN, 0);
                 gpio_set_level(COMPRESSION_PIN, 0);
                 gpio_set_level(TRANSMISSION_PIN, 0);
+                gpio_set_level(RECEPTION_PIN, 0);
                 gpio_set_level(ACK_PIN, 0);
 
                 d_a = 0;
@@ -2272,8 +2273,7 @@ void transmit_data_task(void *pvParameters)
         // *)rcv_ack, "Y", 1) == 0) || (strncmp((const char
         // *)need_retransmit, "Y", 1) == 0)) && (strncmp((const char
         // *)is_data_sent_ok, "+OK", 3) == 0))
-        gpio_set_level(TRANSMISSION_PIN, 0);
-        gpio_set_level(RECEPTION_PIN, 1);
+
     } // while (1)
 } // transmit_data_task
 ///////////////////////////////////////////////////////////////////////////////
@@ -2435,6 +2435,8 @@ void uart_task(void *pvParameters)
                     (is_rylr998_module_init))
                 {
                     gpio_set_level(LED_PIN, 0);
+                    gpio_set_level(TRANSMISSION_PIN, 0);
+                    gpio_set_level(RECEPTION_PIN, 1);
                     //
                     // are we sending 'data' type message???
                     if (strncmp((const char *)is_sending_data, "Y", 1) == 0)
