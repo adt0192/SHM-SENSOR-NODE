@@ -108,6 +108,8 @@ char *need_retransmit_ctrl =
     "N"; // to know if we nned retransmit the 'ctrl' message
 char *need_retransmit_data =
     "N"; // to know if we nned retransmit the 'data' message
+
+bool data_set_end = false; // to know if we already sent all the data blocks
 //***************************************************************************//
 //********************************** FLAGS **********************************//
 //***************************************************************************//
@@ -2359,6 +2361,7 @@ void check_ack_task(void *pvParameters)
             }
             else
             {
+                data_set_end = true;
                 // freeing up allocated memory **********************
                 for (int i = 0; i < p; i++)
                 {
@@ -2458,8 +2461,13 @@ void uart_task(void *pvParameters)
                 // >> 'ctrl' message type
                 // so we wait for the 'ack' message type
                 //
+                // I added (!data_set_end) so the following 'if' will execute only of we
+                // haven't sent all thew data blocks
+                // because when the app finishes, we send 'LORA_MODE_SLEEP' and the
+                // UART module will answer '+OK'
+                // so we don't accidentally start the 'resendTimer'
                 if ((strncmp((const char *)incoming_uart_data, "+OK", 3) == 0) &&
-                    (is_rylr998_module_init))
+                    (is_rylr998_module_init) && (!data_set_end))
                 {
                     gpio_set_level(LED_PIN, 0);
                     gpio_set_level(TRANSMISSION_PIN, 0);

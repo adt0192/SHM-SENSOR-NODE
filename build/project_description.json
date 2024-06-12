@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "SHM-SENSOR-NODE",
-    "project_version":    "7bf6322-dirty",
+    "project_version":    "b3b4fcf-dirty",
     "project_path":       "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.1.2",
     "build_dir":          "D:/WORK/PROJECT/ESP-IDF_PROJECTS/SHM-SENSOR-NODE/build",
