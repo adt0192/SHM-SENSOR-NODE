@@ -150,8 +150,22 @@ double max_z_value = 0; // max z initializing
 // *_samples_compressed_bin that we are copying to total_bits_tx_after_pad0
 int d_a = 0;
 
+// to keep track of the last data set 'ctrl' message's ID
+uint16_t last_data_set_ctrl_id = 0;
+
 // needed bits for each axis to transmit their respective samples
 uint8_t x_bits_tx, y_bits_tx, z_bits_tx;
+
+// max number of 'xyz triplets' a block of data received has
+uint8_t max_xyx_triplets_to_send = 0;
+
+// (x_bits_tx + y_bits_tx + z_bits_tx) indicates how many bits
+// we need to send a 'xyz triplet'
+uint8_t xyz_bits_tx = 0;
+
+// amount of messages we need to receive to have a complete set of
+// samples from the sensor node
+uint8_t amount_msg_needed = 255; // initialize it with the max possible value
 
 Lora_Data_t Lora_data;
 
@@ -1151,6 +1165,14 @@ void compressing_samples_task(void *pvParameters)
         y_bits_tx = needed_bits(y_possible_values);
         z_bits_tx = needed_bits(z_possible_values);
         //
+        xyz_bits_tx = x_bits_tx + y_bits_tx + z_bits_tx;
+        //
+        max_xyx_triplets_to_send =
+            rylr998_payload_max_bits / xyz_bits_tx;
+        // // when we have already received this amount of data-type messages
+        // it means we already have all the info from the sensor-node
+        amount_msg_needed = (p / max_xyx_triplets_to_send) + 1;
+        //
         ESP_LOGW(TAG,
                  "Needed bits to represent the quantity of those possible "
                  "values multiples of the resolution (%.12lf):",
@@ -1679,6 +1701,8 @@ void transmit_data_task(void *pvParameters)
             if (strncmp((const char *)is_ctrl_sent_ok, "N", 1) == 0)
             {
                 //
+                last_data_set_ctrl_id = MSG_COUNTER_TX;
+                //
                 header_hex_of_data_to_send = add_header_hex(ctrl, MSG_COUNTER_TX);
                 //
                 // preparing hexadecimal format of data_to_send_hex
@@ -1750,6 +1774,7 @@ void transmit_data_task(void *pvParameters)
                 DecimalToHexadecimal(y_bits_tx, data_to_send_hex_1);
                 DecimalToHexadecimal(z_bits_tx, data_to_send_hex_2);
                 //
+
                 //
                 // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
                 // |     32 bits      |     32 bits      |     32 bits      |
@@ -1947,14 +1972,7 @@ void transmit_data_task(void *pvParameters)
                     header_hex_of_data_to_send = add_header_hex(data, MSG_COUNTER_TX);
                     //
                     ///// composing the block of data to send (in binary)
-                    // (x_bits_tx + y_bits_tx + z_bits_tx) indicates how many bits
-                    // we need to send a 'xyz triplet'
-                    uint8_t xyz_bits_tx = x_bits_tx + y_bits_tx + z_bits_tx;
-                    //
-                    // max number of 'xyz triplets' we can send in ONE message
-                    uint8_t max_xyx_triplets_to_send =
-                        rylr998_payload_max_bits / xyz_bits_tx;
-                    //
+                    // xyz_bits_tx = x_bits_tx + y_bits_tx + z_bits_tx
                     // |                    total_bits_tx_after_pad0                    |
                     // +----+-------------+-------------+-------------+---+-------------+
                     //  pad | xyz_bits_tx | xyz_bits_tx | xyz_bits_tx |...| xyz_bits_tx |
@@ -2165,43 +2183,11 @@ void transmit_data_task(void *pvParameters)
                 } // if ((strncmp((const char *)is_data_sent_ok, "+OK", 3) == 0) &&
                 //  (strncmp((const char *)is_ctrl_sent_ok, "+OK", 3) == 0))
                 break;
-            }
+            } // if (d_a < p)
             else
-            { // if (d_a < p)
-                // freeing up allocated memory **********************
-                for (int i = 0; i < p; i++)
-                {
-                    free(x_samples_compressed_bin[i]);
-                    free(y_samples_compressed_bin[i]);
-                    free(z_samples_compressed_bin[i]);
-                }
+            {
                 free(retransmission_message_hex);
-                //
-                retransmission_msg_defined = "N";
-                // freeing up allocated memory **********************
-
-                // SLEEP MODE RYLR998
-                gpio_set_level(LED_PIN, 1);
-                ESP_LOGI(TAG, "SLEEP MODE in LoRa Module RYLR998...\n");
-                char *mode_command = "AT+MODE=" LORA_MODE_SLEEP "\r\n";
-                uart_write_bytes(UART_NUM, (const char *)mode_command,
-                                 strlen(mode_command));
-                char *data_config = "AT+MODE?\r\n";
-                uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
-                vTaskDelay(pdMS_TO_TICKS(DELAY));
-                ESP_LOGE(TAG,
-                         "******************** <APP FINISHED> *********************");
-                ESP_LOGW(TAG, "!!!DEBUGGING!!! d_a: <%d>", d_a);
-                ESP_LOGE(TAG,
-                         "******************** <APP FINISHED> *********************");
-                gpio_set_level(LED_PIN, 0);
-                gpio_set_level(DELAY_PIN, 0);
-                gpio_set_level(COMPRESSION_PIN, 0);
-                gpio_set_level(TRANSMISSION_PIN, 0);
-                gpio_set_level(RECEPTION_PIN, 0);
-                gpio_set_level(ACK_PIN, 0);
-
-                d_a = 0;
+                ESP_LOGW(TAG, "!!!DEBUGGING!!! retransmission_message_hex freed up");
                 break;
             } // esle if (d_a < p)
             ///// DATA BLOCKING ******************************************************
@@ -2338,7 +2324,7 @@ void check_ack_task(void *pvParameters)
             {
                 is_data_sent_ok = "+OK";
 
-                // we reset the flag 'retransmission_msg_defined' becassue we
+                // we reset the flag 'retransmission_msg_defined' because we
                 // already sent the 'ctrl' message, and we are gonna send the block
                 // of data after, so the 'retransmission_message_hex' will have
                 // different length
@@ -2364,8 +2350,49 @@ void check_ack_task(void *pvParameters)
             //
             // Send a notification to transmit_data_task()
             // bringing it out of the 'Blocked' state
-            vTaskDelay(pdMS_TO_TICKS(DELAY / 10));
-            xTaskNotifyGive(transmit_data_task_handle);
+            // only if we haven't send yet all the messages needed to
+            // conform the data set
+            if ((header_dec & 0x3FFF) != last_data_set_ctrl_id)
+            {
+                vTaskDelay(pdMS_TO_TICKS(DELAY / 10));
+                xTaskNotifyGive(transmit_data_task_handle);
+            }
+            else
+            {
+                // freeing up allocated memory **********************
+                for (int i = 0; i < p; i++)
+                {
+                    free(x_samples_compressed_bin[i]);
+                    free(y_samples_compressed_bin[i]);
+                    free(z_samples_compressed_bin[i]);
+                }
+                //
+                retransmission_msg_defined = "N";
+                // freeing up allocated memory **********************
+
+                // SLEEP MODE RYLR998
+                gpio_set_level(LED_PIN, 1);
+                ESP_LOGI(TAG, "SLEEP MODE in LoRa Module RYLR998...\n");
+                char *mode_command = "AT+MODE=" LORA_MODE_SLEEP "\r\n";
+                uart_write_bytes(UART_NUM, (const char *)mode_command,
+                                 strlen(mode_command));
+                char *data_config = "AT+MODE?\r\n";
+                uart_write_bytes(UART_NUM, (const char *)data_config, strlen(data_config));
+                vTaskDelay(pdMS_TO_TICKS(DELAY));
+                ESP_LOGE(TAG,
+                         "******************** <APP FINISHED> *********************");
+                ESP_LOGW(TAG, "!!!DEBUGGING!!! d_a: <%d>", d_a);
+                ESP_LOGE(TAG,
+                         "******************** <APP FINISHED> *********************");
+                gpio_set_level(LED_PIN, 0);
+                gpio_set_level(DELAY_PIN, 0);
+                gpio_set_level(COMPRESSION_PIN, 0);
+                gpio_set_level(TRANSMISSION_PIN, 0);
+                gpio_set_level(RECEPTION_PIN, 0);
+                gpio_set_level(ACK_PIN, 0);
+
+                d_a = 0;
+            }
         }
         //
         // ***********************************************************************
