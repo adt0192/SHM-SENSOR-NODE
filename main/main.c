@@ -2352,7 +2352,7 @@ void check_ack_task(void *pvParameters)
             // bringing it out of the 'Blocked' state
             // only if we haven't send yet all the messages needed to
             // conform the data set
-            if ((header_dec & 0x3FFF) != last_data_set_ctrl_id)
+            if ((header_dec & 0x3FFF) != (amount_msg_needed + last_data_set_ctrl_id))
             {
                 vTaskDelay(pdMS_TO_TICKS(DELAY / 10));
                 xTaskNotifyGive(transmit_data_task_handle);
