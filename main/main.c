@@ -214,7 +214,8 @@ int64_t temp_time2 = 0, temp_time3 = 0;
 #define DELAY_PIN GPIO_NUM_2         // active when calling delay task
 #define COMPRESSION_PIN GPIO_NUM_38  // active when calling compression task
 #define TRANSMISSION_PIN GPIO_NUM_37 // active when calling transmission task
-#define ACK_PIN GPIO_NUM_36          // active when calling ack task
+#define RECEPTION_PIN GPIO_NUM_36    // active when calling ack task
+#define ACK_PIN GPIO_NUM_35          // active when calling ack task
 
 //***************************************************************************//
 //***************************** GLOBAL VARIABLES ****************************//
@@ -668,6 +669,9 @@ void init_led(void)
     ESP_ERROR_CHECK(gpio_reset_pin(TRANSMISSION_PIN));
     ESP_ERROR_CHECK(gpio_set_direction(TRANSMISSION_PIN, GPIO_MODE_OUTPUT));
 
+    ESP_ERROR_CHECK(gpio_reset_pin(RECEPTION_PIN));
+    ESP_ERROR_CHECK(gpio_set_direction(RECEPTION_PIN, GPIO_MODE_OUTPUT));
+
     ESP_ERROR_CHECK(gpio_reset_pin(ACK_PIN));
     ESP_ERROR_CHECK(gpio_set_direction(ACK_PIN, GPIO_MODE_OUTPUT));
 
@@ -675,6 +679,7 @@ void init_led(void)
     gpio_set_level(DELAY_PIN, 0);
     gpio_set_level(COMPRESSION_PIN, 0);
     gpio_set_level(TRANSMISSION_PIN, 0);
+    gpio_set_level(RECEPTION_PIN, 0);
     gpio_set_level(ACK_PIN, 0);
 
     ESP_LOGI(TAG, "Init LED !!!COMPLETED!!!");
@@ -2268,6 +2273,7 @@ void transmit_data_task(void *pvParameters)
         // *)need_retransmit, "Y", 1) == 0)) && (strncmp((const char
         // *)is_data_sent_ok, "+OK", 3) == 0))
         gpio_set_level(TRANSMISSION_PIN, 0);
+        gpio_set_level(RECEPTION_PIN, 1);
     } // while (1)
 } // transmit_data_task
 ///////////////////////////////////////////////////////////////////////////////
@@ -2461,6 +2467,8 @@ void uart_task(void *pvParameters)
                 if ((strncmp((const char *)incoming_uart_data, "+RCV=", 5) == 0) &&
                     (is_rylr998_module_init))
                 {
+                    gpio_set_level(RECEPTION_PIN, 0);
+
                     char *token = strtok((char *)incoming_uart_data, "=");
                     // loop through the string to extract all other tokens
                     uint8_t count_token = 0;
