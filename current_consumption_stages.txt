@@ -1,0 +1,14 @@
+config time                   -> 11.14 s
+config time current           -> 49.67 mA
+
+collecting data time          -> 8.3 s
+collecting data current       -> 41.60 mA
+
+processing data time          -> 9.68 s
+processing data current       -> 53.85 mA
+
+transmitting data time        -> 352 ms +
+transmitting data current     -> 105.38 mA +
+
+receiving data time           -> 1 199 s +
+receiving data current        -> 53.66 mA + 

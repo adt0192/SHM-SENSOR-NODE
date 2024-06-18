@@ -1,0 +1,1368 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  4 2024 10:37:21[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot:  3 storage          Unknown data     01 82 00110000 00400000[0m
+[0;32mI (95) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=10cf0h ( 68848) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=00020d18 vaddr=3fc95500 size=02a7ch ( 10876) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0002379c vaddr=40374000 size=0c87ch ( 51324) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=2c180h (180608) map[0m
+[0;32mI (170) esp_image: segment 4: paddr=0005c1a8 vaddr=4038087c size=04bb0h ( 19376) load[0m
+[0;32mI (181) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (181) boot: Disabling RNG early entropy source...[0m
+[0;32mI (193) cpu_start: Multicore app[0m
+[0;32mI (193) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (193) esp_psram: Speed: 40MHz[0m
+[0;32mI (194) cpu_start: Pro cpu up.[0m
+[0;32mI (198) cpu_start: Starting app cpu, entry point is 0x4037559c[0m
+0x4037559c: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/port/cpu_start.c:157
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (623) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (632) cpu_start: Pro cpu start user code[0m
+[0;32mI (632) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (632) cpu_start: Application information:[0m
+[0;32mI (635) cpu_start: Project name:     SHM-SENSOR-NODE[0m
+[0;32mI (641) cpu_start: App version:      b3b4fcf-dirty[0m
+[0;32mI (646) cpu_start: Compile time:     Jun 12 2024 17:23:34[0m
+[0;32mI (653) cpu_start: ELF file SHA256:  05b13e7380cee4ff...[0m
+[0;32mI (659) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (664) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (669) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (673) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (678) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (685) heap_init: At 3FC9A230 len 0004F4E0 (317 KiB): DRAM[0m
+[0;32mI (692) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (698) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (704) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (711) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (719) spi_flash: detected chip: generic[0m
+[0;32mI (723) spi_flash: flash io: dio[0m
+[0;32mI (727) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (734) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (741) app_start: Starting scheduler on CPU0[0m
+[0;32mI (746) app_start: Starting scheduler on CPU1[0m
+[0;32mI (746) main_task: Started on CPU0[0m
+[0;32mI (756) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (766) main_task: Calling app_main()[0m
+[0;32mI (766) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (776) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (786) gpio: GPIO[38]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (796) gpio: GPIO[37]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (806) gpio: GPIO[36]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (816) gpio: GPIO[35]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (826) !!!SHM SENSOR NODE!!!: Init LED !!!COMPLETED!!![0m
+[0;32mI (826) !!!SHM SENSOR NODE!!!: Waiting 50 ms[0m
+[0;32mI (886) !!!SHM SENSOR NODE!!!: Initializing file system...[0m
+[0;32mI (1226) !!!SHM SENSOR NODE!!!: Partition size: total: 3848081, used: 2646544[0m
+[0;32mI (1226) !!!SHM SENSOR NODE!!!: Waiting 50 ms[0m
+[0;32mI (1276) uart: queue free spaces: 20[0m
+[0;32mI (1276) !!!SHM SENSOR NODE!!!: UART Interface Configuration !!!COMPLETED!!![0m
+[0;32mI (1276) !!!SHM SENSOR NODE!!!: Waiting 50 ms[0m
+[0;32mI (1326) !!!SHM SENSOR NODE!!!: Task 'uart_task' !!!CREATED!!![0m
+[0;33mW (1326) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (1326) !!!SHM SENSOR NODE!!!: After 'uart_task' created[0m
+[0;33mW (1336) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <350147>[0m
+[0;33mW (1336) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;32mI (1346) !!!SHM SENSOR NODE!!!: Task 'xyz_data_reading_task' !!!CREATED!!![0m
+[0;33mW (1356) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (1366) !!!SHM SENSOR NODE!!!: After 'xyz_data_reading_task' created[0m
+[0;33mW (1366) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <345703>[0m
+[0;33mW (1376) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;32mI (1386) !!!SHM SENSOR NODE!!!: Task 'compressing_samples_task' !!!CREATED!!![0m
+[0;33mW (1396) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (1406) !!!SHM SENSOR NODE!!!: After 'compressing_samples_task' created[0m
+[0;33mW (1406) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <337163>[0m
+[0;33mW (1416) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;32mI (1426) !!!SHM SENSOR NODE!!!: Task 'check_ack_task' !!!CREATED!!![0m
+[0;33mW (1436) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (1446) !!!SHM SENSOR NODE!!!: After 'check_ack_task' created[0m
+[0;33mW (1446) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <332719>[0m
+[0;33mW (1456) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;32mI (1466) !!!SHM SENSOR NODE!!!: Task 'transmit_data_task' !!!CREATED!!![0m
+[0;33mW (1476) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (1476) !!!SHM SENSOR NODE!!!: After 'transmit_data_task' created[0m
+[0;33mW (1486) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <328275>[0m
+[0;33mW (1496) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (1506) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (1516) !!!SHM SENSOR NODE!!!: After rnd_index_arr allocation[0m
+[0;33mW (1516) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <326223>[0m
+[0;33mW (1526) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (1556) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! ENTERING 'init_rylr998_module'...[0m
+[0;32mI (1556) SHM SENSOR NODE -> RYLR998: Sending <AT> Command to LoRa Module...
+[0m
+[0;33mW (1556) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <3296>[0m
+[0;32mI (1566) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;32mI (2056) SHM SENSOR NODE -> RYLR998: Sending Reset Command to LoRa Module...
+[0m
+[0;33mW (2056) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (2056) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RESET
+[0m
+[0;33mW (2066) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (2066) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +READY
+[0m
+[0;32mI (2556) SHM SENSOR NODE -> RYLR998: Sending Address Config Command to LoRa Module...
+[0m
+[0;33mW (2576) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (2576) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (3056) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (3056) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +ADDRESS=2
+[0m
+[0;32mI (3556) SHM SENSOR NODE -> RYLR998: Sending Network ID Config Command to LoRa Module...
+[0m
+[0;33mW (3576) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (3576) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (4056) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (4056) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +NETWORKID=18
+[0m
+[0;32mI (4556) SHM SENSOR NODE -> RYLR998: Sending Band Config Command to LoRa Module...
+[0m
+[0;33mW (4556) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (4556) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (5056) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (5056) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +BAND=868000000
+[0m
+[0;32mI (5556) SHM SENSOR NODE -> RYLR998: Sending <AT+PARAMETER=8,7,1,12
+> Config Command to LoRa Module...
+[0m
+[0;33mW (5576) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (5576) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (6056) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (6056) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +PARAMETER=8,7,1,12
+[0m
+[0;32mI (6556) SHM SENSOR NODE -> RYLR998: Sending Domain Password Config Command to LoRa Module...
+[0m
+[0;33mW (6556) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (6556) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (7056) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (7056) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +CPIN=44794c61
+[0m
+[0;33mW (7556) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (7556) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +CRFOP=22
+[0m
+[0;32mI (8056) SHM SENSOR NODE -> RYLR998: Sending Mode Command to LoRa Module...
+[0m
+[0;33mW (8056) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (8056) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;32mI (8556) SHM SENSOR NODE -> RYLR998: RYLR998 Module Initialized !!!COMPLETED!!!
+[0m
+[0;33mW (8556) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! LEAVING 'init_rylr998_module'...[0m
+[0;32mI (8556) !!!SHM SENSOR NODE!!!: Waiting 50 ms[0m
+[0;32mI (8616) !!!SHM SENSOR NODE!!!: RYLR998 Timer init configuration[0m
+[0;32mI (8616) !!!SHM SENSOR NODE!!!: RYLR998 Timer configured and stopped !!!COMPLETED!!![0m
+[0;33mW (8616) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (8626) !!!SHM SENSOR NODE!!!: After *_samples_double allocation[0m
+[0;33mW (8626) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <301591>[0m
+[0;33mW (8636) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (8646) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (8656) !!!SHM SENSOR NODE!!!: After *_samples_compressed allocation[0m
+[0;33mW (8666) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <289291>[0m
+[0;33mW (8666) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (8686) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (8686) !!!SHM SENSOR NODE!!!: After sensing_mtrx allocation[0m
+[0;33mW (8696) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <34351>[0m
+[0;33mW (8696) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;32mI (8706) SHM SENSOR NODE -> ADXL355: Initializing SPI ADXL355 Accelerometer[0m
+[0;32mI (8716) !!!SHM SENSOR NODE!!!: SPI ADXL355 Accelerometer INITIALIZED!!![0m
+[0;32mI (8726) !!!SHM SENSOR NODE!!!: Stopping accelerometer, Measure OFF[0m
+[0;32mI (8836) !!!SHM SENSOR NODE!!!: Accelerometer STOPPED (OFF)!!![0m
+[0;32mI (8836) !!!SHM SENSOR NODE!!!: Waiting 2s[0m
+[0;32mI (10836) !!!SHM SENSOR NODE!!!: Configuring ADXL355 with Frequency and Scale[0m
+[0;32mI (11036) SHM SENSOR NODE -> ADXL355: ADXL355 with Frequency and Scale CONFIGURED CORRECTLY!!![0m
+[0;32mI (11036) !!!SHM SENSOR NODE!!!: Waiting 100ms[0m
+[0;32mI (11136) !!!SHM SENSOR NODE!!!: Starting periodic timer[0m
+[0;32mI (11136) !!!SHM SENSOR NODE!!!: Turning ON Measurement Mode ADXL355[0m
+[0;32mI (11236) main_task: Returned from app_main()[0m
+[0;32mI (19336) !!!SHM SENSOR NODE!!!: Turning OFF Measurement Mode ADXL355[0m
+[0;33mW (23956) !!!SHM SENSOR NODE!!!: compressing_samples_task DEBUGGING <COMPRESSION STAGE STEP 2 FINISHED>[0m
+[0;32mI (26306) !!!SHM SENSOR NODE!!!: Taken time for NEW APPROACH (taken sample * each column): <2278 us>[0m
+[0;33mW (26306) !!!SHM SENSOR NODE!!!: compressing_samples_task DEBUGGING <COMPRESSION STAGE STEP 3 FINISHED>[0m
+[0;33mW (26316) !!!SHM SENSOR NODE!!!: Values 'max' and 'min' for each axis:[0m
+[0;33mW (26326) !!!SHM SENSOR NODE!!!: double_min_x_value = -1593.048499999999422[0m
+[0;33mW (26326) !!!SHM SENSOR NODE!!!: double_max_x_value = 1601.513593749999245[0m
+[0;33mW (26336) !!!SHM SENSOR NODE!!!: double_min_y_value = -863.197124999999119[0m
+[0;33mW (26346) !!!SHM SENSOR NODE!!!: double_max_y_value = 867.697124999999346[0m
+[0;33mW (26356) !!!SHM SENSOR NODE!!!: double_min_z_value = -2165.193828125002256[0m
+[0;33mW (26356) !!!SHM SENSOR NODE!!!: double_max_z_value = 2176.288390624999010[0m
+[0;33mW (26366) !!!SHM SENSOR NODE!!!: compressing_samples_task DEBUGGING <SAMPLES RE-DIMENSIONING STEP 1 FINISHED>[0m
+[0;33mW (26386) !!!SHM SENSOR NODE!!!: Possible values multiples of resolution (0.000015625000):[0m
+[0;33mW (26386) !!!SHM SENSOR NODE!!!: x_possible_values = 204451973		y_possible_values = 110777231		z_possible_values = 277854862[0m
+[0;33mW (26396) !!!SHM SENSOR NODE!!!: compressing_samples_task DEBUGGING <SAMPLES RE-DIMENSIONING STEP 2 FINISHED>[0m
+[0;33mW (26416) !!!SHM SENSOR NODE!!!: Needed bits to represent the quantity of those possible values multiples of the resolution (0.000015625000):[0m
+[0;33mW (26426) !!!SHM SENSOR NODE!!!: x_bits_tx = 28		y_bits_tx = 27		z_bits_tx = 29[0m
+[0;33mW (26426) !!!SHM SENSOR NODE!!!: compressing_samples_task DEBUGGING <SAMPLES RE-DIMENSIONING STEP 3 FINISHED>[0m
+[0;33mW (26456) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (26456) !!!SHM SENSOR NODE!!!: After *_sample_compressed_temp_bin allocation[0m
+[0;33mW (26456) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <37143>[0m
+[0;33mW (26466) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (26526) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (26526) !!!SHM SENSOR NODE!!!: After *_samples_compressed_bin allocation[0m
+[0;33mW (26526) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <32083>[0m
+[0;33mW (26536) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (26566) !!!SHM SENSOR NODE!!!: compressing_samples_task DEBUGGING <SAMPLES RE-DIMENSIONING STEP 4 FINISHED>
+[0m
+[0;32mI (26576) !!!SHM SENSOR NODE!!!: ***!!!COMPRESSED FINISHED!!!**********************************************************************************************[0m
+[0;31mE (26576) !!!SHM SENSOR NODE!!!: *********************************************************[0m
+[0;33mW (26586) !!!SHM SENSOR NODE!!!: After COMPRESSED FINISHED[0m
+[0;33mW (26596) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <326067>[0m
+[0;31mE (26596) !!!SHM SENSOR NODE!!!: *********************************************************
+[0m
+[0;32mI (26606) !!!SHM SENSOR NODE!!!: Waiting 2s before transmitting data...[0m
+[0;32mI (28616) !!!SHM SENSOR NODE!!!: Enabling Transceiver mode in LoRa Module RYLR998...
+[0m
+[0;33mW (28616) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (28616) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +MODE=0
+[0m
+[0;32mI (29116) !!!SHM SENSOR NODE!!!: STARTING DATA TRANSMISSION...[0m
+[0;33mW (29116) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <3292>[0m
+[0;33mW (29116) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! min_x_value_int32: -101955103[0m
+[0;33mW (29126) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! min_y_value_int32: -55244615[0m
+[0;33mW (29126) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! min_z_value_int32: -138572405[0m
+[0;33mW (29136) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_3[0]: F9[0m
+[0;33mW (29146) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_4[0]: FC[0m
+[0;33mW (29156) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_5[0]: F7[0m
+[0;33mW (29156) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_3[2]: EC[0m
+[0;33mW (29166) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_4[2]: B5[0m
+[0;33mW (29176) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_5[2]: BD[0m
+[0;33mW (29186) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_3[4]: 49[0m
+[0;33mW (29196) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_4[4]: 08[0m
+[0;33mW (29196) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_5[4]: 8D[0m
+[0;33mW (29206) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_3[6]: E1[0m
+[0;33mW (29216) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_4[6]: B9[0m
+[0;33mW (29226) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! data_to_send_hex_5[6]: 8B[0m
+[0;31mE (29226) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (29236) !!!SHM SENSOR NODE!!!: SENDING 'CTRL' MESSAGE - MSG_COUNTER_TX <0>[0m
+[0;33mW (29246) !!!SHM SENSOR NODE!!!: full_message_hex (ctrl): <40001C1B1DF9EC49E1FCB508B9F7BD8D8B>[0m
+[0;33mW (29256) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325859>[0m
+[0;31mE (29266) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (29276) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,34,40001C1B1DF9EC49E1FCB508B9F7BD8D8B
+>[0m
+[0;33mW (29286) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <50>[0m
+[0;33mW (29456) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (29456) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (30466) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (30566) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (30566) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00000,-16,13
+[0m
+[0;33mW (30586) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <3352>[0m
+[0;32mI (30586) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <0> RECEIVED[0m
+[0;31mE (30586) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (30596) !!!SHM SENSOR NODE!!!: <325799> BYTES[0m
+[0;31mE (30606) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (30666) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1724>[0m
+[0;31mE (30676) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (30676) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <1>[0m
+[0;33mW (30686) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800105D4E3096519E5A7ECC43688D09429441C0AB9E85A64AE10935122F9A65BA4AA5D4D347651B08E7ECC18C5C90FEF6451F9E7DD06F260D51CB68EF5E283A043E5780E9B5ED5CB276F19DC43456B748E93E25B715AA4EE9E9B5584CAA6B3E4FE56FF9CF5E4A11A76403DA2D86BC03156FBE3DDE54A>[0m
+[0;33mW (30716) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <11>[0m
+[0;33mW (30716) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325311>[0m
+[0;31mE (30726) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (30736) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800105D4E3096519E5A7ECC43688D09429441C0AB9E85A64AE10935122F9A65BA4AA5D4D347651B08E7ECC18C5C90FEF6451F9E7DD06F260D51CB68EF5E283A043E5780E9B5ED5CB276F19DC43456B748E93E25B715AA4EE9E9B5584CAA6B3E4FE56FF9CF5E4A11A76403DA2D86BC03156FBE3DDE54A
+>[0m
+[0;33mW (30766) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (31476) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (31476) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (32476) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (32916) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (32916) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00100,-17,13
+[0m
+[0;33mW (32936) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (32936) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <1> RECEIVED[0m
+[0;31mE (32936) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (32946) !!!SHM SENSOR NODE!!!: <325531> BYTES[0m
+[0;31mE (32956) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (33016) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1724>[0m
+[0;31mE (33026) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (33026) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <2>[0m
+[0;33mW (33036) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8002050A1E875763E626DA46944956C524F7D33E63B2B3693381219F86A20C80746A72CFFE17C6F7569C137D85B0D8CB62AC0CE7BBF55456819EB5DBD1FE758CE0C62A46796AE6C96860F76E3B68C79406015250BDE8241BF6E94743ED65965C7A85C5A5490F4A06B5CAE3C349BB773903242477E81A>[0m
+[0;33mW (33066) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <22>[0m
+[0;33mW (33066) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325287>[0m
+[0;31mE (33076) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (33086) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8002050A1E875763E626DA46944956C524F7D33E63B2B3693381219F86A20C80746A72CFFE17C6F7569C137D85B0D8CB62AC0CE7BBF55456819EB5DBD1FE758CE0C62A46796AE6C96860F76E3B68C79406015250BDE8241BF6E94743ED65965C7A85C5A5490F4A06B5CAE3C349BB773903242477E81A
+>[0m
+[0;33mW (33116) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (33826) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (33826) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (34826) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (35266) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (35266) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00200,-14,12
+[0m
+[0;33mW (35286) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (35286) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <2> RECEIVED[0m
+[0;31mE (35286) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (35296) !!!SHM SENSOR NODE!!!: <325515> BYTES[0m
+[0;31mE (35306) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (35366) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1724>[0m
+[0;31mE (35376) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (35376) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <3>[0m
+[0;33mW (35386) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <80030334F5BD379BF6A45C01F297C67EAA475246CE366967289CC97C1FC6E9BAFA3A1CD25581F3EAB62733B055BC9E7563762567CBA3CC7E2DCF688BC46EAB7F54A450329D4ACAC465DCF0547868729827A446A399EBC3518583398ED96483576442C6B61485DD765ABE56E6CBFBB975DD38E93D12BE>[0m
+[0;33mW (35416) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <33>[0m
+[0;33mW (35416) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325271>[0m
+[0;31mE (35426) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (35436) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,80030334F5BD379BF6A45C01F297C67EAA475246CE366967289CC97C1FC6E9BAFA3A1CD25581F3EAB62733B055BC9E7563762567CBA3CC7E2DCF688BC46EAB7F54A450329D4ACAC465DCF0547868729827A446A399EBC3518583398ED96483576442C6B61485DD765ABE56E6CBFBB975DD38E93D12BE
+>[0m
+[0;33mW (35466) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (36176) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (36176) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (37176) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (37616) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (37616) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00300,-14,12
+[0m
+[0;33mW (37636) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (37636) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <3> RECEIVED[0m
+[0;31mE (37636) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (37646) !!!SHM SENSOR NODE!!!: <325499> BYTES[0m
+[0;31mE (37656) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (37716) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1724>[0m
+[0;31mE (37726) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (37726) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <4>[0m
+[0;33mW (37736) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8004097792FFA42537ECDDC046215FB4C242E62E2D6411E54FC85F5C19D82737CB3659044C1607B2BA790593061D932D6A099BA84FE2DC8BD4C8197874B2BE0D8FA512523F57F16926E52576480B3314E13BAE61F20467AEC27F8534A52A70C5145E520AF66345D6802B5BA38A5FAD3D63FD24D0026C>[0m
+[0;33mW (37766) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <44>[0m
+[0;33mW (37766) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325255>[0m
+[0;31mE (37776) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (37786) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8004097792FFA42537ECDDC046215FB4C242E62E2D6411E54FC85F5C19D82737CB3659044C1607B2BA790593061D932D6A099BA84FE2DC8BD4C8197874B2BE0D8FA512523F57F16926E52576480B3314E13BAE61F20467AEC27F8534A52A70C5145E520AF66345D6802B5BA38A5FAD3D63FD24D0026C
+>[0m
+[0;33mW (37816) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (38526) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (38526) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (39526) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (39966) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (39966) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00400,-14,12
+[0m
+[0;33mW (39986) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (39986) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <4> RECEIVED[0m
+[0;31mE (39986) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (39996) !!!SHM SENSOR NODE!!!: <325479> BYTES[0m
+[0;31mE (40006) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (40066) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (40076) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (40076) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <5>[0m
+[0;33mW (40086) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <80050807BB618B3DCBAAE9FA9072087F77B94EFE9AFFEB63C30C7B413CB9251D043C65E52B76E6B5DA8A7EA0650ED33557B6A466E034F24FEB81D569D34A6CA02063B2EDA1402416250702727CA829D87164EAA96E46898C4D3FA58D0EACF9BA7A605606168654AA82ED80E542F7A15B3D4D2727143A>[0m
+[0;33mW (40116) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <55>[0m
+[0;33mW (40116) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325235>[0m
+[0;31mE (40126) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (40136) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,80050807BB618B3DCBAAE9FA9072087F77B94EFE9AFFEB63C30C7B413CB9251D043C65E52B76E6B5DA8A7EA0650ED33557B6A466E034F24FEB81D569D34A6CA02063B2EDA1402416250702727CA829D87164EAA96E46898C4D3FA58D0EACF9BA7A605606168654AA82ED80E542F7A15B3D4D2727143A
+>[0m
+[0;33mW (40166) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (40876) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (40876) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (41876) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (42316) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (42316) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00500,-16,14
+[0m
+[0;33mW (42336) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (42336) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <5> RECEIVED[0m
+[0;31mE (42336) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (42346) !!!SHM SENSOR NODE!!!: <325463> BYTES[0m
+[0;31mE (42356) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (42416) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (42426) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (42426) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <6>[0m
+[0;33mW (42436) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800608AD63959672AD2BCA9D4A427F707480DE4E5A5A9546C3F64B754ED4A931F278427EB81480D8025A5D1F4789E73382B3A8AA3EB0C04FED497569E43A6C9DA88718801F7B06FE69A4C73C3D348D5425448653305C84179A2746F32CA58FF7005ECF94566C0E0680DEC9C6C42BDB75510DA931BDEA>[0m
+[0;33mW (42466) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <66>[0m
+[0;33mW (42466) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325219>[0m
+[0;31mE (42476) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (42486) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800608AD63959672AD2BCA9D4A427F707480DE4E5A5A9546C3F64B754ED4A931F278427EB81480D8025A5D1F4789E73382B3A8AA3EB0C04FED497569E43A6C9DA88718801F7B06FE69A4C73C3D348D5425448653305C84179A2746F32CA58FF7005ECF94566C0E0680DEC9C6C42BDB75510DA931BDEA
+>[0m
+[0;33mW (42516) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (43226) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (43226) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (44226) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (44666) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (44666) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00600,-15,12
+[0m
+[0;33mW (44686) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (44686) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <6> RECEIVED[0m
+[0;31mE (44686) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (44696) !!!SHM SENSOR NODE!!!: <325447> BYTES[0m
+[0;31mE (44706) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (44766) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (44776) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (44776) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <7>[0m
+[0;33mW (44786) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <80070625C67F6A9701285ADB8668EFDD171B62828E9C45C478ABC74D87FEA614065A4BDF19B5239EFA6720C565B4629F62E9E927C0CE6EC2FB085D34A71F08FBA8E8200D218CE27DEB0AD5B45127FCF57F0CF26E4D8AA567EA7F5DBD64675901605802F935F6241E77A00A662A1F156AE5B5E860FC2C>[0m
+[0;33mW (44816) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <77>[0m
+[0;33mW (44816) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325203>[0m
+[0;31mE (44826) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (44836) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,80070625C67F6A9701285ADB8668EFDD171B62828E9C45C478ABC74D87FEA614065A4BDF19B5239EFA6720C565B4629F62E9E927C0CE6EC2FB085D34A71F08FBA8E8200D218CE27DEB0AD5B45127FCF57F0CF26E4D8AA567EA7F5DBD64675901605802F935F6241E77A00A662A1F156AE5B5E860FC2C
+>[0m
+[0;33mW (44866) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (45576) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (45576) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (46576) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (47016) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (47016) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00700,-15,12
+[0m
+[0;33mW (47036) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (47036) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <7> RECEIVED[0m
+[0;31mE (47036) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (47046) !!!SHM SENSOR NODE!!!: <325431> BYTES[0m
+[0;31mE (47056) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (47116) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (47126) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (47126) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <8>[0m
+[0;33mW (47136) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800805C0E97963C65A67D22CBA63E1A376C3C02E87BBDF86E7F90D77BFC6A962F33A7696CF18085126A12EA02590C29F607E02A78F85A445CFD4B4BA859A5EDE00C64282256C8AC028820AAE7D276DF87A3232AA21E2A9C0A8CDA915A32D408DDA00000000000000000000095BAF8AA24267ECB7FBA0>[0m
+[0;33mW (47166) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <88>[0m
+[0;33mW (47166) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325187>[0m
+[0;31mE (47176) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (47186) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800805C0E97963C65A67D22CBA63E1A376C3C02E87BBDF86E7F90D77BFC6A962F33A7696CF18085126A12EA02590C29F607E02A78F85A445CFD4B4BA859A5EDE00C64282256C8AC028820AAE7D276DF87A3232AA21E2A9C0A8CDA915A32D408DDA00000000000000000000095BAF8AA24267ECB7FBA0
+>[0m
+[0;33mW (47216) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (47926) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (47926) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (48926) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (49366) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (49366) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00800,-15,12
+[0m
+[0;33mW (49386) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (49386) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <8> RECEIVED[0m
+[0;31mE (49386) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (49396) !!!SHM SENSOR NODE!!!: <325415> BYTES[0m
+[0;31mE (49406) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (49466) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (49476) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (49476) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <9>[0m
+[0;33mW (49486) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800905A0E0FB61953727A5B0245C0D6CF63C46A27D2317A4B970C951E907266BF35E4EE6631558531A6B454FC799FC3783CC76EA54E386868E70B91D1A2AB6DD7884C198E05277A32676E02652AC94F599787E705E0384991C674FB9B3E63FD6C25D968CD656A50A7F2E82E349906339039364783076>[0m
+[0;33mW (49516) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <99>[0m
+[0;33mW (49516) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325171>[0m
+[0;31mE (49526) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (49536) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800905A0E0FB61953727A5B0245C0D6CF63C46A27D2317A4B970C951E907266BF35E4EE6631558531A6B454FC799FC3783CC76EA54E386868E70B91D1A2AB6DD7884C198E05277A32676E02652AC94F599787E705E0384991C674FB9B3E63FD6C25D968CD656A50A7F2E82E349906339039364783076
+>[0m
+[0;33mW (49566) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (50276) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (50276) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (51276) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (51716) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (51716) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00900,-16,13
+[0m
+[0;33mW (51736) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (51736) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <9> RECEIVED[0m
+[0;31mE (51736) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (51746) !!!SHM SENSOR NODE!!!: <325399> BYTES[0m
+[0;31mE (51756) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (51816) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (51826) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (51826) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <10>[0m
+[0;33mW (51836) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800A06BC031B74C4C42926DB529842D65A4FFC6ACEEE44899C7DB5A6A6546D0FF41C56FD8E75E492827646C5E5E4BA0366319BE80332507D2AFF587A2D8AAA1B2507DF5C7B88818AEAB2E38A49580314F7CCF663B09882CBB0EE307A5023CD301440F7F2546682DA584E2DA5B0B8CB62ABC3E7BC203A>[0m
+[0;33mW (51866) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <110>[0m
+[0;33mW (51866) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325155>[0m
+[0;31mE (51876) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (51886) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800A06BC031B74C4C42926DB529842D65A4FFC6ACEEE44899C7DB5A6A6546D0FF41C56FD8E75E492827646C5E5E4BA0366319BE80332507D2AFF587A2D8AAA1B2507DF5C7B88818AEAB2E38A49580314F7CCF663B09882CBB0EE307A5023CD301440F7F2546682DA584E2DA5B0B8CB62ABC3E7BC203A
+>[0m
+[0;33mW (51916) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (52626) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (52626) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (53626) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (54066) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (54066) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00A00,-15,13
+[0m
+[0;33mW (54086) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (54086) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <10> RECEIVED[0m
+[0;31mE (54086) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (54096) !!!SHM SENSOR NODE!!!: <325383> BYTES[0m
+[0;31mE (54106) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (54166) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (54176) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (54176) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <11>[0m
+[0;33mW (54186) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800B074DA0357EA137A9ECE2D671067657A7AD1A999F7A24A13905504606264AFC5A8408A828F13382B36BD34593F06960B83D2794E16086C5D63920DF92B7301A05782B095ED734676EEAA86AF50B973E8AB6915E78C69380C972069D68EFFB9047898CF4D8814261424CA3195D6535B9A32435AB34>[0m
+[0;33mW (54216) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <121>[0m
+[0;33mW (54216) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325139>[0m
+[0;31mE (54226) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (54236) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800B074DA0357EA137A9ECE2D671067657A7AD1A999F7A24A13905504606264AFC5A8408A828F13382B36BD34593F06960B83D2794E16086C5D63920DF92B7301A05782B095ED734676EEAA86AF50B973E8AB6915E78C69380C972069D68EFFB9047898CF4D8814261424CA3195D6535B9A32435AB34
+>[0m
+[0;33mW (54266) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (54976) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (54976) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (55976) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (56416) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (56416) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00B00,-15,12
+[0m
+[0;33mW (56436) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (56436) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <11> RECEIVED[0m
+[0;31mE (56436) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (56446) !!!SHM SENSOR NODE!!!: <325367> BYTES[0m
+[0;31mE (56456) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (56516) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (56526) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (56526) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <12>[0m
+[0;33mW (56536) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800C05026FFD56D9FA26CECC825B8D8C7633863A7C710C267B0BA3706154E8CF233C20DE08723A0A5A2CB2E967591BED7F6AD2A9FD17B07DF6907887FC6EAB2C512464FB1F4C30D165F8EBDE53720D35A731B27175F864FA1DEF564D75E6C400B6050BE75057B88206E3DE474D8EF57EA0EEE9ED073E>[0m
+[0;33mW (56566) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <132>[0m
+[0;33mW (56566) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325123>[0m
+[0;31mE (56576) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (56586) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800C05026FFD56D9FA26CECC825B8D8C7633863A7C710C267B0BA3706154E8CF233C20DE08723A0A5A2CB2E967591BED7F6AD2A9FD17B07DF6907887FC6EAB2C512464FB1F4C30D165F8EBDE53720D35A731B27175F864FA1DEF564D75E6C400B6050BE75057B88206E3DE474D8EF57EA0EEE9ED073E
+>[0m
+[0;33mW (56616) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (57326) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (57326) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (58326) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (58766) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (58766) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00C00,-15,12
+[0m
+[0;33mW (58786) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (58786) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <12> RECEIVED[0m
+[0;31mE (58786) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (58796) !!!SHM SENSOR NODE!!!: <325351> BYTES[0m
+[0;31mE (58806) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (58866) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (58876) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (58876) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <13>[0m
+[0;33mW (58886) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800D093341D19F8538AC80DFC238A3FD73D654424D052F445894734B574E25E78B583824E553CDA3324C515283297EEE36D27B244BBE12728A82F7C1F85E9BAE83C7EF57AF8997432AC9273A769734780824AAA12D7206B7664D747468E920DA64696FDB572426528F4C54C5DCE42565A73127F8015A>[0m
+[0;33mW (58916) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <143>[0m
+[0;33mW (58916) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325107>[0m
+[0;31mE (58926) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (58936) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800D093341D19F8538AC80DFC238A3FD73D654424D052F445894734B574E25E78B583824E553CDA3324C515283297EEE36D27B244BBE12728A82F7C1F85E9BAE83C7EF57AF8997432AC9273A769734780824AAA12D7206B7664D747468E920DA64696FDB572426528F4C54C5DCE42565A73127F8015A
+>[0m
+[0;33mW (58966) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (59676) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (59676) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (60676) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (61116) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (61116) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00D00,-15,12
+[0m
+[0;33mW (61136) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (61136) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <13> RECEIVED[0m
+[0;31mE (61136) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (61146) !!!SHM SENSOR NODE!!!: <325335> BYTES[0m
+[0;31mE (61156) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (61216) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (61226) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (61226) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <14>[0m
+[0;33mW (61236) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800E08A50DA995E1816BBFE87267B2D0770610BE8CEFEB849D783F500954A646429C82851EF8D6FF0AB15AB3C2265EB52546E7E2EC08F069374D172040128EFE07C8303FA28DFC01EB20FFE04ADEB25512425665BFA8E79E8971841D6CAA5AE78243471D548E937E5B6F988799D21983CD016A550310>[0m
+[0;33mW (61266) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <154>[0m
+[0;33mW (61266) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325091>[0m
+[0;31mE (61276) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (61286) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800E08A50DA995E1816BBFE87267B2D0770610BE8CEFEB849D783F500954A646429C82851EF8D6FF0AB15AB3C2265EB52546E7E2EC08F069374D172040128EFE07C8303FA28DFC01EB20FFE04ADEB25512425665BFA8E79E8971841D6CAA5AE78243471D548E937E5B6F988799D21983CD016A550310
+>[0m
+[0;33mW (61316) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (62026) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (62026) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (63026) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (63466) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (63466) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00E00,-16,13
+[0m
+[0;33mW (63486) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (63486) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <14> RECEIVED[0m
+[0;31mE (63486) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (63496) !!!SHM SENSOR NODE!!!: <325319> BYTES[0m
+[0;31mE (63506) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (63566) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (63576) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (63576) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <15>[0m
+[0;33mW (63586) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <800F098C4391A58EBFACF9FF2A4FA41EA564CBCA6C3EA7AAA2E5E0B86D5A4E74E9A2884AD2593B36B6B93F236502719356DA5166CECB5865AC9036E3048E8A30C945F51335674B2EE818F3946C3EFA3754E3BA93207FC8489CA08F9FF6AB41B7089332C6B9F8557EC81193A6CBFAB975DAB2293D0F42>[0m
+[0;33mW (63616) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <165>[0m
+[0;33mW (63616) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325075>[0m
+[0;31mE (63626) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (63636) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,800F098C4391A58EBFACF9FF2A4FA41EA564CBCA6C3EA7AAA2E5E0B86D5A4E74E9A2884AD2593B36B6B93F236502719356DA5166CECB5865AC9036E3048E8A30C945F51335674B2EE818F3946C3EFA3754E3BA93207FC8489CA08F9FF6AB41B7089332C6B9F8557EC81193A6CBFAB975DAB2293D0F42
+>[0m
+[0;33mW (63666) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (64376) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (64376) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (65376) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (65816) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (65816) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C00F00,-16,14
+[0m
+[0;33mW (65836) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (65836) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <15> RECEIVED[0m
+[0;31mE (65836) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (65846) !!!SHM SENSOR NODE!!!: <325303> BYTES[0m
+[0;31mE (65856) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (65916) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (65926) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (65926) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <16>[0m
+[0;33mW (65936) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8010044C665D4A8DB165D86B5A5274E85595B402700E3F664A76576D1586E88D28FE45D19894BA7A465EDA3E07455BBF7E151FA9E2105A4EE5DC75584AC66B448C4ACB9A27BB2BD0AEABA4908304D258DFB23EB20E36884BE5178FDBD62B4705C64EE7E5C55833DE6B40E125E9855366832DA808D6FE>[0m
+[0;33mW (65966) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <176>[0m
+[0;33mW (65966) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325059>[0m
+[0;31mE (65976) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (65986) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8010044C665D4A8DB165D86B5A5274E85595B402700E3F664A76576D1586E88D28FE45D19894BA7A465EDA3E07455BBF7E151FA9E2105A4EE5DC75584AC66B448C4ACB9A27BB2BD0AEABA4908304D258DFB23EB20E36884BE5178FDBD62B4705C64EE7E5C55833DE6B40E125E9855366832DA808D6FE
+>[0m
+[0;33mW (66016) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (66726) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (66726) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (67726) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (68166) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (68166) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01000,-15,12
+[0m
+[0;33mW (68186) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (68186) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <16> RECEIVED[0m
+[0;31mE (68186) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (68196) !!!SHM SENSOR NODE!!!: <325287> BYTES[0m
+[0;31mE (68206) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (68266) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (68276) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (68276) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <17>[0m
+[0;33mW (68286) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <80110542F2A95B3C55E727161C6F7E98B78D58129792AE687C7DB79325B2EB890D4E392956E3DF18824DAF1587FFB4CD8AB1376ADF008E738E1A97D382AA9D0E1087CA957187181DAA96E3A85B4783562EA60E7C0E068740ED057DC5A2E9DBF4448915BDD948D5B2BA4E1305C477A96400A1E7D6E91E>[0m
+[0;33mW (68316) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <187>[0m
+[0;33mW (68316) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325043>[0m
+[0;31mE (68326) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (68336) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,80110542F2A95B3C55E727161C6F7E98B78D58129792AE687C7DB79325B2EB890D4E392956E3DF18824DAF1587FFB4CD8AB1376ADF008E738E1A97D382AA9D0E1087CA957187181DAA96E3A85B4783562EA60E7C0E068740ED057DC5A2E9DBF4448915BDD948D5B2BA4E1305C477A96400A1E7D6E91E
+>[0m
+[0;33mW (68366) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (69076) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (69076) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (70076) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (70516) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (70516) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01100,-14,12
+[0m
+[0;33mW (70536) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (70536) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <17> RECEIVED[0m
+[0;31mE (70536) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (70546) !!!SHM SENSOR NODE!!!: <325271> BYTES[0m
+[0;31mE (70556) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (70616) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (70626) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (70626) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <18>[0m
+[0;33mW (70636) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <80120553201B5C547B273D31B259C5E3F614514E79F7D1674111037DC6A6A9DBCC4C5A43C5B61D10967AAD3B86ABC62573AC856910DFBC583B2F15F9D1DA77F13A67250A537BE30FE9B625C660205C3682902A8299F3258BD8E5602C17A78A0EBE65AB42D6E2E13A8A328CE4C614EF52C678A67D182C>[0m
+[0;33mW (70666) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <198>[0m
+[0;33mW (70666) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325027>[0m
+[0;31mE (70676) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (70686) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,80120553201B5C547B273D31B259C5E3F614514E79F7D1674111037DC6A6A9DBCC4C5A43C5B61D10967AAD3B86ABC62573AC856910DFBC583B2F15F9D1DA77F13A67250A537BE30FE9B625C660205C3682902A8299F3258BD8E5602C17A78A0EBE65AB42D6E2E13A8A328CE4C614EF52C678A67D182C
+>[0m
+[0;33mW (70716) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (71426) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (71426) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (72426) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (72866) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (72866) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01200,-15,12
+[0m
+[0;33mW (72886) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (72886) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <18> RECEIVED[0m
+[0;31mE (72886) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (72896) !!!SHM SENSOR NODE!!!: <325255> BYTES[0m
+[0;31mE (72906) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (72966) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (72976) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (72976) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <19>[0m
+[0;33mW (72986) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8013099432C9A61949ED053846527254F595AB3E701009452764A3595C442700C9DA68EBF1571B4D628EA1EB0848D5C98FA0BE2B416DB823E98A726EC1CA30D12AC5E500C5663436E802C170789EBC582B4076A3EABC07514E7F7EDE0929F1AB8A44CBDB94A8E20E5D7E4A86BF938B74FFA2A92BBC10>[0m
+[0;33mW (73016) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <209>[0m
+[0;33mW (73016) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <325011>[0m
+[0;31mE (73026) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (73036) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8013099432C9A61949ED053846527254F595AB3E701009452764A3595C442700C9DA68EBF1571B4D628EA1EB0848D5C98FA0BE2B416DB823E98A726EC1CA30D12AC5E500C5663436E802C170789EBC582B4076A3EABC07514E7F7EDE0929F1AB8A44CBDB94A8E20E5D7E4A86BF938B74FFA2A92BBC10
+>[0m
+[0;33mW (73066) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (73776) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (73776) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (74776) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (75216) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (75216) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01300,-15,12
+[0m
+[0;33mW (75236) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (75236) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <19> RECEIVED[0m
+[0;31mE (75236) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (75246) !!!SHM SENSOR NODE!!!: <325239> BYTES[0m
+[0;31mE (75256) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (75316) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (75326) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (75326) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <20>[0m
+[0;33mW (75336) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8014037DE4913C896064BEDCD0601CC236827EA6829E2E05D1403B64DD8527E7CB84781CA43822A172A33D2FA8996A71951B836BAFEC98B145A1EC01A14EF0EAEF85CCA709648DAEE7E1E08269B92B772921328FAD4BC75128DF7EDE1169F1C7D87614E5B7FF8312A07EF9C56B6C595DF9D5A75E1CDA>[0m
+[0;33mW (75366) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <220>[0m
+[0;33mW (75366) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324995>[0m
+[0;31mE (75376) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (75386) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8014037DE4913C896064BEDCD0601CC236827EA6829E2E05D1403B64DD8527E7CB84781CA43822A172A33D2FA8996A71951B836BAFEC98B145A1EC01A14EF0EAEF85CCA709648DAEE7E1E08269B92B772921328FAD4BC75128DF7EDE1169F1C7D87614E5B7FF8312A07EF9C56B6C595DF9D5A75E1CDA
+>[0m
+[0;33mW (75416) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (76126) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (76126) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (77126) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (77566) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (77566) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01400,-15,12
+[0m
+[0;33mW (77586) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (77586) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <20> RECEIVED[0m
+[0;31mE (77586) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (77596) !!!SHM SENSOR NODE!!!: <325223> BYTES[0m
+[0;31mE (77606) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (77666) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (77676) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (77676) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <21>[0m
+[0;33mW (77686) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801505C4A0D16403B2A7D6E97E9573D35A1F4F7ACB1E3446C789F5758D7EA936DA988FE1E9E9BEB31AC38CEC667EFFE7709E95E8D37EE07B6BE5585C1846A7BF4446BBD52374C24D29271CF64CE1A955351EF268815AC724F4E17BE1ABA9B607C85C4B19764023CA7D6B7485C9383764511CA7DCEE74>[0m
+[0;33mW (77716) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <231>[0m
+[0;33mW (77716) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324979>[0m
+[0;31mE (77726) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (77736) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801505C4A0D16403B2A7D6E97E9573D35A1F4F7ACB1E3446C789F5758D7EA936DA988FE1E9E9BEB31AC38CEC667EFFE7709E95E8D37EE07B6BE5585C1846A7BF4446BBD52374C24D29271CF64CE1A955351EF268815AC724F4E17BE1ABA9B607C85C4B19764023CA7D6B7485C9383764511CA7DCEE74
+>[0m
+[0;33mW (77766) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (78476) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (78476) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (79476) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (79916) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (79916) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01500,-15,13
+[0m
+[0;33mW (79936) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (79936) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <21> RECEIVED[0m
+[0;31mE (79936) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (79946) !!!SHM SENSOR NODE!!!: <325207> BYTES[0m
+[0;31mE (79956) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (80016) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (80026) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (80026) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <22>[0m
+[0;33mW (80036) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801604E6822554F76626A8EB8856B8DE95DF868E75DC7E06970A9F72420A68F4E0666C79747758C292936CAB64601FE94BE0F0E5F35EE44C9B3995304956681E9E4488AF014E9F9E662A2FA270CA84F7A3D416995215E6832E8D70EC0268D9EA2A5E9353D66805468095C6C67B15037062A168CF06EC>[0m
+[0;33mW (80066) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <242>[0m
+[0;33mW (80066) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324963>[0m
+[0;31mE (80076) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (80086) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801604E6822554F76626A8EB8856B8DE95DF868E75DC7E06970A9F72420A68F4E0666C79747758C292936CAB64601FE94BE0F0E5F35EE44C9B3995304956681E9E4488AF014E9F9E662A2FA270CA84F7A3D416995215E6832E8D70EC0268D9EA2A5E9353D66805468095C6C67B15037062A168CF06EC
+>[0m
+[0;33mW (80116) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (80826) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (80826) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (81826) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (82266) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (82266) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01600,-15,13
+[0m
+[0;33mW (82286) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (82286) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <22> RECEIVED[0m
+[0;31mE (82286) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (82296) !!!SHM SENSOR NODE!!!: <325191> BYTES[0m
+[0;31mE (82306) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (82366) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (82376) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (82376) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <23>[0m
+[0;33mW (82386) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801705BC80B963756027CBCA925A0821B61936667A60F42833CB9C8E37FFEB25BED2A7A9B89B5AFE26E3DBB745A8A517621FD927B11C1C38253C73CD840E4C4FEFA5F18D9B670F7028140B48676B14370113F68C8DE7C4A5BDEB5095EEE650FC8A6AF182773E78F29163B2059BFB93614445279FFF40>[0m
+[0;33mW (82416) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <253>[0m
+[0;33mW (82416) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324947>[0m
+[0;31mE (82426) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (82436) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801705BC80B963756027CBCA925A0821B61936667A60F42833CB9C8E37FFEB25BED2A7A9B89B5AFE26E3DBB745A8A517621FD927B11C1C38253C73CD840E4C4FEFA5F18D9B670F7028140B48676B14370113F68C8DE7C4A5BDEB5095EEE650FC8A6AF182773E78F29163B2059BFB93614445279FFF40
+>[0m
+[0;33mW (82466) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (83176) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (83176) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (84176) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (84616) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (84616) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01700,-14,12
+[0m
+[0;33mW (84636) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (84636) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <23> RECEIVED[0m
+[0;31mE (84636) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (84646) !!!SHM SENSOR NODE!!!: <325175> BYTES[0m
+[0;31mE (84656) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (84716) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (84726) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (84726) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <24>[0m
+[0;33mW (84736) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801808DDC73B99BA83EC0CAC445F548B5674D672818976692EBBEE9F3485AC7ACE605C47B35640135A7D70CFA6A727C1735AD5E90AF94C52AD2B5599830E705DEAC5C4A08F640220A7D6C06263DD1F96C3A49687C277035D90EE3A58F0A492C6C86E809E777BF72E962C7C272D2FE17C7065E9C0F632>[0m
+[0;33mW (84766) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <264>[0m
+[0;33mW (84766) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324931>[0m
+[0;31mE (84776) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (84786) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801808DDC73B99BA83EC0CAC445F548B5674D672818976692EBBEE9F3485AC7ACE605C47B35640135A7D70CFA6A727C1735AD5E90AF94C52AD2B5599830E705DEAC5C4A08F640220A7D6C06263DD1F96C3A49687C277035D90EE3A58F0A492C6C86E809E777BF72E962C7C272D2FE17C7065E9C0F632
+>[0m
+[0;33mW (84816) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (85526) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (85526) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (86526) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (86966) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (86966) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01800,-15,12
+[0m
+[0;33mW (86986) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (86986) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <24> RECEIVED[0m
+[0;31mE (86986) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (86996) !!!SHM SENSOR NODE!!!: <325159> BYTES[0m
+[0;31mE (87006) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (87066) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (87076) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (87076) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <25>[0m
+[0;33mW (87086) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <80190B44F023C3637FAF50C8C05D1086D64DE25A7E819AE74D990F7E9FDDA9ECD7A481BB5518C91DCAB04953E769455F8082806A132B86573A5D55E86DC6768FC2C69F0C4572CF0028FFE65A6733FF96FD2DCA8C3BBC65DD13A365A61F27F789EE5AC4331625BF527B5F34A76613DA8048A9AA0DB0EA>[0m
+[0;33mW (87116) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <275>[0m
+[0;33mW (87116) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324915>[0m
+[0;31mE (87126) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (87136) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,80190B44F023C3637FAF50C8C05D1086D64DE25A7E819AE74D990F7E9FDDA9ECD7A481BB5518C91DCAB04953E769455F8082806A132B86573A5D55E86DC6768FC2C69F0C4572CF0028FFE65A6733FF96FD2DCA8C3BBC65DD13A365A61F27F789EE5AC4331625BF527B5F34A76613DA8048A9AA0DB0EA
+>[0m
+[0;33mW (87166) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (87876) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (87876) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (88876) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (89316) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (89316) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01900,-15,12
+[0m
+[0;33mW (89336) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (89336) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <25> RECEIVED[0m
+[0;31mE (89336) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (89346) !!!SHM SENSOR NODE!!!: <325143> BYTES[0m
+[0;31mE (89356) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (89416) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (89426) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (89426) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <26>[0m
+[0;33mW (89436) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801A04E9F81155351926AE08E654307375B3CD6A726DE1A7CAA05B871798EA96AEA88A526D595E3B82BBFDAF46F81BCB78D6FAA978E1C05B8B9CD6337C5A7C728CC25EEEC5291E2903391652470ACC54CFB95A608DC185E4F4756631A3A802E0D24502B4B4AC9BFA5DD15D65F95E4767998EA81F417C>[0m
+[0;33mW (89466) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <286>[0m
+[0;33mW (89466) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324899>[0m
+[0;31mE (89476) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (89486) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801A04E9F81155351926AE08E654307375B3CD6A726DE1A7CAA05B871798EA96AEA88A526D595E3B82BBFDAF46F81BCB78D6FAA978E1C05B8B9CD6337C5A7C728CC25EEEC5291E2903391652470ACC54CFB95A608DC185E4F4756631A3A802E0D24502B4B4AC9BFA5DD15D65F95E4767998EA81F417C
+>[0m
+[0;33mW (89516) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (90226) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (90226) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (91226) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (91666) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (91666) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01A00,-15,12
+[0m
+[0;33mW (91686) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (91686) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <26> RECEIVED[0m
+[0;31mE (91686) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (91696) !!!SHM SENSOR NODE!!!: <325127> BYTES[0m
+[0;31mE (91706) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (91766) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (91776) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (91776) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <27>[0m
+[0;33mW (91786) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801B08B1D7CF96C1F82BD0C3AA874A8CD929A1B2B7DAE1244CA3514A8C6C65D820DE4890A5E4EA16EA629B324267068329A9B3634413DA52F2A3B59E5D7E70C41AC66AF4FB6F4840A8B906426E46A1577808E295DCA6E72078C57B934C69B00F1E588526B5FEF356784F5A27AA3DBD84E6D36A6AE926>[0m
+[0;33mW (91816) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <297>[0m
+[0;33mW (91816) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324883>[0m
+[0;31mE (91826) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (91836) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801B08B1D7CF96C1F82BD0C3AA874A8CD929A1B2B7DAE1244CA3514A8C6C65D820DE4890A5E4EA16EA629B324267068329A9B3634413DA52F2A3B59E5D7E70C41AC66AF4FB6F4840A8B906426E46A1577808E295DCA6E72078C57B934C69B00F1E588526B5FEF356784F5A27AA3DBD84E6D36A6AE926
+>[0m
+[0;33mW (91866) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (92576) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (92576) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (93576) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (94016) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (94016) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01B00,-15,13
+[0m
+[0;33mW (94036) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (94036) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <27> RECEIVED[0m
+[0;31mE (94036) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (94046) !!!SHM SENSOR NODE!!!: <325111> BYTES[0m
+[0;31mE (94056) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (94116) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (94126) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (94126) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <28>[0m
+[0;33mW (94136) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801C064631696CC7536886AE7C72513A17BE2B0A9B5E328755D4917F2FE729F7DD2C28F88192C6767637B056C34D528B3940B3647CE2643CF00F9420691252CAC4054B5A295BC8D06731AC4E64E31C16D5217E891C09061D95A76A08D4284FD8EC6BBE9B574C44CA926FEC642FD9EB48984D65B0F558>[0m
+[0;33mW (94166) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <308>[0m
+[0;33mW (94166) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324867>[0m
+[0;31mE (94176) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (94186) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801C064631696CC7536886AE7C72513A17BE2B0A9B5E328755D4917F2FE729F7DD2C28F88192C6767637B056C34D528B3940B3647CE2643CF00F9420691252CAC4054B5A295BC8D06731AC4E64E31C16D5217E891C09061D95A76A08D4284FD8EC6BBE9B574C44CA926FEC642FD9EB48984D65B0F558
+>[0m
+[0;33mW (94216) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (94926) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (94926) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (95926) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (96366) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (96366) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01C00,-16,14
+[0m
+[0;33mW (96386) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (96386) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <28> RECEIVED[0m
+[0;31mE (96386) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (96396) !!!SHM SENSOR NODE!!!: <325095> BYTES[0m
+[0;31mE (96406) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (96466) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (96476) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (96476) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <29>[0m
+[0;33mW (96486) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801D04D1BBB5539057E68CF66C8F27D8B9B24436C28D5C0755DABD7F2FD869F7BC56480FFBA4E155DE61E90E64EA03E355347066ADE1466CFB7077619BCE941CD6274109087DC63729DBCE4683856F78E888C2B2BF238889529B94025C6B99CD76666A5B96EF90428B2A4DE4D1A6ED538FCB268CFDB2>[0m
+[0;33mW (96516) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <319>[0m
+[0;33mW (96516) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324851>[0m
+[0;31mE (96526) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (96536) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801D04D1BBB5539057E68CF66C8F27D8B9B24436C28D5C0755DABD7F2FD869F7BC56480FFBA4E155DE61E90E64EA03E355347066ADE1466CFB7077619BCE941CD6274109087DC63729DBCE4683856F78E888C2B2BF238889529B94025C6B99CD76666A5B96EF90428B2A4DE4D1A6ED538FCB268CFDB2
+>[0m
+[0;33mW (96566) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (97276) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (97276) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (98276) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (98716) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (98716) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01D00,-14,13
+[0m
+[0;33mW (98736) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (98736) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <29> RECEIVED[0m
+[0;31mE (98736) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (98746) !!!SHM SENSOR NODE!!!: <325079> BYTES[0m
+[0;31mE (98756) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (98816) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (98826) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (98826) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <30>[0m
+[0;33mW (98836) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801E062DB6296B21F928661FAC516DF2D5842F466EB515A5021A5F56D7A6E6CF418C2E89F1B3271CD23F3FEBA53B19875AAF50E71BA630A875745B68DBFEE4EBCB42C39DF52FEE65E3C1F28A349D60939050BE477DD089268DD79EAA636C6FEB2E8C5C3479817A62BEBAE503A2A5C33F0A8AA4F11710>[0m
+[0;33mW (98866) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <330>[0m
+[0;33mW (98866) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324835>[0m
+[0;31mE (98876) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (98886) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801E062DB6296B21F928661FAC516DF2D5842F466EB515A5021A5F56D7A6E6CF418C2E89F1B3271CD23F3FEBA53B19875AAF50E71BA630A875745B68DBFEE4EBCB42C39DF52FEE65E3C1F28A349D60939050BE477DD089268DD79EAA636C6FEB2E8C5C3479817A62BEBAE503A2A5C33F0A8AA4F11710
+>[0m
+[0;33mW (98916) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (99626) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (99626) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (100626) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (101066) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (101066) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01E00,-15,12
+[0m
+[0;33mW (101086) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (101086) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <30> RECEIVED[0m
+[0;31mE (101086) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (101096) !!!SHM SENSOR NODE!!!: <325063> BYTES[0m
+[0;31mE (101106) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (101166) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (101176) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (101176) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <31>[0m
+[0;33mW (101186) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <801F07E764E1890C7B2ABDF29082389098D1DF6EB0FF4A465290BF6DA340A898358470CDECD7A3F056994E0428D5B824992DEB6C01CB6855B21E55CDF0327483AE0683431D70ED5AA8DA02723822DCF3CD87E64C530A06D7921976A4C6694D21C68A53E5595E3412BBF93D2714E8137ACACF69A0022A>[0m
+[0;33mW (101216) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <341>[0m
+[0;33mW (101216) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324819>[0m
+[0;31mE (101226) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (101236) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,801F07E764E1890C7B2ABDF29082389098D1DF6EB0FF4A465290BF6DA340A898358470CDECD7A3F056994E0428D5B824992DEB6C01CB6855B21E55CDF0327483AE0683431D70ED5AA8DA02723822DCF3CD87E64C530A06D7921976A4C6694D21C68A53E5595E3412BBF93D2714E8137ACACF69A0022A
+>[0m
+[0;33mW (101266) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (101976) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (101976) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (102976) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (103416) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (103416) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C01F00,-15,12
+[0m
+[0;33mW (103436) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (103436) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <31> RECEIVED[0m
+[0;31mE (103436) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (103446) !!!SHM SENSOR NODE!!!: <325047> BYTES[0m
+[0;31mE (103456) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (103516) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (103526) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (103526) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <32>[0m
+[0;33mW (103536) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802008DDBF7999BBE26C0CDEA29E0BC03AB45D26D6CEE3C85408D79067FB6B522CA83C302EB413C7AE51D33126C76E8D758B6EE93715864D1A657538F28E68D1D844EA27D75534E9E6ADDA7252AE62F5997F6A705B4146CC047975DBE7A93D0C5E7E72F9F890BAA6ABE296264E24BB6D5410E891F584>[0m
+[0;33mW (103566) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <352>[0m
+[0;33mW (103566) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324803>[0m
+[0;31mE (103576) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (103586) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802008DDBF7999BBE26C0CDEA29E0BC03AB45D26D6CEE3C85408D79067FB6B522CA83C302EB413C7AE51D33126C76E8D758B6EE93715864D1A657538F28E68D1D844EA27D75534E9E6ADDA7252AE62F5997F6A705B4146CC047975DBE7A93D0C5E7E72F9F890BAA6ABE296264E24BB6D5410E891F584
+>[0m
+[0;33mW (103616) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (104326) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (104326) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (105326) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (105766) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (105766) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02000,-16,13
+[0m
+[0;33mW (105786) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (105786) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <32> RECEIVED[0m
+[0;31mE (105786) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (105796) !!!SHM SENSOR NODE!!!: <325031> BYTES[0m
+[0;31mE (105806) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (105866) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (105876) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (105876) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <33>[0m
+[0;33mW (105886) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8021062A31EB6AE545686117BE90AB66C9CC7836C49F50A646329B6CC687E886B5C475949477F6ADDE9FCD92C3C2F982413D40E51D30163092A6034A0A1E41FA5C846872C34C6EFFA5FE13008848F5F93B315EB9426A66ABA23173ABC3A91116CA8C1ED5797D956EBE6EAD654783EB5B8BF4E72D27A4>[0m
+[0;33mW (105916) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <363>[0m
+[0;33mW (105916) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324787>[0m
+[0;31mE (105926) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (105936) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8021062A31EB6AE545686117BE90AB66C9CC7836C49F50A646329B6CC687E886B5C475949477F6ADDE9FCD92C3C2F982413D40E51D30163092A6034A0A1E41FA5C846872C34C6EFFA5FE13008848F5F93B315EB9426A66ABA23173ABC3A91116CA8C1ED5797D956EBE6EAD654783EB5B8BF4E72D27A4
+>[0m
+[0;33mW (105966) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (106676) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (106676) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (107676) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (108116) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (108116) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02100,-15,12
+[0m
+[0;33mW (108136) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (108136) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <33> RECEIVED[0m
+[0;31mE (108136) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (108146) !!!SHM SENSOR NODE!!!: <325015> BYTES[0m
+[0;31mE (108156) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (108216) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (108226) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (108226) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <34>[0m
+[0;33mW (108236) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8022066AFE3B6F4986A8B8EC7865647136DDF9FA89CD1145F512BF674BD2A818EFF27DACD118830072AACE5D63B683F74061CB250BDA5C63E10DD6C3A5E287BD46C4D65F8F53E0E36692DC9A6EC8C9F780DEB2968DAA056BA59F5DF897E75DAB7C8135A5C8C06B92AF9F11E3FF5AAF45502B256EE936>[0m
+[0;33mW (108266) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <374>[0m
+[0;33mW (108266) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324771>[0m
+[0;31mE (108276) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (108286) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8022066AFE3B6F4986A8B8EC7865647136DDF9FA89CD1145F512BF674BD2A818EFF27DACD118830072AACE5D63B683F74061CB250BDA5C63E10DD6C3A5E287BD46C4D65F8F53E0E36692DC9A6EC8C9F780DEB2968DAA056BA59F5DF897E75DAB7C8135A5C8C06B92AF9F11E3FF5AAF45502B256EE936
+>[0m
+[0;33mW (108316) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (109026) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (109026) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (110026) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (110466) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (110466) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02200,-15,12
+[0m
+[0;33mW (110486) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (110486) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <34> RECEIVED[0m
+[0;31mE (110486) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (110496) !!!SHM SENSOR NODE!!!: <324999> BYTES[0m
+[0;31mE (110506) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (110566) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (110576) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (110576) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <35>[0m
+[0;33mW (110586) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <80230395F5A33E2E16E4E02D4474120D37DC5B5E9DBBAE83FF3F49454E6A656F0804BE33203CE1E213027E7884CE21745353C8E6882384735520B7CFCFA29CBEC8082394898D1D7BAB0FD66C57BA62B5F12B96773FEBC80337AD8AED012AE3D56A3E3968B436D5BA548D4F63314C48375F8964573296>[0m
+[0;33mW (110616) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <385>[0m
+[0;33mW (110616) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324755>[0m
+[0;31mE (110626) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (110636) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,80230395F5A33E2E16E4E02D4474120D37DC5B5E9DBBAE83FF3F49454E6A656F0804BE33203CE1E213027E7884CE21745353C8E6882384735520B7CFCFA29CBEC8082394898D1D7BAB0FD66C57BA62B5F12B96773FEBC80337AD8AED012AE3D56A3E3968B436D5BA548D4F63314C48375F8964573296
+>[0m
+[0;33mW (110666) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (111376) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (111376) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (112376) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (112816) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (112816) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02300,-15,13
+[0m
+[0;33mW (112836) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (112836) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <35> RECEIVED[0m
+[0;31mE (112836) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (112846) !!!SHM SENSOR NODE!!!: <324983> BYTES[0m
+[0;31mE (112856) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (112916) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (112926) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (112926) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <36>[0m
+[0;33mW (112936) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8024046CFCB34CBFEA2604189A300D472341334E414F2DA563752D5D6E7FA752EAE860D7A6168F1FF2839BE7C7A6970984A7386A65E6827EF69878997786AC8EC3264E17EB6D5364E891F6E083037AD8DFAE02B20F1A890653EB9C7AB66C43C6E25F524FF674B6BA818DF162E3F3B3321F1EA3EE18F6>[0m
+[0;33mW (112966) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <396>[0m
+[0;33mW (112966) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324739>[0m
+[0;31mE (112976) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (112986) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8024046CFCB34CBFEA2604189A300D472341334E414F2DA563752D5D6E7FA752EAE860D7A6168F1FF2839BE7C7A6970984A7386A65E6827EF69878997786AC8EC3264E17EB6D5364E891F6E083037AD8DFAE02B20F1A890653EB9C7AB66C43C6E25F524FF674B6BA818DF162E3F3B3321F1EA3EE18F6
+>[0m
+[0;33mW (113016) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (113726) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (113726) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (114726) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (115166) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (115166) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02400,-14,12
+[0m
+[0;33mW (115186) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (115186) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <36> RECEIVED[0m
+[0;31mE (115186) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (115196) !!!SHM SENSOR NODE!!!: <324967> BYTES[0m
+[0;31mE (115206) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (115266) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (115276) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (115276) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <37>[0m
+[0;33mW (115286) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8025065E4DAB6E6B7828A7F8A0424338B47CECBE5A0DD967511C397EDE4C29F1F26262DC6F76B2387A865F1368388AC18E872FAB2B867092B2D6F9EF9EFEC75E1E25C91BFD6451B7E7DCECE6781C1438226C8EA33D6F85B8C35363370DA7C740407AEA4418534AEAA7112C04F2006355C04466B8F718>[0m
+[0;33mW (115316) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <407>[0m
+[0;33mW (115316) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324723>[0m
+[0;31mE (115326) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (115336) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8025065E4DAB6E6B7828A7F8A0424338B47CECBE5A0DD967511C397EDE4C29F1F26262DC6F76B2387A865F1368388AC18E872FAB2B867092B2D6F9EF9EFEC75E1E25C91BFD6451B7E7DCECE6781C1438226C8EA33D6F85B8C35363370DA7C740407AEA4418534AEAA7112C04F2006355C04466B8F718
+>[0m
+[0;33mW (115366) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (116076) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (116076) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (117076) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (117516) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (117516) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02500,-15,12
+[0m
+[0;33mW (117536) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (117536) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <37> RECEIVED[0m
+[0;31mE (117536) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (117546) !!!SHM SENSOR NODE!!!: <324951> BYTES[0m
+[0;31mE (117556) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (117616) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (117626) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (117626) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <38>[0m
+[0;33mW (117636) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <80260547B05D5B8CF0672CF07494B70C1A1293E6CA20C088A14E5C95A73B2BBB2C7E6FC9B45792786E97F092866E640B6F83EF68BE0A3C789E40A82B3612A3EBB4093332A99F85C5EC8101F671CBC997B54AAA9AB4AFC55B46215CE05467480B4257BA5FF5F12A36774246278E33498304072A4525CC>[0m
+[0;33mW (117666) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <418>[0m
+[0;33mW (117666) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324707>[0m
+[0;31mE (117676) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (117686) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,80260547B05D5B8CF0672CF07494B70C1A1293E6CA20C088A14E5C95A73B2BBB2C7E6FC9B45792786E97F092866E640B6F83EF68BE0A3C789E40A82B3612A3EBB4093332A99F85C5EC8101F671CBC997B54AAA9AB4AFC55B46215CE05467480B4257BA5FF5F12A36774246278E33498304072A4525CC
+>[0m
+[0;33mW (117716) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (118426) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (118426) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (119426) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (119866) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (119866) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02600,-14,12
+[0m
+[0;33mW (119886) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (119886) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <38> RECEIVED[0m
+[0;31mE (119886) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (119896) !!!SHM SENSOR NODE!!!: <324935> BYTES[0m
+[0;31mE (119906) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (119966) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (119976) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (119976) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <39>[0m
+[0;33mW (119986) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802703D32773425460253334BE53F63D35AFE6367220A4683868C98E87C56B2BD9F864E06436D52B6A89204A46B3B4477436DF291C2B8E740CBEB7DC61169DC1E84823AB578D1E56AB0FB8AC635F26B6BAFB76870C8003AA9A613F96CD64FC547475594DF7F2AFDE9F8178669B995D72927328FAE226>[0m
+[0;33mW (120016) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <429>[0m
+[0;33mW (120016) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324691>[0m
+[0;31mE (120026) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (120036) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802703D32773425460253334BE53F63D35AFE6367220A4683868C98E87C56B2BD9F864E06436D52B6A89204A46B3B4477436DF291C2B8E740CBEB7DC61169DC1E84823AB578D1E56AB0FB8AC635F26B6BAFB76870C8003AA9A613F96CD64FC547475594DF7F2AFDE9F8178669B995D72927328FAE226
+>[0m
+[0;33mW (120066) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (120776) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (120776) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (121776) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (122216) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (122216) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02700,-15,13
+[0m
+[0;33mW (122236) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (122236) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <39> RECEIVED[0m
+[0;31mE (122236) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (122246) !!!SHM SENSOR NODE!!!: <324919> BYTES[0m
+[0;31mE (122256) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (122316) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (122326) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (122326) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <40>[0m
+[0;33mW (122336) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802805020E0756D98C26CF5D904F203AD55C0E0A6B925B64F6A7D95610F4A6BEF1EA5ED1C1D66BFA2A80DD430615887D697D8FA844DA485431E035B3D5AA726D6B0738DB577D39DDE9D0E7EC7D72FBB87F2956AA7F4404FECDD9569CF366C9DCF05272B05595B2DE70127C4902C1FA9C3C306C3EC9EA>[0m
+[0;33mW (122366) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <440>[0m
+[0;33mW (122366) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324675>[0m
+[0;31mE (122376) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (122386) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802805020E0756D98C26CF5D904F203AD55C0E0A6B925B64F6A7D95610F4A6BEF1EA5ED1C1D66BFA2A80DD430615887D697D8FA844DA485431E035B3D5AA726D6B0738DB577D39DDE9D0E7EC7D72FBB87F2956AA7F4404FECDD9569CF366C9DCF05272B05595B2DE70127C4902C1FA9C3C306C3EC9EA
+>[0m
+[0;33mW (122416) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (123126) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (123126) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (124126) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (124566) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (124566) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02800,-14,12
+[0m
+[0;33mW (124586) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (124586) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <40> RECEIVED[0m
+[0;31mE (124586) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (124596) !!!SHM SENSOR NODE!!!: <324903> BYTES[0m
+[0;31mE (124606) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (124666) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (124676) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (124676) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <41>[0m
+[0;33mW (124686) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <8029088145859377236B8EAC52848BCD58FA288EB419D187C27BA3868A1DAA8BE2F037A109B3C4CD4A4BA38F668B3961717982E8E531EA3E6D48543A8DFA54E293439AB0A43E7E9D24E5E966365928A3AE4FDA49DDE707A6738184A967EA6613724D653DB53E0B76692F5B444830DA4A3EF3E5D1C688>[0m
+[0;33mW (124716) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <451>[0m
+[0;33mW (124716) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324659>[0m
+[0;31mE (124726) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (124736) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,8029088145859377236B8EAC52848BCD58FA288EB419D187C27BA3868A1DAA8BE2F037A109B3C4CD4A4BA38F668B3961717982E8E531EA3E6D48543A8DFA54E293439AB0A43E7E9D24E5E966365928A3AE4FDA49DDE707A6738184A967EA6613724D653DB53E0B76692F5B444830DA4A3EF3E5D1C688
+>[0m
+[0;33mW (124766) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (125476) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (125476) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (126476) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (126916) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (126916) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02900,-15,12
+[0m
+[0;33mW (126936) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (126936) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <41> RECEIVED[0m
+[0;31mE (126936) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (126946) !!!SHM SENSOR NODE!!!: <324887> BYTES[0m
+[0;31mE (126956) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (127016) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (127026) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (127026) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <42>[0m
+[0;33mW (127036) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802A05C48B516401F2A7D6E4B62C84E94303FE3E3C7D2C87EF786B899753EAC8FA3646D144F4CBE1F6603EA804F68085560FE8E6BF290043469C948E9A9E5B6F4DE69F01D372CEEEA8FFFDB256B82815DFA29E75DF3D03F757C744C3AB2563C3604EEB6EF558651E6B3DCB281BBF9D8C93DAAB048D86>[0m
+[0;33mW (127066) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <462>[0m
+[0;33mW (127066) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324643>[0m
+[0;31mE (127076) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (127086) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802A05C48B516401F2A7D6E4B62C84E94303FE3E3C7D2C87EF786B899753EAC8FA3646D144F4CBE1F6603EA804F68085560FE8E6BF290043469C948E9A9E5B6F4DE69F01D372CEEEA8FFFDB256B82815DFA29E75DF3D03F757C744C3AB2563C3604EEB6EF558651E6B3DCB281BBF9D8C93DAAB048D86
+>[0m
+[0;33mW (127116) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (127826) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (127826) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (128826) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (129266) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (129266) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02A00,-16,14
+[0m
+[0;33mW (129286) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (129286) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <42> RECEIVED[0m
+[0;31mE (129286) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (129296) !!!SHM SENSOR NODE!!!: <324871> BYTES[0m
+[0;31mE (129306) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (129366) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (129376) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (129376) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <43>[0m
+[0;33mW (129386) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802B07FF81498AAFFAAADF33142E854EA326EF763F4736E8586DBB90B7F82B5851F245834FB4B566625E815426E47C1B777FEE295DDC4C4ADC61F5122D7265C083282BBF7C8DABC1EB1AD1E453AFBAF5AAFEAE71BE8088303B2D8DFB136B20EC2C4EA155B55343966ADDD607C6D23D86D936EA922B84>[0m
+[0;33mW (129416) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <473>[0m
+[0;33mW (129416) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324627>[0m
+[0;31mE (129426) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (129436) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802B07FF81498AAFFAAADF33142E854EA326EF763F4736E8586DBB90B7F82B5851F245834FB4B566625E815426E47C1B777FEE295DDC4C4ADC61F5122D7265C083282BBF7C8DABC1EB1AD1E453AFBAF5AAFEAE71BE8088303B2D8DFB136B20EC2C4EA155B55343966ADDD607C6D23D86D936EA922B84
+>[0m
+[0;33mW (129466) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (130176) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (130176) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (131176) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (131616) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (131616) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02B00,-16,13
+[0m
+[0;33mW (131636) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (131636) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <43> RECEIVED[0m
+[0;31mE (131636) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (131646) !!!SHM SENSOR NODE!!!: <324855> BYTES[0m
+[0;31mE (131656) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (131716) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (131726) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (131726) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <44>[0m
+[0;33mW (131736) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802C05F53D6D674C35E818B29C6E7D85B77BCFEE962F844598527361071CA79B483C375D8E93BFF37A4B3DFE482BE8DD8DAB8AEB1A9C2670CCF957A3FB8E994FD168CA292D986539ABF1AAB259882B7610972E79AF4CC6B3E4677436B1E91BD1969943E9FA61846AD05162442C5747485C5DE5AC0580>[0m
+[0;33mW (131766) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <484>[0m
+[0;33mW (131766) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324611>[0m
+[0;31mE (131776) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (131786) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802C05F53D6D674C35E818B29C6E7D85B77BCFEE962F844598527361071CA79B483C375D8E93BFF37A4B3DFE482BE8DD8DAB8AEB1A9C2670CCF957A3FB8E994FD168CA292D986539ABF1AAB259882B7610972E79AF4CC6B3E4677436B1E91BD1969943E9FA61846AD05162442C5747485C5DE5AC0580
+>[0m
+[0;33mW (131816) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (132526) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (132526) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (133526) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (133966) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (133966) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02C00,-15,13
+[0m
+[0;33mW (133986) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (133986) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <44> RECEIVED[0m
+[0;31mE (133986) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (133996) !!!SHM SENSOR NODE!!!: <324839> BYTES[0m
+[0;31mE (134006) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (134066) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (134076) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (134076) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <45>[0m
+[0;33mW (134086) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802D080307778AED3CEAE445F67F7B2AB8A246CAAD3BB502B34D532ED55663AC31187105AB17A7A9C6999EE3A9E8B465ABD087AD7821024482EE54A3DF4E5D1E1F88EE267A9AD4DF2C22968040F83FE46687F258509FA5534DEF5C561D673CC5009C063D7A91323CD40CCA8488FBD84EA3016629D148>[0m
+[0;33mW (134116) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <495>[0m
+[0;33mW (134116) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324595>[0m
+[0;31mE (134126) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (134136) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802D080307778AED3CEAE445F67F7B2AB8A246CAAD3BB502B34D532ED55663AC31187105AB17A7A9C6999EE3A9E8B465ABD087AD7821024482EE54A3DF4E5D1E1F88EE267A9AD4DF2C22968040F83FE46687F258509FA5534DEF5C561D673CC5009C063D7A91323CD40CCA8488FBD84EA3016629D148
+>[0m
+[0;33mW (134166) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (134876) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (134876) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (135876) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (136316) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (136316) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02D00,-14,13
+[0m
+[0;33mW (136336) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (136336) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <45> RECEIVED[0m
+[0;31mE (136336) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (136346) !!!SHM SENSOR NODE!!!: <324823> BYTES[0m
+[0;31mE (136356) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (136416) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (136426) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (136426) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <46>[0m
+[0;33mW (136436) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802E041F89F5477F69E59B20F062DCB0B6B2341E865EA887106ECD7A7BABE999DB4268B4FFF717BACA8E50D58324C50736823C2445E64C4D1D8875390BEA68CC9D67BA729D85FCAA2A80BE506565A9B6DDFC3A89CC42C4EEA98355844AE6B3BBD87A1E88F845AB06A603C247BEE993864FEB2A86FFCA>[0m
+[0;33mW (136466) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <506>[0m
+[0;33mW (136466) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324579>[0m
+[0;31mE (136476) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (136486) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802E041F89F5477F69E59B20F062DCB0B6B2341E865EA887106ECD7A7BABE999DB4268B4FFF717BACA8E50D58324C50736823C2445E64C4D1D8875390BEA68CC9D67BA729D85FCAA2A80BE506565A9B6DDFC3A89CC42C4EEA98355844AE6B3BBD87A1E88F845AB06A603C247BEE993864FEB2A86FFCA
+>[0m
+[0;33mW (136516) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (137226) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (137226) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (138226) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (138666) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (138666) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02E00,-15,12
+[0m
+[0;33mW (138686) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (138686) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <46> RECEIVED[0m
+[0;31mE (138686) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (138696) !!!SHM SENSOR NODE!!!: <324807> BYTES[0m
+[0;31mE (138706) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (138766) !!!SHM SENSOR NODE!!!: Bytes free in 'transmit_data_task' stack: <1660>[0m
+[0;31mE (138776) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************[0m
+[0;33mW (138776) !!!SHM SENSOR NODE!!!: SENDING 'BLOCKING' MESSAGE - MSG_COUNTER_TX <47>[0m
+[0;33mW (138786) !!!SHM SENSOR NODE!!!: full_message_hex (blocking): <802F04F2411955C31F26B8AE08522DE83590C37E6FABD8A25A7E1728CE836332EC5A5DCE41B65A6ACA7F7D784438042D4925A3E5BBC1F46BC097774C486A926C1E0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000>[0m
+[0;33mW (138816) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <512>[0m
+[0;33mW (138816) !!!SHM SENSOR NODE!!!: Free heap memmory (bytes): <324563>[0m
+[0;31mE (138826) !!!SHM SENSOR NODE!!!: ******************** <TRANSMISSION> *********************
+[0m
+[0;32mI (138836) SHM SENSOR NODE -> RYLR998: Sending to LoRa module command_data: <AT+SEND=22,236,802F04F2411955C31F26B8AE08522DE83590C37E6FABD8A25A7E1728CE836332EC5A5DCE41B65A6ACA7F7D784438042D4925A3E5BBC1F46BC097774C486A926C1E0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+>[0m
+[0;33mW (138866) SHM SENSOR NODE -> RYLR998: !!!DEBUGGING!!! bytes_pushed_to_tx_fifo= <253>[0m
+[0;33mW (139576) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (139576) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;33mW (140576) !!!SHM SENSOR NODE!!!: Timer timed-out[0m
+[0;33mW (141016) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (141016) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +RCV=22,6,C02F00,-14,13
+[0m
+[0;33mW (141036) !!!SHM SENSOR NODE!!!: Bytes free in 'check_ack_task' stack: <2152>[0m
+[0;32mI (141036) !!!SHM SENSOR NODE!!!: 'ACK' message corresponding to transaction ID <47> RECEIVED[0m
+[0;31mE (141036) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;33mW (141046) !!!SHM SENSOR NODE!!!: <324791> BYTES[0m
+[0;31mE (141056) !!!SHM SENSOR NODE!!!: ******************** FREE HEAP MEMORY ********************[0m
+[0;32mI (141076) !!!SHM SENSOR NODE!!!: SLEEP MODE in LoRa Module RYLR998...
+[0m
+[0;33mW (141076) !!!SHM SENSOR NODE!!!: Bytes free in 'uart_task' stack: <2128>[0m
+[0;32mI (141076) !!!SHM SENSOR NODE!!!: Data received from LoRa module: +OK
+[0m
+[0;31mE (141576) !!!SHM SENSOR NODE!!!: ******************** <APP FINISHED> *********************[0m
+[0;33mW (141576) !!!SHM SENSOR NODE!!!: !!!DEBUGGING!!! d_a: <512>[0m
+[0;31mE (141576) !!!SHM SENSOR NODE!!!: ******************** <APP FINISHED> *********************[0m
